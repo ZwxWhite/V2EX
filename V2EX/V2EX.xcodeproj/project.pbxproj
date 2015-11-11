@@ -14,6 +14,7 @@
 		CC35600B1BF33A8E00D1780A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC3560091BF33A8E00D1780A /* LaunchScreen.storyboard */; };
 		CC3560161BF33A8E00D1780A /* V2EXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3560151BF33A8E00D1780A /* V2EXTests.swift */; };
 		CC3560211BF33A8F00D1780A /* V2EXUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3560201BF33A8F00D1780A /* V2EXUITests.swift */; };
+		CC3560311BF34C4C00D1780A /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC3560301BF34C4C00D1780A /* Auth.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		CC35601C1BF33A8F00D1780A /* V2EXUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = V2EXUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC3560201BF33A8F00D1780A /* V2EXUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2EXUITests.swift; sourceTree = "<group>"; };
 		CC3560221BF33A8F00D1780A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC3560301BF34C4C00D1780A /* Auth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				CC3560001BF33A8E00D1780A /* AppDelegate.swift */,
 				CC3560021BF33A8E00D1780A /* ViewController.swift */,
 				CC3560041BF33A8E00D1780A /* Main.storyboard */,
+				CC3560301BF34C4C00D1780A /* Auth.storyboard */,
 				CC3560071BF33A8E00D1780A /* Assets.xcassets */,
 				CC3560091BF33A8E00D1780A /* LaunchScreen.storyboard */,
 				CC35600C1BF33A8E00D1780A /* Info.plist */,
@@ -232,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC3560311BF34C4C00D1780A /* Auth.storyboard in Resources */,
 				CC35600B1BF33A8E00D1780A /* LaunchScreen.storyboard in Resources */,
 				CC3560081BF33A8E00D1780A /* Assets.xcassets in Resources */,
 				CC3560061BF33A8E00D1780A /* Main.storyboard in Resources */,
@@ -485,6 +489,7 @@
 				CC3560271BF33A8F00D1780A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CC3560281BF33A8F00D1780A /* Build configuration list for PBXNativeTarget "V2EXTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +498,7 @@
 				CC35602A1BF33A8F00D1780A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CC35602B1BF33A8F00D1780A /* Build configuration list for PBXNativeTarget "V2EXUITests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +507,7 @@
 				CC35602D1BF33A8F00D1780A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
