@@ -7,13 +7,14 @@
 //  今日热议
 
 import UIKit
+import Alamofire
+
 
 class DailyHotViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
+        
     }
 
 }
