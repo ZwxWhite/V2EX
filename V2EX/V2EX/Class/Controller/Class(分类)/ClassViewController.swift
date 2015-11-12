@@ -7,8 +7,9 @@
 //  分类
 
 import UIKit
+import PagingMenuController
 
-class ClassViewController: BaseViewController {
+class ClassViewController: UIViewController  {
 
     override func viewDidLoad() {
         super.viewDidLoad()

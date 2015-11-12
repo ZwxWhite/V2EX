@@ -183,8 +183,8 @@
 			isa = PBXGroup;
 			children = (
 				CC35603D1BF4406000D1780A /* Main.storyboard */,
-				CC3560371BF43F5F00D1780A /* AppDelegate.swift */,
 				CC3560381BF43F5F00D1780A /* Auth.storyboard */,
+				CC3560371BF43F5F00D1780A /* AppDelegate.swift */,
 				CC3560391BF43F5F00D1780A /* Info.plist */,
 			);
 			name = Other;

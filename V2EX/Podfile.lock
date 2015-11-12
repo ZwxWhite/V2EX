@@ -1,10 +1,13 @@
 PODS:
   - Alamofire (3.1.2)
+  - PageMenu (1.2.8)
 
 DEPENDENCIES:
   - Alamofire
+  - PageMenu
 
 SPEC CHECKSUMS:
   Alamofire: 7c16ca65f3c7e681fd925fd7f2dec7747ff96855
+  PageMenu: 703e82e173f54a4626ab88fcdca7703ee52e0cbe
 
 COCOAPODS: 0.39.0
