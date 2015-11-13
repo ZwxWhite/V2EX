@@ -29,7 +29,7 @@
         <!--分类-->
         <scene sceneID="IbE-Di-X5n">
             <objects>
-                <viewController id="VJv-Jz-lSr" userLabel="分类" customClass="ClassViewController" customModule="V2EX" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="分类" id="VJv-Jz-lSr" userLabel="分类" customClass="ClassViewController" customModule="V2EX" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hZ2-oK-eKg"/>
                         <viewControllerLayoutGuide type="bottom" id="Ftp-NW-ztz"/>
@@ -50,7 +50,7 @@
         <!--今日热议-->
         <scene sceneID="QLy-MJ-fKR">
             <objects>
-                <viewController id="UEg-mG-vfy" userLabel="今日热议" sceneMemberID="viewController">
+                <viewController title="今日热议" id="UEg-mG-vfy" userLabel="今日热议" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SbN-l9-sj9"/>
                         <viewControllerLayoutGuide type="bottom" id="uFm-BM-4O7"/>
@@ -71,7 +71,7 @@
         <!--节点-->
         <scene sceneID="hdb-oc-jdz">
             <objects>
-                <viewController id="1d3-FH-TSE" userLabel="节点" sceneMemberID="viewController">
+                <viewController title="节点" id="1d3-FH-TSE" userLabel="节点" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pNY-vF-LNI"/>
                         <viewControllerLayoutGuide type="bottom" id="viH-7F-k7v"/>
@@ -92,7 +92,7 @@
         <!--我-->
         <scene sceneID="t9q-0k-Qaf">
             <objects>
-                <viewController id="der-e0-Lp7" userLabel="我" sceneMemberID="viewController">
+                <viewController title="我" id="der-e0-Lp7" userLabel="我" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EwP-Jm-GnM"/>
                         <viewControllerLayoutGuide type="bottom" id="txH-KJ-eEe"/>
