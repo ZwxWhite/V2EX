@@ -51,10 +51,10 @@ extension ClassViewController {
         
         let items = ["技术","创意","好玩","Apple","酷工作","交易","城市","问与答","最热","全部","R2","节点","关注"];
         var controllers = [ClassItemViewController]()
-        for index in 0...9 {
+        for item in items {
             
             let controller = ClassItemViewController()
-            controller.title = String(index)
+            controller.title = item
             
             controllers.append(controller)
         }
@@ -69,8 +69,11 @@ extension ClassViewController {
         
         options.menuItemMargin = 0
         options.menuHeight = 30
-        options.menuDisplayMode = .Standard(widthMode: .Fixed(width: 80), centerItem: false, scrollingMode: PagingMenuOptions.MenuScrollingMode.ScrollEnabled)
-        options.menuItemMode = .Underline(height: 3, color: UIColor.blackColor(), horizontalPadding: 0, verticalPadding: 0)
+        options.textColor = UIColor.blackColor()
+        options.font = UIFont.boldSystemFontOfSize(14)
+        options.selectedTextColor = UIColor.whiteColor()
+        options.menuDisplayMode = .Standard(widthMode: .Fixed(width: 70), centerItem: false, scrollingMode: PagingMenuOptions.MenuScrollingMode.ScrollEnabled)
+        options.menuItemMode = .RoundRect(radius: 4, horizontalPadding: 5, verticalPadding: 5, selectedColor: UIColor.blackColor())
         return options
     }
 }

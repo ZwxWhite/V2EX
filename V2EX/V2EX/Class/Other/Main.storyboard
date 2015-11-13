@@ -50,7 +50,7 @@
         <!--今日热议-->
         <scene sceneID="QLy-MJ-fKR">
             <objects>
-                <viewController title="今日热议" id="UEg-mG-vfy" userLabel="今日热议" sceneMemberID="viewController">
+                <viewController title="今日热议" automaticallyAdjustsScrollViewInsets="NO" id="UEg-mG-vfy" userLabel="今日热议" customClass="DailyHotViewController" customModule="V2EX" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SbN-l9-sj9"/>
                         <viewControllerLayoutGuide type="bottom" id="uFm-BM-4O7"/>
@@ -58,11 +58,27 @@
                     <view key="view" contentMode="scaleToFill" id="q86-j4-Ph8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="V4W-6P-nUm">
+                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="V4W-6P-nUm" secondAttribute="trailing" id="3fs-h1-fiP"/>
+                            <constraint firstItem="uFm-BM-4O7" firstAttribute="top" secondItem="V4W-6P-nUm" secondAttribute="bottom" id="Ezy-a0-h0T"/>
+                            <constraint firstItem="V4W-6P-nUm" firstAttribute="leading" secondItem="q86-j4-Ph8" secondAttribute="leading" id="HP3-TY-vtf"/>
+                            <constraint firstItem="V4W-6P-nUm" firstAttribute="top" secondItem="SbN-l9-sj9" secondAttribute="bottom" id="doN-qB-dYZ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dwZ-Bs-iF3"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="tableView" destination="V4W-6P-nUm" id="tSd-kO-F6V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C2q-1z-BFC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
