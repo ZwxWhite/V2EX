@@ -60,18 +60,35 @@ protocol ApiRequestCallBack: NSObjectProtocol {
 
 
 class BaseApiManager: ApiManagerProtocol, RequestParamsValidator {
-    var methodName: String
-    var requestMethod: HttpRequestMethod
+    
+    /// 服务器地址
     var baseUrl = V2EXBaseUrl
+    
+    /// 请求api
+    var methodName: String
+    
+    /// 请求方式
+    var requestMethod: HttpRequestMethod
+    
+    /// 请求参数
     var requestParams: [String: AnyObject]?
+    
+    /// 请求头
     var requestHeaders: [String: String]?
+    
+    /// 超时时间
     var timeoutInterval = V2TimeoutInterval
+    
+    /// 回调代理
     weak var delegate: ApiRequestCallBack?
     
+    /// 请求manager
     private var manager: Manager
+    
+    /// 请求request
     private var request: Request?
     
-    
+
     init(methodName: String, requestType: HttpRequestMethod) {
         self.methodName = methodName
         self.requestMethod = requestType
@@ -83,6 +100,11 @@ class BaseApiManager: ApiManagerProtocol, RequestParamsValidator {
         self.manager = Manager(configuration: urlSessionConfig)
     }
     
+    /**
+         开始网络请求
+         
+         - throws: 错误类型
+     */
     func start() throws {
         
         // 1.判断参数
@@ -117,6 +139,9 @@ class BaseApiManager: ApiManagerProtocol, RequestParamsValidator {
     }
     
     
+    /**
+        取消网络请求
+     */
     func cancel() {
         if let request = self.request {
             request.cancel()
