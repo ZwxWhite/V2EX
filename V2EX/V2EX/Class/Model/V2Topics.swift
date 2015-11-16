@@ -67,9 +67,9 @@ struct V2Node {
     var title_alternative: String
     var url: String
     var topics: String
-    var avatar_mini: String
-    var avatar_normal: String
-    var avatar_large: String
+    var avatar_mini: String?
+    var avatar_normal: String?
+    var avatar_large: String?
     
     
     init(id: String, name: String, title: String, title_alternative: String, url: String, topics: String, avatar_mini: String, avatar_normal: String, avatar_large: String) {
@@ -82,6 +82,28 @@ struct V2Node {
         self.avatar_mini = avatar_mini
         self.avatar_normal = avatar_normal
         self.avatar_large = avatar_large
+    }
+}
+
+
+struct V2NodeViewModel {
+    var id: String
+    var name: String
+    var title: String
+    var title_alternative: String
+    var url: String
+    var topics: String
+    var avatar_mini: String?
+    var avatar_normal: String?
+    var avatar_large: String?
+    
+    enum NodeInputError: ErrorType {
+        case InputMissing
+        case InputTypeError
+    }
+    
+    func createNode() {
+
     }
 }
 
