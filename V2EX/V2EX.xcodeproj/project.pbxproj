@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8EE480D6E0032F386D83A753 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 971F9F073A31501FD7E5A26C /* Pods.framework */; };
+		CC07B6C21BF9852800DD73F1 /* DebugLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC07B6C11BF9852800DD73F1 /* DebugLog.swift */; };
 		CC3560081BF33A8E00D1780A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC3560071BF33A8E00D1780A /* Assets.xcassets */; };
 		CC3560161BF33A8E00D1780A /* V2EXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3560151BF33A8E00D1780A /* V2EXTests.swift */; };
 		CC3560211BF33A8F00D1780A /* V2EXUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3560201BF33A8F00D1780A /* V2EXUITests.swift */; };
@@ -48,6 +49,7 @@
 /* Begin PBXFileReference section */
 		8F53E090EA56FC6699AB8AE4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		971F9F073A31501FD7E5A26C /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC07B6C11BF9852800DD73F1 /* DebugLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugLog.swift; sourceTree = "<group>"; };
 		CC355FFD1BF33A8E00D1780A /* V2EX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = V2EX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC3560071BF33A8E00D1780A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC3560111BF33A8E00D1780A /* V2EXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = V2EXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -260,6 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				CC3560561BF4897B00D1780A /* Random.swift */,
+				CC07B6C11BF9852800DD73F1 /* DebugLog.swift */,
 				CCB27C3B1BF4A0F300D91B75 /* AppConstant.swift */,
 			);
 			path = Tools;
@@ -486,6 +489,7 @@
 				CC3560531BF485B600D1780A /* ClassItemViewController.swift in Sources */,
 				CC35604D1BF4459200D1780A /* NodeViewController.swift in Sources */,
 				CC3560471BF4453300D1780A /* BaseViewController.swift in Sources */,
+				CC07B6C21BF9852800DD73F1 /* DebugLog.swift in Sources */,
 				CC35604F1BF445D500D1780A /* PersonalViewController.swift in Sources */,
 				CC3560571BF4897B00D1780A /* Random.swift in Sources */,
 			);
