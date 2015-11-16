@@ -9,12 +9,12 @@
 import Foundation
 
 
-protocol Contextualizable {
+public protocol Contextualizable {
     
 }
 
 extension Contextualizable {
-    func currentContext(file : String = __FILE__, function : String = __FUNCTION__, line : Int = __LINE__) -> String {
+    func currentDebugContext(file : String = __FILE__, function : String = __FUNCTION__, line : Int = __LINE__) -> String {
         return "\(file):\(function):\(line):\(self.dynamicType)"  //dynamicType表达式来获取该实例在运行阶段的类型
     }
 }

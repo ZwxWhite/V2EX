@@ -10,10 +10,10 @@ import Alamofire
 
 // MARK: Enum
 /**
-请求类型
+    请求类型
 
-- Get:  Get请求
-- Post: Post请求
+    - Get:  Get请求
+    - Post: Post请求
 */
 enum HttpRequestMethod {
     case Get
@@ -22,12 +22,12 @@ enum HttpRequestMethod {
 
 
 /**
- 网络错误类型
- 
- - NoContent:   返回内容不符
- - ParamsError: 参数格式不符
- - Timeout:     超时
- - NoNetWork:   无网络
+     网络错误类型
+     
+     - NoContent:   返回内容不符
+     - ParamsError: 参数格式不符
+     - Timeout:     超时
+     - NoNetWork:   无网络
  */
 enum HttpRequestErrorType: ErrorType {
     case NoContent
@@ -53,12 +53,19 @@ extension RequestParamsValidator {
 }
 
 
+protocol ApiRequestCallBack: NSObjectProtocol {
+    func requestFinish(response: Response<AnyObject, NSError>)
+    func requestFailed(error: NSError)
+}
+
+
 class BaseApiManager: ApiManagerProtocol, RequestParamsValidator {
     var methodName: String
     var requestMethod: HttpRequestMethod
     var baseUrl = V2EXBaseUrl
     var requestParams: [String: AnyObject]?
     var requestHeaders: [String: String]?
+    weak var delegate: ApiRequestCallBack?
     
     init(methodName: String, requestType: HttpRequestMethod) {
         self.methodName = methodName
@@ -84,7 +91,18 @@ class BaseApiManager: ApiManagerProtocol, RequestParamsValidator {
         case .Post:method = .POST
         }
 
-        Alamofire.request(method, methodName, parameters: requestParams, encoding: .URL, headers: requestHeaders)
+        Alamofire.request(method, methodName, parameters: requestParams, encoding: .URL, headers: requestHeaders).responseJSON { response in
+            switch response.result {
+            case .Success(_):
+                if let delegate = self.delegate {
+                    delegate.requestFinish(response)
+                }
+            case .Failure(let error):
+                if let delegate = self.delegate {
+                    delegate.requestFailed(error)
+                }
+            }
+        }
     }
 }
 

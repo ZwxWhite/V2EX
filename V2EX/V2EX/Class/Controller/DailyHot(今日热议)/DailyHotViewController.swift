@@ -9,10 +9,8 @@
 import UIKit
 import Alamofire
 
-
-
 // MARK: Life cycle
-class DailyHotViewController: BaseViewController {
+class DailyHotViewController: BaseViewController,Contextualizable {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -36,13 +34,12 @@ extension DailyHotViewController {
     func loadData() {
         
         
-        
         do {
             try BaseApiManager(methodName: "a", requestType: .Get).start()
         } catch HttpRequestErrorType.NoNetWork{
-
+            print(V2Error(currentDebugContext(),"网络不通").reason)
         } catch {
-            
+            print(V2Error(currentDebugContext(),"网络不通").source)
         }
         
         
