@@ -1,16 +1,19 @@
 PODS:
   - Alamofire (3.1.2)
   - PagingMenuController (0.7.5)
+  - ReachabilitySwift (2.1)
   - SnapKit (0.17.0)
 
 DEPENDENCIES:
   - Alamofire
   - PagingMenuController
+  - ReachabilitySwift
   - SnapKit
 
 SPEC CHECKSUMS:
   Alamofire: 7c16ca65f3c7e681fd925fd7f2dec7747ff96855
   PagingMenuController: ea590be94de2332a1f78fbbc45fa6f49405279ea
+  ReachabilitySwift: 99bb7acceebb90b2048b4a8fd6539be96454dcb2
   SnapKit: 49fd7b1b3ff58ab4064004036b8afcfddbd3a4bd
 
 COCOAPODS: 0.39.0

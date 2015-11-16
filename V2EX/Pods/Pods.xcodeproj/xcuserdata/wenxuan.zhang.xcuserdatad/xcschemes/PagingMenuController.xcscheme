@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'C7AC29348D4340EF593E1FDD'
+               BlueprintIdentifier = 'FAAFC423C0434240AFC5AEC8'
                BlueprintName = 'PagingMenuController'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'PagingMenuController.framework'>

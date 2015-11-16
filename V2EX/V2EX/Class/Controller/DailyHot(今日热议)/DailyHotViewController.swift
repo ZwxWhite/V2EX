@@ -31,7 +31,22 @@ class DailyHotViewController: BaseViewController {
 // MARK: LoadData
 extension DailyHotViewController {
     
+    
+    
     func loadData() {
+        
+        
+        
+        do {
+            try BaseApiManager(methodName: "a", requestType: .Get).start()
+        } catch HttpRequestErrorType.NoNetWork{
+
+        } catch {
+            
+        }
+        
+        
+        
         Alamofire.request(.GET, "https://www.v2ex.com/api/topics/hot.json").responseJSON { (responseObject: Response) -> Void in
             
             // 网络错误
