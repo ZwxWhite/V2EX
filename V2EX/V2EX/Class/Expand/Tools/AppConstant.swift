@@ -19,10 +19,14 @@ public let Tabbar_Height: CGFloat = 49.0
 
 
 
-// MARK: Domain
+
+
+
+// MARK: Net
+
+public let V2TimeoutInterval = 30.0
+
 public let V2EXBaseUrl = "https://www.v2ex.com"
-
-
 
 func networkReachability() -> Bool {
     do {

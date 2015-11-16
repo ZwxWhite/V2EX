@@ -65,11 +65,22 @@ class BaseApiManager: ApiManagerProtocol, RequestParamsValidator {
     var baseUrl = V2EXBaseUrl
     var requestParams: [String: AnyObject]?
     var requestHeaders: [String: String]?
+    var timeoutInterval = V2TimeoutInterval
     weak var delegate: ApiRequestCallBack?
+    
+    private var manager: Manager
+    private var request: Request?
+    
     
     init(methodName: String, requestType: HttpRequestMethod) {
         self.methodName = methodName
         self.requestMethod = requestType
+        
+        // manager
+        let urlSessionConfig = NSURLSessionConfiguration.defaultSessionConfiguration()
+        urlSessionConfig.timeoutIntervalForRequest = timeoutInterval
+        urlSessionConfig.HTTPAdditionalHeaders = Manager.defaultHTTPHeaders
+        self.manager = Manager(configuration: urlSessionConfig)
     }
     
     func start() throws {
@@ -91,7 +102,7 @@ class BaseApiManager: ApiManagerProtocol, RequestParamsValidator {
         case .Post:method = .POST
         }
 
-        Alamofire.request(method, methodName, parameters: requestParams, encoding: .URL, headers: requestHeaders).responseJSON { response in
+        request = manager.request(method, baseUrl+methodName, parameters: requestParams, encoding: .URL, headers: requestHeaders).responseJSON { response in
             switch response.result {
             case .Success(_):
                 if let delegate = self.delegate {
@@ -102,6 +113,15 @@ class BaseApiManager: ApiManagerProtocol, RequestParamsValidator {
                     delegate.requestFailed(error)
                 }
             }
+        }
+    }
+    
+    
+    func cancel() {
+        if let request = self.request {
+            request.cancel()
+        } else {
+            print("no request")
         }
     }
 }
