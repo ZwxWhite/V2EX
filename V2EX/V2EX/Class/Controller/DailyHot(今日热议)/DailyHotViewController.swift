@@ -10,11 +10,11 @@ import UIKit
 import Alamofire
 
 // MARK: Life cycle
-class DailyHotViewController: BaseViewController,Contextualizable {
+class DailyHotViewController: BaseViewController,Contextualizable,ApiRequestCallBack {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var topicsArray = Array<V2Topics>()
+    lazy var apiManager = DailyHotApiManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,39 +28,23 @@ class DailyHotViewController: BaseViewController,Contextualizable {
 
 // MARK: LoadData
 extension DailyHotViewController {
-    
-    
-    
     func loadData() {
-        
-        
         do {
-            try BaseApiManager(methodName: "a", requestType: .Get).start()
+            apiManager.delegate = self
+            try apiManager.start()
         } catch HttpRequestErrorType.NoNetWork{
             print(V2Error(currentDebugContext(),"网络不通").reason)
         } catch {
             print(V2Error(currentDebugContext(),"网络不通").source)
         }
+    }
+    
+    func requestFinish(response: Response<AnyObject, NSError>) {
         
+    }
+    
+    func requestFailed(error: NSError) {
         
-        
-        Alamofire.request(.GET, "https://www.v2ex.com/api/topics/hot.json").responseJSON { (responseObject: Response) -> Void in
-            
-            // 网络错误
-            if let error = responseObject.result.error {
-                print(error)
-            }
-        
-            else {
-                if let responseArray = responseObject.result.value as! NSArray? {
-                    for dictionary in responseArray {
-                        
-                        
-                    }
-                }
-            }
-            
-        }
     }
 }
 

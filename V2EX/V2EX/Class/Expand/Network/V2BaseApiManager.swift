@@ -62,13 +62,19 @@ protocol ApiRequestCallBack: NSObjectProtocol {
 class BaseApiManager: ApiManagerProtocol, RequestParamsValidator {
     
     /// 服务器地址
-    var baseUrl = V2EXBaseUrl
+    var baseUrl: String {
+        return V2EXBaseUrl
+    }
     
     /// 请求api
-    var methodName: String
+    var methodName: String {
+        return ""
+    }
     
     /// 请求方式
-    var requestMethod: HttpRequestMethod
+    var requestMethod: HttpRequestMethod {
+        return HttpRequestMethod.Get
+    }
     
     /// 请求参数
     var requestParams: [String: AnyObject]?
@@ -89,10 +95,7 @@ class BaseApiManager: ApiManagerProtocol, RequestParamsValidator {
     private var request: Request?
     
 
-    init(methodName: String, requestType: HttpRequestMethod) {
-        self.methodName = methodName
-        self.requestMethod = requestType
-        
+    init() {
         // manager
         let urlSessionConfig = NSURLSessionConfiguration.defaultSessionConfiguration()
         urlSessionConfig.timeoutIntervalForRequest = timeoutInterval
