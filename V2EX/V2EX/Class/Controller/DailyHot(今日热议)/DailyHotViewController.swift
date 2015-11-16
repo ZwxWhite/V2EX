@@ -16,6 +16,8 @@ class DailyHotViewController: BaseViewController,Contextualizable,ApiRequestCall
     
     lazy var apiManager = DailyHotApiManager()
     
+    var topics = [V2Topics]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,6 +42,14 @@ extension DailyHotViewController {
     }
     
     func requestFinish(response: Response<AnyObject, NSError>) {
+        if let result = response.result.value as? NSArray {
+            for dictionary in result {
+                topics.append(V2Topics(dictionary: dictionary as! NSDictionary))
+            }
+            tableView.reloadData()
+        } else {
+            print(V2Error(currentDebugContext(),"格式不正确"))
+        }
         
     }
     
