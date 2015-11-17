@@ -23,7 +23,6 @@ class ClassViewController: BaseViewController  {
     }
     
     override func viewDidLayoutSubviews() {
-        
         pagingMenuController.view.frame = CGRectMake(0, NavigationBar_Height, Screen_Width, Screen_Height - NavigationBar_Height - Tabbar_Height)
     }
 }

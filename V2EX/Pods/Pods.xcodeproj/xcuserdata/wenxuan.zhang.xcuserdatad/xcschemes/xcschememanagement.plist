@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Kingfisher.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>PagingMenuController-PagingMenuController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,17 +42,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>17AB0F358D5A9C71E0859645D74D09D0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>23D4B5C9CC657B68134305BFEB076270</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2B0E0AA04DB6BBEC9531254295ABBCAA</key>
+		<key>2589AB564B2C236C0DC575C7EFEE93BB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,7 +62,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>923E78A32FFC98449DF1E419B68A31A0</key>
+		<key>86988C6F97357D313FCA2C00A45D8A2C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9C3E7BFC7353E4C01C8A19ADA16B1725</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F91226101ECE8FCFD221A3EC54481F82</key>
 		<dict>
 			<key>primary</key>
 			<true/>

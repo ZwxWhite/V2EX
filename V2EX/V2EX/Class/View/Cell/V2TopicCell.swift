@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class V2TopicCell: UITableViewCell {
 
@@ -20,6 +21,16 @@ class V2TopicCell: UITableViewCell {
     var topic: V2Topic? {
         didSet{
             
+            self.titleLabel.text = self.topic?.title
+            self.nodeLabel.text = self.topic?.node?.title
+            self.userName.text = self.topic?.member?.username
+            self.lastTouchedLabel.text = String(self.topic?.last_modified)
+            self.avatarImage.layer.cornerRadius = 4.0
+            self.avatarImage.layer.masksToBounds = true
+            
+            if let avatarImageUrl = self.topic?.member?.avatar_normal {
+                self.avatarImage.kf_setImageWithURL(NSURL(string: "https:" + avatarImageUrl)!, placeholderImage: nil)
+            }
         }
     }
 }
