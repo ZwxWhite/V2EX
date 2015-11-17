@@ -89,6 +89,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods/PagingMenuController.framework"
   install_framework "Pods/ReachabilitySwift.framework"
   install_framework "Pods/SnapKit.framework"
+  install_framework "Pods/SwiftDate.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods/Alamofire.framework"
@@ -96,4 +97,5 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods/PagingMenuController.framework"
   install_framework "Pods/ReachabilitySwift.framework"
   install_framework "Pods/SnapKit.framework"
+  install_framework "Pods/SwiftDate.framework"
 fi

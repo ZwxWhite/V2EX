@@ -9,13 +9,14 @@
 import UIKit
 import Kingfisher
 
+
 class V2TopicCell: UITableViewCell,Contextualizable {
 
     
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var userName: UILabel!
-    @IBOutlet weak var lastTouchedLabel: UILabel!
+    @IBOutlet weak var lastModifiedLabel: UILabel!
     @IBOutlet weak var avatarImage: UIImageView! {
         didSet{
             avatarImage.layer.cornerRadius = 4
@@ -41,7 +42,7 @@ class V2TopicCell: UITableViewCell,Contextualizable {
                 
                 titleLabel.text = topic.title
                 userName.text = topic.userName
-                lastTouchedLabel.text = topic.lastTouched
+                lastModifiedLabel.text = topic.lastModified
                 avatarImage.kf_setImageWithURL(NSURL(string: topic.avatarImageString!)!, placeholderImage: nil)
                 repliesLabel.text = topic.replies
                 nodeLabel.text = topic.node
@@ -58,7 +59,7 @@ struct V2TopicViewModel {
     var avatarImageString: String?
     var title: String!
     var userName: String!
-    var lastTouched: String!
+    var lastModified: String!
     var replies: String!
     var node: String!
     
@@ -81,10 +82,12 @@ struct V2TopicViewModel {
             self.userName = ""
         }
         
-        if let modelLastTouched = topic.last_touched {
-            self.lastTouched = String(modelLastTouched)
+        if let modelLastTouched = topic.last_modified {
+            
+            let lastTouchedTime = NSTimeInterval(modelLastTouched)
+            self.lastModified = relationshipOfDate(NSDate(), anotherDate: NSDate(timeIntervalSince1970: lastTouchedTime))
         } else {
-            self.lastTouched = ""
+            self.lastModified = ""
         }
         
         if let modelReplies = topic.replies {

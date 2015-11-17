@@ -30,6 +30,7 @@
 		CC9FE4B81BFAD457006967FF /* V2TopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9FE4B71BFAD457006967FF /* V2TopicCell.swift */; };
 		CCB27C3C1BF4A0F300D91B75 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB27C3B1BF4A0F300D91B75 /* AppConstant.swift */; };
 		CCB27C571BF5BFA700D91B75 /* V2Topics.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB27C561BF5BFA700D91B75 /* V2Topics.swift */; };
+		CCF36B321BFB3DF60006366D /* DateTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF36B311BFB3DF60006366D /* DateTool.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		CC9FE4B71BFAD457006967FF /* V2TopicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = V2TopicCell.swift; sourceTree = "<group>"; };
 		CCB27C3B1BF4A0F300D91B75 /* AppConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
 		CCB27C561BF5BFA700D91B75 /* V2Topics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = V2Topics.swift; sourceTree = "<group>"; };
+		CCF36B311BFB3DF60006366D /* DateTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTool.swift; sourceTree = "<group>"; };
 		E716E6859B40D39F7099A9E0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -272,6 +274,7 @@
 				CC3560561BF4897B00D1780A /* Random.swift */,
 				CC07B6C11BF9852800DD73F1 /* DebugLog.swift */,
 				CCB27C3B1BF4A0F300D91B75 /* AppConstant.swift */,
+				CCF36B311BFB3DF60006366D /* DateTool.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -529,6 +532,7 @@
 				CC35605A1BF48A5200D1780A /* Color.swift in Sources */,
 				CC9FE4AE1BF9F7AA006967FF /* DailyHotApiManager.swift in Sources */,
 				CC35603A1BF43F5F00D1780A /* AppDelegate.swift in Sources */,
+				CCF36B321BFB3DF60006366D /* DateTool.swift in Sources */,
 				CC3560531BF485B600D1780A /* ClassItemViewController.swift in Sources */,
 				CC35604D1BF4459200D1780A /* NodeViewController.swift in Sources */,
 				CC3560471BF4453300D1780A /* BaseViewController.swift in Sources */,

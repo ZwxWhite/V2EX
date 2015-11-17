@@ -8,7 +8,6 @@
 
 import UIKit
 import Alamofire
-import Crashlytics
 
 // MARK: Life cycle
 class DailyHotViewController: BaseViewController,UITableViewDelegate,UITableViewDataSource,Contextualizable,ApiRequestCallBack {
@@ -57,6 +56,7 @@ extension DailyHotViewController {
 // MARK: LoadData
 extension DailyHotViewController {
     func loadData() {
+            
         do {
             apiManager.delegate = self
             try apiManager.start()

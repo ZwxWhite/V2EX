@@ -152,7 +152,7 @@
                                         <inset key="separatorInset" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
                                             <outlet property="avatarImage" destination="jUE-bb-u3z" id="Bpz-74-x9k"/>
-                                            <outlet property="lastTouchedLabel" destination="bv2-6i-JDj" id="T0Q-on-htX"/>
+                                            <outlet property="lastModifiedLabel" destination="bv2-6i-JDj" id="Apy-Go-qME"/>
                                             <outlet property="nodeLabel" destination="2gD-T2-fXi" id="zN2-kw-HcP"/>
                                             <outlet property="repliesLabel" destination="Txg-B2-HL4" id="zAR-m3-OHv"/>
                                             <outlet property="titleLabel" destination="nLk-Hl-YbR" id="n1f-O0-kRl"/>
