@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import Crashlytics
 
 // MARK: Life cycle
 class DailyHotViewController: BaseViewController,UITableViewDelegate,UITableViewDataSource,Contextualizable,ApiRequestCallBack {
@@ -75,6 +76,9 @@ extension DailyHotViewController {
             for dictionary in result {
                 topics.append(V2Topic(dictionary: dictionary as! NSDictionary))
             }
+
+            CLSNSLogv("a", getVaList([1, 2, "three"]))
+            Crashlytics.sharedInstance().setObjectValue("test", forKey: "crash")
             tableView.reloadData()
         } else {
             print(V2Error(currentDebugContext(),"格式不正确"))
