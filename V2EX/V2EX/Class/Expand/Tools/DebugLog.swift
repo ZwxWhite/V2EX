@@ -28,8 +28,16 @@ public struct V2Error: ErrorType {
         self.reason = reason
         self.source = source
     }
+    
 }
 
+
+
+extension V2Error {
+    func description() -> String {
+        return "Source:\(source) \n Reason:\(reason)"
+    }
+}
 
 
 

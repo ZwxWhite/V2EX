@@ -9,7 +9,7 @@
 import Foundation
 
 
-struct V2Topics {
+struct V2Topic {
     
     var id: Int?
     var title: String?
