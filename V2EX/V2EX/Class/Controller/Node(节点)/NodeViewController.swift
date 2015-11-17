@@ -19,7 +19,5 @@ class NodeViewController: BaseViewController {
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
-        Crashlytics.sharedInstance().throwException()
     }
 }

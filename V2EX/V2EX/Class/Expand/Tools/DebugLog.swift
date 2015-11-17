@@ -29,9 +29,10 @@ public struct V2Error: ErrorType {
         self.source = source
     }
     
+    func logError() {
+        print(self.description())
+    }
 }
-
-
 
 extension V2Error {
     func description() -> String {

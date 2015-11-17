@@ -161,7 +161,7 @@
                             <constraint firstItem="V4W-6P-nUm" firstAttribute="top" secondItem="SbN-l9-sj9" secondAttribute="bottom" id="doN-qB-dYZ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="dwZ-Bs-iF3"/>
+                    <navigationItem key="navigationItem" title="今日热议" id="dwZ-Bs-iF3"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="tableView" destination="V4W-6P-nUm" id="tSd-kO-F6V"/>
@@ -185,7 +185,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="81B-MX-Fuo"/>
+                    <navigationItem key="navigationItem" title="节点" id="81B-MX-Fuo"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zuw-JI-a3F" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -206,7 +206,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="abE-Yc-k6p"/>
+                    <navigationItem key="navigationItem" title="我" id="abE-Yc-k6p"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Iy-gK-ed1" userLabel="First Responder" sceneMemberID="firstResponder"/>

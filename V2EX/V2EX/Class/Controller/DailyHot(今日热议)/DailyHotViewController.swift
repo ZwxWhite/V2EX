@@ -19,14 +19,15 @@ class DailyHotViewController: BaseViewController,UITableViewDelegate,UITableView
         }
     }
     
+    /// 请求
     lazy var apiManager = DailyHotApiManager()
     
+    /// 数据源
     var topics = [V2Topic]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "今日热议"
         loadData()
     }
 }
@@ -50,7 +51,7 @@ extension DailyHotViewController {
             return topicCell
         }
         
-        print(V2Error(currentDebugContext(),"cell error"))
+        V2Error(currentDebugContext(),"cell error").logError()
         return UITableViewCell()
     }
 }
@@ -63,9 +64,9 @@ extension DailyHotViewController {
             apiManager.delegate = self
             try apiManager.start()
         } catch HttpRequestErrorType.NoNetWork{
-            print(V2Error(currentDebugContext(),"网络不通"))
+            V2Error(currentDebugContext(),"网络不通").logError()
         } catch HttpRequestErrorType.ParamsError{
-            print(V2Error(currentDebugContext(),"参数错误"))
+            V2Error(currentDebugContext(),"参数错误").logError()
         } catch {
             
         }
@@ -76,12 +77,9 @@ extension DailyHotViewController {
             for dictionary in result {
                 topics.append(V2Topic(dictionary: dictionary as! NSDictionary))
             }
-
-            CLSNSLogv("a", getVaList([1, 2, "three"]))
-            Crashlytics.sharedInstance().setObjectValue("test", forKey: "crash")
             tableView.reloadData()
         } else {
-            print(V2Error(currentDebugContext(),"格式不正确"))
+            V2Error(currentDebugContext(),"格式不正确").logError()
         }
         
     }

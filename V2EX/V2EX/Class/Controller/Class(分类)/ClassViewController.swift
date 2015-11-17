@@ -18,7 +18,6 @@ class ClassViewController: BaseViewController  {
     override func viewDidLoad() {
         super.viewDidLoad()
      
-        title = "分类"
         configPagingMenuController()
     }
     
@@ -71,6 +70,7 @@ extension ClassViewController {
         options.textColor = UIColor.blackColor()
         options.font = UIFont.boldSystemFontOfSize(14)
         options.selectedTextColor = UIColor.whiteColor()
+        options.animationDuration = 0.2
         options.menuDisplayMode = .Standard(widthMode: .Fixed(width: 70), centerItem: false, scrollingMode: PagingMenuOptions.MenuScrollingMode.ScrollEnabled)
         options.menuItemMode = .RoundRect(radius: 4, horizontalPadding: 5, verticalPadding: 5, selectedColor: UIColor.blackColor())
         return options
