@@ -96,7 +96,7 @@ struct V2TopicViewModel {
             self.replies = "0"
         }
         
-        if let modelNode = topic.node?.name {
+        if let modelNode = topic.node?.title {
             self.node = modelNode+"   "
         } else {
             self.node = ""
