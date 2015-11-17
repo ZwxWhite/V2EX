@@ -9,28 +9,100 @@
 import UIKit
 import Kingfisher
 
-class V2TopicCell: UITableViewCell {
+class V2TopicCell: UITableViewCell,Contextualizable {
 
     
-    @IBOutlet weak var avatarImage: UIImageView!
+
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var nodeLabel: UILabel!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var lastTouchedLabel: UILabel!
-    
-    var topic: V2Topic? {
+    @IBOutlet weak var avatarImage: UIImageView! {
         didSet{
-            
-            self.titleLabel.text = self.topic?.title
-            self.nodeLabel.text = self.topic?.node?.title
-            self.userName.text = self.topic?.member?.username
-            self.lastTouchedLabel.text = String(self.topic?.last_modified)
-            self.avatarImage.layer.cornerRadius = 4.0
-            self.avatarImage.layer.masksToBounds = true
-            
-            if let avatarImageUrl = self.topic?.member?.avatar_normal {
-                self.avatarImage.kf_setImageWithURL(NSURL(string: "https:" + avatarImageUrl)!, placeholderImage: nil)
+            avatarImage.layer.cornerRadius = 4
+            avatarImage.layer.masksToBounds = true
+        }
+    }
+    @IBOutlet weak var repliesLabel: UILabel! {
+        didSet{
+            repliesLabel.layer.cornerRadius = 4
+            repliesLabel.layer.masksToBounds = true
+        }
+    }
+    @IBOutlet weak var nodeLabel: UILabel! {
+        didSet{
+            nodeLabel.layer.cornerRadius = 4
+            nodeLabel.layer.masksToBounds = true
+        }
+    }
+    
+    var topicViewModel: V2TopicViewModel? {
+        didSet{
+            if let topic = topicViewModel {
+                
+                titleLabel.text = topic.title
+                userName.text = topic.userName
+                lastTouchedLabel.text = topic.lastTouched
+                avatarImage.kf_setImageWithURL(NSURL(string: topic.avatarImageString!)!, placeholderImage: nil)
+                repliesLabel.text = topic.replies
+                nodeLabel.text = topic.node
+            } else {
+                V2Error(currentDebugContext(),"model为nil").logError()
             }
         }
     }
 }
+
+
+
+struct V2TopicViewModel {
+    var avatarImageString: String?
+    var title: String!
+    var userName: String!
+    var lastTouched: String!
+    var replies: String!
+    var node: String!
+    
+    init(topic:V2Topic){
+        if let modelAvatarImageString = topic.member?.avatar_normal {
+            self.avatarImageString = "https:" + modelAvatarImageString
+        } else {
+            self.avatarImageString = nil
+        }
+        
+        if let modelTitle = topic.title {
+            self.title = modelTitle
+        } else {
+            self.title = ""
+        }
+        
+        if let modelUserName = topic.member?.username {
+            self.userName = modelUserName
+        } else {
+            self.userName = ""
+        }
+        
+        if let modelLastTouched = topic.last_touched {
+            self.lastTouched = String(modelLastTouched)
+        } else {
+            self.lastTouched = ""
+        }
+        
+        if let modelReplies = topic.replies {
+            self.replies = String(modelReplies)
+        } else {
+            self.replies = "0"
+        }
+        
+        if let modelNode = topic.node?.name {
+            self.node = modelNode+"   "
+        } else {
+            self.node = ""
+        }
+    }
+}
+
+
+
+
+
+
