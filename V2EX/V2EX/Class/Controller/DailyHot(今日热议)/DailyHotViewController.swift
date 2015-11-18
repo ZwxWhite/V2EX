@@ -19,10 +19,10 @@ class DailyHotViewController: BaseViewController,UITableViewDelegate,UITableView
     }
     
     /// 请求
-    lazy var apiManager = DailyHotApiManager()
+    private lazy var apiManager = DailyHotApiManager()
     
     /// 数据源
-    var topics = [V2TopicViewModel]()
+    private var topics = [V2TopicViewModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,7 +55,7 @@ extension DailyHotViewController {
 
 // MARK: LoadData
 extension DailyHotViewController {
-    func loadData() {
+    private func loadData() {
             
         do {
             apiManager.delegate = self
@@ -69,7 +69,7 @@ extension DailyHotViewController {
         }
     }
     
-    func requestFinish(response: Response<AnyObject, NSError>) {
+    internal func requestFinish(response: Response<AnyObject, NSError>) {
         if let result = response.result.value as? NSArray {
             for dictionary in result {
                 
@@ -82,7 +82,7 @@ extension DailyHotViewController {
         }
     }
     
-    func requestFailed(error: NSError) {
+    internal func requestFailed(error: NSError) {
         V2Error(currentDebugContext(),error.domain).logError()
     }
 }

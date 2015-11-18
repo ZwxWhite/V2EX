@@ -20,10 +20,9 @@
 		CC3560451BF4437E00D1780A /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3560441BF4437E00D1780A /* RootViewController.swift */; };
 		CC3560471BF4453300D1780A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3560461BF4453300D1780A /* BaseViewController.swift */; };
 		CC3560491BF4456A00D1780A /* DailyHotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3560481BF4456A00D1780A /* DailyHotViewController.swift */; };
-		CC35604B1BF4458500D1780A /* ClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC35604A1BF4458500D1780A /* ClassViewController.swift */; };
+		CC35604B1BF4458500D1780A /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC35604A1BF4458500D1780A /* CategoriesViewController.swift */; };
 		CC35604D1BF4459200D1780A /* NodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC35604C1BF4459200D1780A /* NodeViewController.swift */; };
 		CC35604F1BF445D500D1780A /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC35604E1BF445D500D1780A /* PersonalViewController.swift */; };
-		CC3560531BF485B600D1780A /* ClassItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3560521BF485B600D1780A /* ClassItemViewController.swift */; };
 		CC3560571BF4897B00D1780A /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3560561BF4897B00D1780A /* Random.swift */; };
 		CC35605A1BF48A5200D1780A /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3560591BF48A5200D1780A /* Color.swift */; };
 		CC9FE4AE1BF9F7AA006967FF /* DailyHotApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9FE4AD1BF9F7AA006967FF /* DailyHotApiManager.swift */; };
@@ -31,6 +30,7 @@
 		CCB27C3C1BF4A0F300D91B75 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB27C3B1BF4A0F300D91B75 /* AppConstant.swift */; };
 		CCB27C571BF5BFA700D91B75 /* V2Topics.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB27C561BF5BFA700D91B75 /* V2Topics.swift */; };
 		CCF36B321BFB3DF60006366D /* DateTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF36B311BFB3DF60006366D /* DateTool.swift */; };
+		CCF9450B1BFC20F300AC8A6A /* CategorieItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF9450A1BFC20F300AC8A6A /* CategorieItemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,10 +70,9 @@
 		CC3560441BF4437E00D1780A /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		CC3560461BF4453300D1780A /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		CC3560481BF4456A00D1780A /* DailyHotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyHotViewController.swift; sourceTree = "<group>"; };
-		CC35604A1BF4458500D1780A /* ClassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassViewController.swift; sourceTree = "<group>"; };
+		CC35604A1BF4458500D1780A /* CategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		CC35604C1BF4459200D1780A /* NodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeViewController.swift; sourceTree = "<group>"; };
 		CC35604E1BF445D500D1780A /* PersonalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
-		CC3560521BF485B600D1780A /* ClassItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassItemViewController.swift; sourceTree = "<group>"; };
 		CC3560561BF4897B00D1780A /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
 		CC3560591BF48A5200D1780A /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		CC9FE4AD1BF9F7AA006967FF /* DailyHotApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyHotApiManager.swift; sourceTree = "<group>"; };
@@ -81,6 +80,7 @@
 		CCB27C3B1BF4A0F300D91B75 /* AppConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
 		CCB27C561BF5BFA700D91B75 /* V2Topics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = V2Topics.swift; sourceTree = "<group>"; };
 		CCF36B311BFB3DF60006366D /* DateTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTool.swift; sourceTree = "<group>"; };
+		CCF9450A1BFC20F300AC8A6A /* CategorieItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorieItemViewController.swift; sourceTree = "<group>"; };
 		E716E6859B40D39F7099A9E0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -218,8 +218,8 @@
 		CC35603F1BF4433D00D1780A /* Class(分类) */ = {
 			isa = PBXGroup;
 			children = (
-				CC35604A1BF4458500D1780A /* ClassViewController.swift */,
-				CC3560521BF485B600D1780A /* ClassItemViewController.swift */,
+				CC35604A1BF4458500D1780A /* CategoriesViewController.swift */,
+				CCF9450A1BFC20F300AC8A6A /* CategorieItemViewController.swift */,
 			);
 			path = "Class(分类)";
 			sourceTree = "<group>";
@@ -524,16 +524,16 @@
 			files = (
 				CC3560491BF4456A00D1780A /* DailyHotViewController.swift in Sources */,
 				CCB27C3C1BF4A0F300D91B75 /* AppConstant.swift in Sources */,
-				CC35604B1BF4458500D1780A /* ClassViewController.swift in Sources */,
+				CC35604B1BF4458500D1780A /* CategoriesViewController.swift in Sources */,
 				CC9FE4B81BFAD457006967FF /* V2TopicCell.swift in Sources */,
 				CCB27C571BF5BFA700D91B75 /* V2Topics.swift in Sources */,
 				CC3560451BF4437E00D1780A /* RootViewController.swift in Sources */,
+				CCF9450B1BFC20F300AC8A6A /* CategorieItemViewController.swift in Sources */,
 				CC07B6C41BF9A24C00DD73F1 /* V2BaseApiManager.swift in Sources */,
 				CC35605A1BF48A5200D1780A /* Color.swift in Sources */,
 				CC9FE4AE1BF9F7AA006967FF /* DailyHotApiManager.swift in Sources */,
 				CC35603A1BF43F5F00D1780A /* AppDelegate.swift in Sources */,
 				CCF36B321BFB3DF60006366D /* DateTool.swift in Sources */,
-				CC3560531BF485B600D1780A /* ClassItemViewController.swift in Sources */,
 				CC35604D1BF4459200D1780A /* NodeViewController.swift in Sources */,
 				CC3560471BF4453300D1780A /* BaseViewController.swift in Sources */,
 				CC07B6C21BF9852800DD73F1 /* DebugLog.swift in Sources */,

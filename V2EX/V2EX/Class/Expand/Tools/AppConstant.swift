@@ -18,6 +18,17 @@ public let Tabbar_Height: CGFloat = 49.0
 
 
 
+/**
+    获取MainStoryboard 上的controller
+
+    - parameter identifier: controller id
+
+    - returns: controller
+ */
+public func viewControllerOfMainStoryboard(identifier: String) -> UIViewController {
+    let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+    return storyboard.instantiateViewControllerWithIdentifier(identifier)
+}
 
 
 
@@ -25,10 +36,9 @@ public let Tabbar_Height: CGFloat = 49.0
 // MARK: Net
 
 public let V2TimeoutInterval = 30.0
-
 public let V2EXBaseUrl = "https://www.v2ex.com"
 
-func networkReachability() -> Bool {
+public func networkReachability() -> Bool {
     do {
         let reachability = try Reachability.reachabilityForInternetConnection()
         return reachability.currentReachabilityStatus != .NotReachable
@@ -36,6 +46,10 @@ func networkReachability() -> Bool {
         return false
     }
 }
+
+
+
+
 
 
 

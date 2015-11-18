@@ -8,10 +8,9 @@
 
 import UIKit
 import PagingMenuController
-import SnapKit
 
 //MARK: life cycle
-class ClassViewController: BaseViewController  {
+class CategoriesViewController: BaseViewController  {
     
     var pagingMenuController: PagingMenuController!
     
@@ -27,7 +26,7 @@ class ClassViewController: BaseViewController  {
 }
 
 //MARK: PagingMenuController
-extension ClassViewController {
+extension CategoriesViewController {
     
     /**
      设置page页面
@@ -45,16 +44,18 @@ extension ClassViewController {
     /**
      分类controller数组
      */
-    func pagingControllerItems() -> [ClassItemViewController] {
+    func pagingControllerItems() -> [CategorieItemViewController] {
         
         let items = ["技术","创意","好玩","Apple","酷工作","交易","城市","问与答","最热","全部","R2","节点","关注"];
-        var controllers = [ClassItemViewController]()
+        var controllers = [CategorieItemViewController]()
         for item in items {
             
-            let controller = ClassItemViewController()
-            controller.title = item
-            
-            controllers.append(controller)
+            if let controller = viewControllerOfMainStoryboard("SID_ClassItemViewController") as? CategorieItemViewController {
+                
+                controller.title = item
+                
+                controllers.append(controller)
+            }
         }
         return controllers
     }
@@ -67,12 +68,13 @@ extension ClassViewController {
         
         options.menuItemMargin = 0
         options.menuHeight = 30
-        options.textColor = UIColor.blackColor()
-        options.font = UIFont.boldSystemFontOfSize(14)
+        options.textColor = UIColor(red: 51/255.0, green: 51/255.0, blue: 67/255.0, alpha: 1)
+        options.font = UIFont.boldSystemFontOfSize(13)
+        options.selectedFont = UIFont.boldSystemFontOfSize(13)
         options.selectedTextColor = UIColor.whiteColor()
         options.animationDuration = 0.2
         options.menuDisplayMode = .Standard(widthMode: .Fixed(width: 70), centerItem: false, scrollingMode: PagingMenuOptions.MenuScrollingMode.ScrollEnabled)
-        options.menuItemMode = .RoundRect(radius: 4, horizontalPadding: 5, verticalPadding: 5, selectedColor: UIColor.blackColor())
+        options.menuItemMode = .RoundRect(radius: 4, horizontalPadding: 5, verticalPadding: 5, selectedColor: UIColor(red: 51/255.0, green: 51/255.0, blue: 67/255.0, alpha: 1))
         return options
     }
 }
