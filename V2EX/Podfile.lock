@@ -1,21 +1,17 @@
 PODS:
   - Alamofire (3.1.2)
-  - Crashlytics (3.4.0):
+  - Crashlytics (3.4.1):
     - Fabric (~> 1.6.0)
-  - DGElasticPullToRefresh (1.0.3)
-  - Fabric (1.6.0):
-    - Fabric/Base (= 1.6.0)
-  - Fabric/Base (1.6.0)
-  - Kingfisher (1.8.0)
+  - Fabric (1.6.1)
+  - Kingfisher (1.8.2)
   - PagingMenuController (0.7.5)
-  - ReachabilitySwift (2.1)
-  - SnapKit (0.17.0)
+  - ReachabilitySwift (2.3)
+  - SnapKit (0.18.0)
   - SwiftDate (1.2)
 
 DEPENDENCIES:
   - Alamofire
   - Crashlytics
-  - DGElasticPullToRefresh
   - Fabric
   - Kingfisher
   - PagingMenuController
@@ -25,13 +21,12 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: 7c16ca65f3c7e681fd925fd7f2dec7747ff96855
-  Crashlytics: 1ee87895c37472eb3f01f409ea1654a464d2f8d4
-  DGElasticPullToRefresh: 040f39ae69840b3261d163fe6735c5901bf851e9
-  Fabric: d737eda3a26ac940a5430230eedb35f16b226131
-  Kingfisher: 4d40a6d8a0030b575be66593cae3aea587971a67
+  Crashlytics: 41574a245bc6ae10c55d57f385ebd2004e5bee05
+  Fabric: bf0ceb04e7c924090efc5f8c55e4fbcca189e0a0
+  Kingfisher: b39315e9dbed7e8ffe73a9ca1be2ee006d1d57e4
   PagingMenuController: ea590be94de2332a1f78fbbc45fa6f49405279ea
-  ReachabilitySwift: 99bb7acceebb90b2048b4a8fd6539be96454dcb2
-  SnapKit: 49fd7b1b3ff58ab4064004036b8afcfddbd3a4bd
+  ReachabilitySwift: 2ac9df18a443901f06caae38a9f5431219a4c36a
+  SnapKit: e1f090a6d47b1dd4bd89b73f72b6746a7835ef3c
   SwiftDate: 49ebd4efb5f82336cfc2b1d8a6622f47d4b17370
 
 COCOAPODS: 0.39.0

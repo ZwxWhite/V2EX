@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import DGElasticPullToRefresh
 
 // MARK: Life cycle
 class DailyHotViewController: BaseViewController,UITableViewDelegate,UITableViewDataSource,Contextualizable,ApiRequestCallBack {
@@ -26,7 +27,13 @@ class DailyHotViewController: BaseViewController,UITableViewDelegate,UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         loadData()
+        addRefresh()
+    }
+    
+    deinit {
+        tableView.dg_removePullToRefresh()
     }
 }
 
@@ -49,6 +56,10 @@ extension DailyHotViewController {
         }
         V2Error(currentDebugContext(),"cell error").logError()
         return UITableViewCell()
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.reloadData()
     }
 }
 
@@ -77,6 +88,7 @@ extension DailyHotViewController {
                 topics.append(V2TopicViewModel(topic: topic))
             }
             tableView.reloadData()
+            tableView.dg_stopLoading()
         } else {
             V2Error(currentDebugContext(),"格式不正确").logError()
         }
@@ -84,6 +96,10 @@ extension DailyHotViewController {
     
     internal func requestFailed(error: NSError) {
         V2Error(currentDebugContext(),error.domain).logError()
+    }
+    
+    internal func addRefresh() {
+
     }
 }
 
