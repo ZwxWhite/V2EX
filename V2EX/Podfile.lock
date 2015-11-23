@@ -2,6 +2,7 @@ PODS:
   - Alamofire (3.1.2)
   - Crashlytics (3.4.0):
     - Fabric (~> 1.6.0)
+  - DGElasticPullToRefresh (1.0.3)
   - Fabric (1.6.0):
     - Fabric/Base (= 1.6.0)
   - Fabric/Base (1.6.0)
@@ -14,6 +15,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - Crashlytics
+  - DGElasticPullToRefresh
   - Fabric
   - Kingfisher
   - PagingMenuController
@@ -24,6 +26,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Alamofire: 7c16ca65f3c7e681fd925fd7f2dec7747ff96855
   Crashlytics: 1ee87895c37472eb3f01f409ea1654a464d2f8d4
+  DGElasticPullToRefresh: 040f39ae69840b3261d163fe6735c5901bf851e9
   Fabric: d737eda3a26ac940a5430230eedb35f16b226131
   Kingfisher: 4d40a6d8a0030b575be66593cae3aea587971a67
   PagingMenuController: ea590be94de2332a1f78fbbc45fa6f49405279ea

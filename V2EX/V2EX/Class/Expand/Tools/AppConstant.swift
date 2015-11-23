@@ -16,8 +16,6 @@ public let Screen_Height = UIScreen.mainScreen().bounds.size.height
 public let NavigationBar_Height: CGFloat = 64.0
 public let Tabbar_Height: CGFloat = 49.0
 
-
-
 /**
     获取MainStoryboard 上的controller
 

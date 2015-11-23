@@ -44,16 +44,16 @@ extension CategoriesViewController {
     /**
      分类controller数组
      */
-    func pagingControllerItems() -> [CategorieItemViewController] {
+    func pagingControllerItems() -> [CategoryItemViewController] {
         
-        let items = ["技术","创意","好玩","Apple","酷工作","交易","城市","问与答","最热","全部","R2","节点","关注"];
-        var controllers = [CategorieItemViewController]()
-        for item in items {
-            
-            if let controller = viewControllerOfMainStoryboard("SID_ClassItemViewController") as? CategorieItemViewController {
-                
-                controller.title = item
-                
+        let titles = ["技术","创意","好玩","Apple","酷工作","交易","城市","问与答","最热","全部","R2","节点","关注"];
+        let items = [CategoryItem.Tech,CategoryItem.Creative,CategoryItem.Play,CategoryItem.Apple,CategoryItem.Jobs,CategoryItem.Deals,CategoryItem.City,CategoryItem.Qna,CategoryItem.Hot,CategoryItem.All,CategoryItem.R2,CategoryItem.Nodes,CategoryItem.Members];
+        
+        var controllers = [CategoryItemViewController]()
+        for index in 0...items.count-1 {
+            if let controller = viewControllerOfMainStoryboard("SID_CategoryItemViewController") as? CategoryItemViewController {
+                controller.title = titles[index]
+                controller.categotyItem = items[index]
                 controllers.append(controller)
             }
         }

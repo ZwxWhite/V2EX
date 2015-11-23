@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>DGElasticPullToRefresh.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Kingfisher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,12 +52,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>132C06A93A84116D23E4A7F881C4E0FC</key>
+		<key>115824B7CB2E76E5ACB836A251E79404</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1A520A1E88275801642BF9DDCEE42981</key>
+		<key>2336E32EBAC08DFC22C14EDBAB88B32E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,7 +67,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3D9F1F3C472240960E84964F1BB43CC9</key>
+		<key>29C2CAFDBBB48AFE75980961867B769F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2FE9B19FCA28AC6F1BF1D5FD6CDC39B5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -77,7 +87,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A6584DC537825D54047E7C5C1A8CFBB7</key>
+		<key>E427EF3379E76F1A115A082C5DB10406</key>
 		<dict>
 			<key>primary</key>
 			<true/>

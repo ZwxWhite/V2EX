@@ -6,6 +6,8 @@
 //  Copyright © 2015年 张文轩. All rights reserved.
 //
 
+
+// 今日热议
 class DailyHotApiManager: BaseApiManager {
     
     override var methodName:String {
@@ -26,4 +28,38 @@ class DailyHotApiManager: BaseApiManager {
         }
     }
 }
+
+
+// 分类
+class CategoryApiManager: BaseApiManager {
+
+    var tab: String! {
+        didSet{
+            self.requestParams = ["tab":tab]
+        }
+    }
+    
+    override var baseUrl: String {
+        return "https://www.v2ex.com"
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

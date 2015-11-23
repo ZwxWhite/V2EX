@@ -18,10 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
-        Fabric.sharedSDK().debug = true
-        Fabric.with([Crashlytics.self()])
+        configTools()
         
-
+        configV2exStyle(application)
+        
         return true
     }
 
@@ -34,7 +34,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidBecomeActive(application: UIApplication) {}
 
     func applicationWillTerminate(application: UIApplication) {}
-
-
 }
+
+
+
+extension AppDelegate {
+    
+    func configTools() {
+        Fabric.sharedSDK().debug = true
+        Fabric.with([Crashlytics.self()])
+    }
+    
+    func configV2exStyle(application: UIApplication) {
+
+        UINavigationBar.appearance().barTintColor = UIColor.whiteColor()
+    }
+}
+
+
+
+
+
+
+
 
