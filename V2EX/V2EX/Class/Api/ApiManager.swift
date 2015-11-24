@@ -6,6 +6,8 @@
 //  Copyright © 2015年 张文轩. All rights reserved.
 //
 
+import Alamofire
+
 
 // 今日热议
 class DailyHotApiManager: BaseApiManager {
@@ -39,8 +41,26 @@ class CategoryApiManager: BaseApiManager {
         }
     }
     
-    override var baseUrl: String {
-        return "https://www.v2ex.com"
+    override func startRequest() {
+        
+        var method : Method
+        switch requestMethod {
+        case .Get: method = .GET
+        case .Post:method = .POST
+        }
+        
+        self.request = manager.request(method, baseUrl+methodName, parameters: requestParams, encoding: ParameterEncoding.URL, headers: requestHeaders).responseJSON { response in
+            switch response.result {
+            case .Success(_):
+                if let delegate = self.delegate {
+                    delegate.requestFinish(response)
+                }
+            case .Failure(let error):
+                if let delegate = self.delegate {
+                    delegate.requestFailed(error)
+                }
+            }
+        }
     }
     
 }

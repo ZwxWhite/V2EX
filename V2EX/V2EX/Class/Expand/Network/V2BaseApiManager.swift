@@ -89,10 +89,10 @@ class BaseApiManager: ApiManagerProtocol, RequestParamsValidator {
     weak var delegate: ApiRequestCallBack?
     
     /// 请求manager
-    private var manager: Manager
+    var manager: Manager
     
     /// 请求request
-    private var request: Request?
+    var request: Request?
     
 
     init() {
@@ -121,12 +121,17 @@ class BaseApiManager: ApiManagerProtocol, RequestParamsValidator {
         }
         
         // 3.发起请求
+        startRequest()
+    }
+    
+    func startRequest() {
+        
         var method : Method
         switch requestMethod {
         case .Get: method = .GET
         case .Post:method = .POST
         }
-
+        
         request = manager.request(method, baseUrl+methodName, parameters: requestParams, encoding: .URL, headers: requestHeaders).responseJSON { response in
             switch response.result {
             case .Success(_):

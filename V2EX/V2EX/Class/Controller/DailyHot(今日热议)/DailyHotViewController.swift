@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import DGElasticPullToRefresh
 
-// MARK: Life cycle
+// MARK: - Life cycle
 class DailyHotViewController: BaseViewController,UITableViewDelegate,UITableViewDataSource,Contextualizable,ApiRequestCallBack {
 
     @IBOutlet weak var tableView: UITableView! {
@@ -40,7 +40,7 @@ class DailyHotViewController: BaseViewController,UITableViewDelegate,UITableView
     }
 }
 
-// MARK: UITableViewDelegate & UITableViewDataSource
+// MARK: - UITableViewDelegate & UITableViewDataSource
 extension DailyHotViewController {
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -67,7 +67,7 @@ extension DailyHotViewController {
 }
 
 
-// MARK: LoadData
+// MARK: - LoadData
 extension DailyHotViewController {
     func loadData() {
             
