@@ -25,6 +25,9 @@ class DailyHotViewController: BaseViewController,UITableViewDelegate,UITableView
     /// 数据源
     private var topics = [V2TopicViewModel]()
     
+    /// 刷新
+    private var refreshControl: UIRefreshControl?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -66,7 +69,7 @@ extension DailyHotViewController {
 
 // MARK: LoadData
 extension DailyHotViewController {
-    private func loadData() {
+    func loadData() {
             
         do {
             apiManager.delegate = self
@@ -88,18 +91,22 @@ extension DailyHotViewController {
                 topics.append(V2TopicViewModel(topic: topic))
             }
             tableView.reloadData()
-            tableView.dg_stopLoading()
         } else {
             V2Error(currentDebugContext(),"格式不正确").logError()
         }
+        refreshControl?.endRefreshing()
     }
     
     internal func requestFailed(error: NSError) {
+        refreshControl?.endRefreshing()
         V2Error(currentDebugContext(),error.domain).logError()
     }
     
-    internal func addRefresh() {
-
+    private func addRefresh() {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: "loadData", forControlEvents: UIControlEvents.ValueChanged)
+        self.refreshControl = refreshControl
+        tableView.addSubview(refreshControl)
     }
 }
 
