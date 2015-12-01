@@ -10,7 +10,7 @@ import UIKit
 import PagingMenuController
 
 //MARK: life cycle
-class CategoriesViewController: BaseViewController  {
+class CategoriesViewController: UIViewController  {
     
     var pagingMenuController: PagingMenuController!
     
@@ -47,13 +47,10 @@ extension CategoriesViewController {
     func pagingControllerItems() -> [CategoryItemViewController] {
         
         let titles = ["技术","创意","好玩","Apple","酷工作","交易","城市","问与答","最热","全部","R2","节点","关注"];
-        let items = [CategoryItem.Tech,CategoryItem.Creative,CategoryItem.Play,CategoryItem.Apple,CategoryItem.Jobs,CategoryItem.Deals,CategoryItem.City,CategoryItem.Qna,CategoryItem.Hot,CategoryItem.All,CategoryItem.R2,CategoryItem.Nodes,CategoryItem.Members];
-        
         var controllers = [CategoryItemViewController]()
-        for index in 0...items.count-1 {
+        for index in 0...titles.count-1 {
             if let controller = viewControllerOfMainStoryboard("SID_CategoryItemViewController") as? CategoryItemViewController {
                 controller.title = titles[index]
-                controller.categotyItem = items[index]
                 controllers.append(controller)
             }
         }

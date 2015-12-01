@@ -9,7 +9,7 @@
 import UIKit
 import Crashlytics
 
-class NodeViewController: BaseViewController {
+class NodeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

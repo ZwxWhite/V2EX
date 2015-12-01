@@ -11,16 +11,13 @@ import Alamofire
 import DGElasticPullToRefresh
 
 // MARK: - Life cycle
-class DailyHotViewController: BaseViewController,UITableViewDelegate,UITableViewDataSource,Contextualizable,ApiRequestCallBack {
+class DailyHotViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,Contextualizable {
 
     @IBOutlet weak var tableView: UITableView! {
         didSet{
             self.tableView.tableFooterView = UIView()
         }
     }
-    
-    /// 请求
-    private lazy var apiManager = DailyHotApiManager()
     
     /// 数据源
     private var topics = [V2TopicViewModel]()
@@ -71,42 +68,14 @@ extension DailyHotViewController {
 extension DailyHotViewController {
     func loadData() {
             
-        do {
-            apiManager.delegate = self
-            try apiManager.start()
-        } catch HttpRequestErrorType.NoNetWork{
-            V2Error(currentDebugContext(),"网络不通").logError()
-        } catch HttpRequestErrorType.ParamsError{
-            V2Error(currentDebugContext(),"参数错误").logError()
-        } catch {
-            V2Error(currentDebugContext(),"未知错误").logError()
-        }
+
     }
     
-    internal func requestFinish(response: Response<AnyObject, NSError>) {
-        if let result = response.result.value as? NSArray {
-            for dictionary in result {
-                
-                let topic = V2Topic(dictionary: dictionary as! NSDictionary)
-                topics.append(V2TopicViewModel(topic: topic))
-            }
-            tableView.reloadData()
-        } else {
-            V2Error(currentDebugContext(),"格式不正确").logError()
-        }
-        refreshControl?.endRefreshing()
-    }
-    
-    internal func requestFailed(error: NSError) {
-        refreshControl?.endRefreshing()
-        V2Error(currentDebugContext(),error.domain).logError()
-    }
     
     private func addRefresh() {
-        let refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: "loadData", forControlEvents: UIControlEvents.ValueChanged)
-        self.refreshControl = refreshControl
-        tableView.addSubview(refreshControl)
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl!.addTarget(self, action: "loadData", forControlEvents: UIControlEvents.ValueChanged)
+        tableView.addSubview(self.refreshControl!)
     }
 }
 

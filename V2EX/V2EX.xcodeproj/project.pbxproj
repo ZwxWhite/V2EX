@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8EE480D6E0032F386D83A753 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 971F9F073A31501FD7E5A26C /* Pods.framework */; };
 		CC07B6C21BF9852800DD73F1 /* DebugLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC07B6C11BF9852800DD73F1 /* DebugLog.swift */; };
-		CC07B6C41BF9A24C00DD73F1 /* V2BaseApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC07B6C31BF9A24C00DD73F1 /* V2BaseApiManager.swift */; };
 		CC3560081BF33A8E00D1780A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC3560071BF33A8E00D1780A /* Assets.xcassets */; };
 		CC3560161BF33A8E00D1780A /* V2EXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3560151BF33A8E00D1780A /* V2EXTests.swift */; };
 		CC3560211BF33A8F00D1780A /* V2EXUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3560201BF33A8F00D1780A /* V2EXUITests.swift */; };
@@ -18,14 +17,12 @@
 		CC35603C1BF43F5F00D1780A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC3560391BF43F5F00D1780A /* Info.plist */; };
 		CC35603E1BF4406000D1780A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC35603D1BF4406000D1780A /* Main.storyboard */; };
 		CC3560451BF4437E00D1780A /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3560441BF4437E00D1780A /* RootViewController.swift */; };
-		CC3560471BF4453300D1780A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3560461BF4453300D1780A /* BaseViewController.swift */; };
 		CC3560491BF4456A00D1780A /* DailyHotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3560481BF4456A00D1780A /* DailyHotViewController.swift */; };
 		CC35604B1BF4458500D1780A /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC35604A1BF4458500D1780A /* CategoriesViewController.swift */; };
 		CC35604D1BF4459200D1780A /* NodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC35604C1BF4459200D1780A /* NodeViewController.swift */; };
 		CC35604F1BF445D500D1780A /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC35604E1BF445D500D1780A /* PersonalViewController.swift */; };
 		CC3560571BF4897B00D1780A /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3560561BF4897B00D1780A /* Random.swift */; };
 		CC35605A1BF48A5200D1780A /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3560591BF48A5200D1780A /* Color.swift */; };
-		CC9FE4AE1BF9F7AA006967FF /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9FE4AD1BF9F7AA006967FF /* ApiManager.swift */; };
 		CC9FE4B81BFAD457006967FF /* V2TopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9FE4B71BFAD457006967FF /* V2TopicCell.swift */; };
 		CCB27C3C1BF4A0F300D91B75 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB27C3B1BF4A0F300D91B75 /* AppConstant.swift */; };
 		CCB27C571BF5BFA700D91B75 /* V2Topics.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB27C561BF5BFA700D91B75 /* V2Topics.swift */; };
@@ -54,7 +51,6 @@
 		8F53E090EA56FC6699AB8AE4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		971F9F073A31501FD7E5A26C /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC07B6C11BF9852800DD73F1 /* DebugLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugLog.swift; sourceTree = "<group>"; };
-		CC07B6C31BF9A24C00DD73F1 /* V2BaseApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = V2BaseApiManager.swift; sourceTree = "<group>"; };
 		CC355FFD1BF33A8E00D1780A /* V2EX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = V2EX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC3560071BF33A8E00D1780A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC3560111BF33A8E00D1780A /* V2EXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = V2EXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,14 +64,12 @@
 		CC3560391BF43F5F00D1780A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC35603D1BF4406000D1780A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CC3560441BF4437E00D1780A /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		CC3560461BF4453300D1780A /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		CC3560481BF4456A00D1780A /* DailyHotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyHotViewController.swift; sourceTree = "<group>"; };
 		CC35604A1BF4458500D1780A /* CategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		CC35604C1BF4459200D1780A /* NodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeViewController.swift; sourceTree = "<group>"; };
 		CC35604E1BF445D500D1780A /* PersonalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
 		CC3560561BF4897B00D1780A /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
 		CC3560591BF48A5200D1780A /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		CC9FE4AD1BF9F7AA006967FF /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		CC9FE4B71BFAD457006967FF /* V2TopicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = V2TopicCell.swift; sourceTree = "<group>"; };
 		CCB27C3B1BF4A0F300D91B75 /* AppConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
 		CCB27C561BF5BFA700D91B75 /* V2Topics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = V2Topics.swift; sourceTree = "<group>"; };
@@ -252,7 +246,6 @@
 			isa = PBXGroup;
 			children = (
 				CC3560441BF4437E00D1780A /* RootViewController.swift */,
-				CC3560461BF4453300D1780A /* BaseViewController.swift */,
 			);
 			path = "Other(其他)";
 			sourceTree = "<group>";
@@ -290,7 +283,6 @@
 		CC9FE4AC1BF9F78B006967FF /* Api */ = {
 			isa = PBXGroup;
 			children = (
-				CC9FE4AD1BF9F7AA006967FF /* ApiManager.swift */,
 			);
 			name = Api;
 			path = Class/Api;
@@ -307,7 +299,6 @@
 		CCB27C3D1BF5863200D91B75 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				CC07B6C31BF9A24C00DD73F1 /* V2BaseApiManager.swift */,
 			);
 			name = Network;
 			path = V2EX/Class/Expand/Network;
@@ -529,13 +520,10 @@
 				CCB27C571BF5BFA700D91B75 /* V2Topics.swift in Sources */,
 				CC3560451BF4437E00D1780A /* RootViewController.swift in Sources */,
 				CCF9450B1BFC20F300AC8A6A /* CategoryItemViewController.swift in Sources */,
-				CC07B6C41BF9A24C00DD73F1 /* V2BaseApiManager.swift in Sources */,
 				CC35605A1BF48A5200D1780A /* Color.swift in Sources */,
-				CC9FE4AE1BF9F7AA006967FF /* ApiManager.swift in Sources */,
 				CC35603A1BF43F5F00D1780A /* AppDelegate.swift in Sources */,
 				CCF36B321BFB3DF60006366D /* DateTool.swift in Sources */,
 				CC35604D1BF4459200D1780A /* NodeViewController.swift in Sources */,
-				CC3560471BF4453300D1780A /* BaseViewController.swift in Sources */,
 				CC07B6C21BF9852800DD73F1 /* DebugLog.swift in Sources */,
 				CC35604F1BF445D500D1780A /* PersonalViewController.swift in Sources */,
 				CC3560571BF4897B00D1780A /* Random.swift in Sources */,
