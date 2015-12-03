@@ -18,7 +18,7 @@ final class ZZNetworkAgent {
         
         Alamofire.request(request.method, buildRequestUrl(request), parameters: request.parameters, encoding: request.encoding, headers: request.headers)
     }
-        
+    
     private func buildRequestUrl(request: ZZBaseRequest) -> String {
         
         if let detailUrl = request.requestUrl {
