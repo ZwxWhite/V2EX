@@ -32,14 +32,10 @@ final class ZZNetworkAgent {
     }
     
     private func buildRequestUrl(request: ZZBaseRequest) -> String {
-        if let detailUrl = request.requestUrl {
-            if detailUrl.hasPrefix("http") {
-                return detailUrl
-            } else {
-                return String(request.baseUrl.appendContentsOf(detailUrl))
-            }
+        if request.requestUrl.hasPrefix("http") {
+            return request.requestUrl
         } else {
-            return request.baseUrl
+            return String(request.baseUrl.appendContentsOf(request.requestUrl))
         }
     }
 }

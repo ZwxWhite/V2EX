@@ -24,6 +24,8 @@
 		CC35605A1BF48A5200D1780A /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3560591BF48A5200D1780A /* Color.swift */; };
 		CC67D5901C113D1A00D23B8F /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC67D58E1C113D1A00D23B8F /* CategoriesViewController.swift */; };
 		CC67D5911C113D1A00D23B8F /* CategoryItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC67D58F1C113D1A00D23B8F /* CategoryItemViewController.swift */; };
+		CC67D5961C113E6500D23B8F /* DailyHotControllerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC67D5951C113E6500D23B8F /* DailyHotControllerService.swift */; };
+		CC67D5981C113EB200D23B8F /* DailyHotRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC67D5971C113EB200D23B8F /* DailyHotRequest.swift */; };
 		CC9050841C0ED33800E3C84E /* ZZBaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9050831C0ED33800E3C84E /* ZZBaseRequest.swift */; };
 		CC9050851C0ED33800E3C84E /* ZZBaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9050831C0ED33800E3C84E /* ZZBaseRequest.swift */; };
 		CC9050871C0ED81E00E3C84E /* ZZNetworkAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9050861C0ED81E00E3C84E /* ZZNetworkAgent.swift */; };
@@ -75,6 +77,8 @@
 		CC3560591BF48A5200D1780A /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		CC67D58E1C113D1A00D23B8F /* CategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		CC67D58F1C113D1A00D23B8F /* CategoryItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryItemViewController.swift; sourceTree = "<group>"; };
+		CC67D5951C113E6500D23B8F /* DailyHotControllerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyHotControllerService.swift; sourceTree = "<group>"; };
+		CC67D5971C113EB200D23B8F /* DailyHotRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyHotRequest.swift; sourceTree = "<group>"; };
 		CC9050831C0ED33800E3C84E /* ZZBaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZZBaseRequest.swift; sourceTree = "<group>"; };
 		CC9050861C0ED81E00E3C84E /* ZZNetworkAgent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZZNetworkAgent.swift; sourceTree = "<group>"; };
 		CC9FE4B71BFAD457006967FF /* V2TopicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = V2TopicCell.swift; sourceTree = "<group>"; };
@@ -147,7 +151,7 @@
 				CC3560331BF43EF900D1780A /* Model */,
 				CC3560351BF43EF900D1780A /* View */,
 				CC3560541BF4894300D1780A /* Expand */,
-				CC9FE4AC1BF9F78B006967FF /* Api */,
+				CC67D5921C113DEF00D23B8F /* Service */,
 				CC3560361BF43F5F00D1780A /* Other */,
 				CC3560071BF33A8E00D1780A /* Assets.xcassets */,
 			);
@@ -286,12 +290,30 @@
 			path = "Category(分类)";
 			sourceTree = "<group>";
 		};
-		CC9FE4AC1BF9F78B006967FF /* Api */ = {
+		CC67D5921C113DEF00D23B8F /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				CC67D5941C113E4800D23B8F /* Controller's Service */,
+				CC67D5931C113DEF00D23B8F /* Api */,
 			);
-			name = Api;
-			path = Class/Api;
+			name = Service;
+			path = Class/Service;
+			sourceTree = "<group>";
+		};
+		CC67D5931C113DEF00D23B8F /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				CC67D5971C113EB200D23B8F /* DailyHotRequest.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		CC67D5941C113E4800D23B8F /* Controller's Service */ = {
+			isa = PBXGroup;
+			children = (
+				CC67D5951C113E6500D23B8F /* DailyHotControllerService.swift */,
+			);
+			path = "Controller's Service";
 			sourceTree = "<group>";
 		};
 		CC9FE4B61BFAD440006967FF /* Cell */ = {
@@ -528,12 +550,14 @@
 				CC3560451BF4437E00D1780A /* RootViewController.swift in Sources */,
 				CC35605A1BF48A5200D1780A /* Color.swift in Sources */,
 				CC35603A1BF43F5F00D1780A /* AppDelegate.swift in Sources */,
+				CC67D5981C113EB200D23B8F /* DailyHotRequest.swift in Sources */,
 				CCF36B321BFB3DF60006366D /* DateTool.swift in Sources */,
 				CC35604D1BF4459200D1780A /* NodeViewController.swift in Sources */,
 				CC9050841C0ED33800E3C84E /* ZZBaseRequest.swift in Sources */,
 				CC9050871C0ED81E00E3C84E /* ZZNetworkAgent.swift in Sources */,
 				CC07B6C21BF9852800DD73F1 /* DebugLog.swift in Sources */,
 				CC35604F1BF445D500D1780A /* PersonalViewController.swift in Sources */,
+				CC67D5961C113E6500D23B8F /* DailyHotControllerService.swift in Sources */,
 				CC3560571BF4897B00D1780A /* Random.swift in Sources */,
 				CC67D5911C113D1A00D23B8F /* CategoryItemViewController.swift in Sources */,
 				CC67D5901C113D1A00D23B8F /* CategoriesViewController.swift in Sources */,
