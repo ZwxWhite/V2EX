@@ -67,17 +67,17 @@ extension DailyHotViewController {
 // MARK: - LoadData
 extension DailyHotViewController {
     func loadData() {
+        topics.removeAll()
         let request = DailyHotRequest()
         request.start()?.responseJSON(completionHandler: { (response) -> Void in
             if let result = response.result.value as? NSArray {
                 for dictionary in result {
                     let topic = V2Topic(dictionary: dictionary as! NSDictionary)
-                    self.self.topics.append(V2TopicViewModel(topic: topic))
+                    self.topics.append(V2TopicViewModel(topic: topic))
                 }
                 self.tableView.reloadData()
             } else {
                 V2Error(self.currentDebugContext(),"格式不正确").logError()
-                V2Error(self.currentDebugContext(),(response.result.error?.domain)!).logError()
             }
             self.refreshControl?.endRefreshing()
         })
