@@ -10,7 +10,7 @@ import Alamofire
 
 protocol ZZRequestProtocol {
     func requestFinish(response: Response<AnyObject, NSError>)
-    func requestFailed(error: ErrorType)
+    func requestFailed(error: NSError)
 }
 
 
@@ -27,7 +27,7 @@ class ZZBaseRequest {
     
     var requestUrl: String?
     
-    var baseUrl: String = "http://www.v2ex.com"
+    var baseUrl: String = V2EXBaseUrl
     
     var parameters: [String: AnyObject]?
     
@@ -35,6 +35,11 @@ class ZZBaseRequest {
     
     var headers: [String: String]?
     
+    var request: Request?
+    
+    func start() {
+        request = ZZNetworkAgent.sharedInstance.addRequest(self)
+    }
 }
 
 

@@ -7,34 +7,31 @@
 //
 
 import Alamofire
-import ReachabilitySwift
 
 final class ZZNetworkAgent {
     
     // 获取单例
     static let sharedInstance = ZZNetworkAgent()
     
+    lazy private var requestsRecord = [Int: ZZBaseRequest]()
     
-    func addRequest(request: ZZBaseRequest) {
+    func addRequest(request: ZZBaseRequest) -> Request? {
         
         // 判断网络状态
-        let reachability: Reachability
-        do {
-            reachability = try Reachability.reachabilityForInternetConnection()
-        } catch {
-            request.delegate?.requestFailed(Error.errorWithCode(7000, failureReason: "网络未连接"))
-            return
-        }
-        reachability.whenUnreachable = { reachability in
-            request.delegate?.requestFailed(Error.errorWithCode(7000, failureReason: "网络未连接"))
-            return
+        if networkReachability() {
+            request.delegate?.requestFailed(Error.errorWithCode(7001, failureReason: "网络未连接"))
+            return nil
         }
         
-        Alamofire.request(request.method, buildRequestUrl(request), parameters: request.parameters, encoding: request.encoding, headers: request.headers)
+        // 添加至operation
+        let requestKey = buildRequestUrl(request).hash
+        requestsRecord[requestKey] = request
+        
+        // 发送网络请求,返回Request
+        return Alamofire.request(request.method, buildRequestUrl(request), parameters: request.parameters, encoding: request.encoding, headers: request.headers)
     }
     
     private func buildRequestUrl(request: ZZBaseRequest) -> String {
-        
         if let detailUrl = request.requestUrl {
             if detailUrl.hasPrefix("http") {
                 return detailUrl

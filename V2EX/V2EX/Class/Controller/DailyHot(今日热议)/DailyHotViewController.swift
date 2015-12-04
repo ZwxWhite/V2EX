@@ -71,7 +71,6 @@ extension DailyHotViewController {
 
     }
     
-    
     private func addRefresh() {
         self.refreshControl = UIRefreshControl()
         self.refreshControl!.addTarget(self, action: "loadData", forControlEvents: UIControlEvents.ValueChanged)

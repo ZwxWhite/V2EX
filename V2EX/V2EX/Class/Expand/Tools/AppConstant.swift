@@ -23,7 +23,7 @@ public let Tabbar_Height: CGFloat = 49.0
 
     - returns: controller
  */
-public func viewControllerOfMainStoryboard(identifier: String) -> UIViewController {
+public func viewControllerOfMainStoryboard(identifier: String) -> UIViewController? {
     let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
     return storyboard.instantiateViewControllerWithIdentifier(identifier)
 }
@@ -31,9 +31,10 @@ public func viewControllerOfMainStoryboard(identifier: String) -> UIViewControll
 
 
 
-// MARK: Net
+// MARK: - Net
 
 public let V2TimeoutInterval = 30.0
+
 public let V2EXBaseUrl = "https://www.v2ex.com"
 
 public func networkReachability() -> Bool {
