@@ -8,19 +8,8 @@
 
 import Alamofire
 
-protocol ZZRequestProtocol {
-    func requestFinish(response: Response<AnyObject, NSError>)
-    func requestFailed(error: NSError)
-}
-
-
-
-
 
 class ZZBaseRequest {
-    
-    /// 回调代理
-    var delegate: ZZRequestProtocol?
     
     /// 请求方式
     var method: Method = .GET

@@ -15,14 +15,7 @@ final class ZZNetworkAgent {
     
     lazy private var requestsRecord = [Int: ZZBaseRequest]()
     
-    func addRequest(request: ZZBaseRequest) -> Request? {
-        
-        // 判断网络状态
-        if networkReachability() {
-            request.delegate?.requestFailed(Error.errorWithCode(7001, failureReason: "网络未连接"))
-            return nil
-        }
-        
+    func addRequest(request: ZZBaseRequest) -> Request {
         // 添加至operation
         let requestKey = buildRequestUrl(request).hash
         requestsRecord[requestKey] = request
@@ -36,7 +29,7 @@ final class ZZNetworkAgent {
             if detailUrl.hasPrefix("http") {
                 return detailUrl
             } else {
-                return String(request.baseUrl.appendContentsOf(detailUrl))
+                return String(request.baseUrl + (detailUrl))
             }
         } else {
             return request.baseUrl
