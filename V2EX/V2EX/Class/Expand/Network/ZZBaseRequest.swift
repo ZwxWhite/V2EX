@@ -19,26 +19,33 @@ protocol ZZRequestProtocol {
 
 class ZZBaseRequest {
     
+    /// 回调代理
     var delegate: ZZRequestProtocol?
     
-    var manager: Manager!
-    
+    /// 请求方式
     var method: Method = .GET
     
-    var requestUrl: String = ""
-    
+    /// baseUrl
     var baseUrl: String = V2EXBaseUrl
     
+    /// 请求url
+    var requestUrl: String?
+    
+    /// 请求参数
     var parameters: [String: AnyObject]?
     
+    /// encoding
     var encoding: ParameterEncoding = .URL
     
+    /// header
     var headers: [String: String]?
     
+    /// 请求的request
     var request: Request?
     
-    func start() {
+    func start() -> Request? {
         request = ZZNetworkAgent.sharedInstance.addRequest(self)
+        return request
     }
 }
 

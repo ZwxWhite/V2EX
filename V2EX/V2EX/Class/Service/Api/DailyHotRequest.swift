@@ -9,10 +9,12 @@
 
 class DailyHotRequest: ZZBaseRequest {
     
-    override var requestUrl: String {
-        get{
-            return "/api/topics/hot.json"
-        }
+    override init() {
+        super.init()
+        
+        self.requestUrl = "/api/topics/hot.json"
+        self.method = .GET
+        
     }
 }
 

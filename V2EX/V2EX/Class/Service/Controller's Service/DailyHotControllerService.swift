@@ -9,9 +9,15 @@
 
 class DailyHotControllerService {
     
-    var request: DailyHotRequest = DailyHotRequest()
+    var dailyHotRequest: DailyHotRequest = DailyHotRequest()
     
-    func startLoadData() {
-    
+    func loadData() {
+        if let request = dailyHotRequest.start() {
+            request.responseJSON(completionHandler: { (reponse) -> Void in
+                
+            })
+        } else {
+            
+        }
     }
 }
