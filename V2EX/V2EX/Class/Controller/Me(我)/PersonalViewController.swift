@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PersonalViewController: UIViewController {
+class PersonalViewController: UIViewController, UITableViewDelegate {
 
     
     @IBOutlet weak var tableView: UITableView! {
@@ -30,7 +30,7 @@ class PersonalViewController: UIViewController {
 extension PersonalViewController {
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -38,14 +38,38 @@ extension PersonalViewController {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        if let headerCell = tableView.dequeueReusableCellWithIdentifier("UserHeaderCell", forIndexPath: indexPath) as? UserHeaderCell {
+        if indexPath.section == 0 {
+            let headerCell = tableView.dequeueReusableCellWithIdentifier("UserHeaderCell", forIndexPath: indexPath) as! UserHeaderCell
+            
             return headerCell
         }
+        
+        else if indexPath.section == 1 {
+            let logoutCell = tableView.dequeueReusableCellWithIdentifier("LogoutCell", forIndexPath: indexPath)
+            
+            return logoutCell
+        }
+        
         return UITableViewCell()
     }
     
+    func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return UIView()
+    }
+    
+    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 20;
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if indexPath.section == 0 {
+            return 140
+        }
+        return 40
+    }
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-
+        
     }
 }
 
