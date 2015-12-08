@@ -5,10 +5,10 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="kw3-mN-Ve5">
             <objects>
-                <viewController id="DcF-iP-oKd" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SID_ LoginViewController" id="DcF-iP-oKd" customClass="LoginViewController" customModule="V2EX" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hMX-6Q-QSA"/>
                         <viewControllerLayoutGuide type="bottom" id="1SY-L5-EMY"/>
