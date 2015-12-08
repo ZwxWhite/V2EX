@@ -33,6 +33,7 @@
 		CC9FE4B81BFAD457006967FF /* V2TopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9FE4B71BFAD457006967FF /* V2TopicCell.swift */; };
 		CCB27C3C1BF4A0F300D91B75 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB27C3B1BF4A0F300D91B75 /* AppConstant.swift */; };
 		CCB27C571BF5BFA700D91B75 /* V2Topics.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB27C561BF5BFA700D91B75 /* V2Topics.swift */; };
+		CCB8C8751C16FCFA00404F15 /* Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8C8741C16FCFA00404F15 /* Extention.swift */; };
 		CCF36B321BFB3DF60006366D /* DateTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF36B311BFB3DF60006366D /* DateTool.swift */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +85,7 @@
 		CC9FE4B71BFAD457006967FF /* V2TopicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = V2TopicCell.swift; sourceTree = "<group>"; };
 		CCB27C3B1BF4A0F300D91B75 /* AppConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
 		CCB27C561BF5BFA700D91B75 /* V2Topics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = V2Topics.swift; sourceTree = "<group>"; };
+		CCB8C8741C16FCFA00404F15 /* Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extention.swift; sourceTree = "<group>"; };
 		CCF36B311BFB3DF60006366D /* DateTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTool.swift; sourceTree = "<group>"; };
 		E716E6859B40D39F7099A9E0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,6 +153,7 @@
 				CC3560331BF43EF900D1780A /* Model */,
 				CC3560351BF43EF900D1780A /* View */,
 				CC3560541BF4894300D1780A /* Expand */,
+				CCB8C8731C16FCDA00404F15 /* Extention */,
 				CC67D5921C113DEF00D23B8F /* Service */,
 				CC3560361BF43F5F00D1780A /* Other */,
 				CC3560071BF33A8E00D1780A /* Assets.xcassets */,
@@ -325,6 +328,15 @@
 			name = Network;
 			path = V2EX/Class/Expand/Network;
 			sourceTree = SOURCE_ROOT;
+		};
+		CCB8C8731C16FCDA00404F15 /* Extention */ = {
+			isa = PBXGroup;
+			children = (
+				CCB8C8741C16FCFA00404F15 /* Extention.swift */,
+			);
+			name = Extention;
+			path = Class/Extention;
+			sourceTree = "<group>";
 		};
 		F0F01E4CA06FBBEC5D8DC79F /* Pods */ = {
 			isa = PBXGroup;
@@ -542,6 +554,7 @@
 				CC3560451BF4437E00D1780A /* RootViewController.swift in Sources */,
 				CC35605A1BF48A5200D1780A /* Color.swift in Sources */,
 				CC35603A1BF43F5F00D1780A /* AppDelegate.swift in Sources */,
+				CCB8C8751C16FCFA00404F15 /* Extention.swift in Sources */,
 				CC67D5981C113EB200D23B8F /* DailyHotRequest.swift in Sources */,
 				CCF36B321BFB3DF60006366D /* DateTool.swift in Sources */,
 				CC35604D1BF4459200D1780A /* NodeViewController.swift in Sources */,
