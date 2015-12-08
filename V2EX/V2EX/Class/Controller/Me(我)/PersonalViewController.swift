@@ -38,9 +38,8 @@ extension PersonalViewController {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        if let topicCell = tableView.dequeueReusableCellWithIdentifier("UserHeaderCell", forIndexPath: indexPath) as? UserHeaderCell {
-    
-            
+        if let headerCell = tableView.dequeueReusableCellWithIdentifier("UserHeaderCell", forIndexPath: indexPath) as? UserHeaderCell {
+            return headerCell
         }
         return UITableViewCell()
     }
