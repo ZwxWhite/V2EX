@@ -63,7 +63,7 @@ extension PersonalViewController {
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if indexPath.section == 0 {
-            return 170
+            return 160
         }
         return 40
     }
