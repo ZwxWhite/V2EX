@@ -36,6 +36,7 @@
 		CCB27C571BF5BFA700D91B75 /* V2Topics.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB27C561BF5BFA700D91B75 /* V2Topics.swift */; };
 		CCB8C8751C16FCFA00404F15 /* Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8C8741C16FCFA00404F15 /* Extention.swift */; };
 		CCF36B321BFB3DF60006366D /* DateTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF36B311BFB3DF60006366D /* DateTool.swift */; };
+		CCFCB8E31C192CC7006AF972 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCB8E21C192CC7006AF972 /* LoginRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		CCB27C561BF5BFA700D91B75 /* V2Topics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = V2Topics.swift; sourceTree = "<group>"; };
 		CCB8C8741C16FCFA00404F15 /* Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extention.swift; sourceTree = "<group>"; };
 		CCF36B311BFB3DF60006366D /* DateTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTool.swift; sourceTree = "<group>"; };
+		CCFCB8E21C192CC7006AF972 /* LoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		E716E6859B40D39F7099A9E0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -309,6 +311,7 @@
 			isa = PBXGroup;
 			children = (
 				CC67D5971C113EB200D23B8F /* DailyHotRequest.swift */,
+				CCFCB8E21C192CC7006AF972 /* LoginRequest.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -562,6 +565,7 @@
 				CC67D5981C113EB200D23B8F /* DailyHotRequest.swift in Sources */,
 				CCF36B321BFB3DF60006366D /* DateTool.swift in Sources */,
 				CC35604D1BF4459200D1780A /* NodeViewController.swift in Sources */,
+				CCFCB8E31C192CC7006AF972 /* LoginRequest.swift in Sources */,
 				CC9050841C0ED33800E3C84E /* ZZBaseRequest.swift in Sources */,
 				CC75D7441C11855B00E1C344 /* UserHeaderCell.swift in Sources */,
 				CC9050871C0ED81E00E3C84E /* ZZNetworkAgent.swift in Sources */,

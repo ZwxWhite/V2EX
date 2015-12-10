@@ -8,7 +8,6 @@
 
 import UIKit
 import Alamofire
-import DGElasticPullToRefresh
 
 // MARK: - Life cycle
 class DailyHotViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,Contextualizable {
@@ -33,7 +32,7 @@ class DailyHotViewController: UIViewController,UITableViewDelegate,UITableViewDa
     }
     
     deinit {
-        tableView.dg_removePullToRefresh()
+
     }
 }
 

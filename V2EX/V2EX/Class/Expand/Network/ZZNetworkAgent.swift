@@ -16,9 +16,9 @@ final class ZZNetworkAgent {
     lazy private var requestsRecord = [Int: ZZBaseRequest]()
     
     func addRequest(request: ZZBaseRequest) -> Request {
-        // 添加至operation
-        let requestKey = buildRequestUrl(request).hash
-        requestsRecord[requestKey] = request
+//        // 添加至operation
+//        let requestKey = buildRequestUrl(request).hash
+//        requestsRecord[requestKey] = request
         
         // 发送网络请求,返回Request
         return Alamofire.request(request.method, buildRequestUrl(request), parameters: request.parameters, encoding: request.encoding, headers: request.headers)

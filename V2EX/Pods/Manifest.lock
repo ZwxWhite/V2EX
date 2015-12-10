@@ -3,16 +3,22 @@ PODS:
   - Crashlytics (3.4.1):
     - Fabric (~> 1.6.0)
   - Fabric (1.6.1)
-  - Kingfisher (1.8.2)
-  - PagingMenuController (0.7.5)
+  - Ji (1.2.0):
+    - Ji/Ji (= 1.2.0)
+  - Ji/Ji (1.2.0):
+    - Ji/Ji-libxml
+  - Ji/Ji-libxml (1.2.0)
+  - Kingfisher (1.8.3)
+  - PagingMenuController (0.7.6)
   - ReachabilitySwift (2.3)
   - SnapKit (0.18.0)
-  - SwiftDate (1.2)
+  - SwiftDate (2.0.2)
 
 DEPENDENCIES:
   - Alamofire
   - Crashlytics
   - Fabric
+  - Ji
   - Kingfisher
   - PagingMenuController
   - ReachabilitySwift
@@ -23,10 +29,11 @@ SPEC CHECKSUMS:
   Alamofire: 9f93b56389e48def9220dd57d1f44b1927229a5a
   Crashlytics: 41574a245bc6ae10c55d57f385ebd2004e5bee05
   Fabric: bf0ceb04e7c924090efc5f8c55e4fbcca189e0a0
-  Kingfisher: b39315e9dbed7e8ffe73a9ca1be2ee006d1d57e4
-  PagingMenuController: ea590be94de2332a1f78fbbc45fa6f49405279ea
+  Ji: ddebb22f9ac445db6e884b66f78ea74fb135fdb7
+  Kingfisher: ead91e9dbeb7e5a2e8b7af3bd8a294104cbcc3f9
+  PagingMenuController: d34cb992957c7dfae085785a870cf5f3966020be
   ReachabilitySwift: 2ac9df18a443901f06caae38a9f5431219a4c36a
   SnapKit: e1f090a6d47b1dd4bd89b73f72b6746a7835ef3c
-  SwiftDate: 49ebd4efb5f82336cfc2b1d8a6622f47d4b17370
+  SwiftDate: b4f4d0962afe48365ad2800c9850a6626deb9359
 
 COCOAPODS: 0.39.0
