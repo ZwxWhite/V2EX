@@ -1,3 +1,5 @@
+target 'V2EX' do
+
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 use_frameworks!
@@ -11,3 +13,6 @@ pod 'Fabric'
 pod 'Crashlytics'
 pod 'SwiftDate'
 pod 'Ji'
+pod 'RealmSwift'
+
+end

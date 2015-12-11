@@ -22,6 +22,11 @@ extension LoginViewController {
     
     @IBAction func login() {
         
+        if usernameTextField.text?.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) <= 0 ||
+            passwordTextField.text?.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) <= 0 {
+                return
+        }
+        
         Alamofire.request(.GET, "http://www.v2ex.com/signin").responseString { (response) -> Void in
             switch response.result {
             case.Success(let htmlString):
