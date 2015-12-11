@@ -9,13 +9,13 @@
 
 class LoginRequest: ZZBaseRequest {
     
-    convenience init(username: String?, password: String?) {
+    convenience init(username: String?, password: String?, once: String?) {
         self.init()
         requestUrl = "/signin"
-        method = .GET
+        method = .POST
         
         parameters = [String: String]()
-        parameters!["once"] = "96683"
+        parameters!["once"] = once
         parameters!["next"] = "/"
         if let usernameValue = username {
             parameters!["u"] = usernameValue
@@ -23,6 +23,8 @@ class LoginRequest: ZZBaseRequest {
         if let passwordValue = password {
             parameters!["p"] = passwordValue
         }
+        
+        headers = ["Referer":"http://v2ex.com/signin"]
     }
 }
 
