@@ -9,6 +9,9 @@
 import UIKit
 import Fabric
 import Crashlytics
+import RealmSwift
+
+let v2Realm = try! Realm()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

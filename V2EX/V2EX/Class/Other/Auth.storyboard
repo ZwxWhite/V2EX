@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="V2EX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftS-Sb-PBn">
-                                <rect key="frame" x="107" y="122" width="202" height="90"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="V2EX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftS-Sb-PBn">
+                                <rect key="frame" x="106" y="122" width="202" height="90"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="75"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -69,16 +69,28 @@
                                     <action selector="login" destination="DcF-iP-oKd" eventType="touchUpInside" id="8J6-Oh-7uX"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="创意工作者们的社区" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qh6-45-nrb">
-                                <rect key="frame" x="126" y="663" width="162" height="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="创意工作者们的社区" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qh6-45-nrb">
+                                <rect key="frame" x="135" y="666" width="144" height="22"/>
                                 <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="16"/>
                                 <color key="textColor" red="0.52941176470588236" green="0.52941176470588236" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZL-2c-Kmq">
+                                <rect key="frame" x="364" y="28" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="78F-Gm-FAX"/>
+                                    <constraint firstAttribute="height" constant="30" id="krl-Qz-CZm"/>
+                                </constraints>
+                                <state key="normal" image="login_cancel"/>
+                                <connections>
+                                    <action selector="dissmiss" destination="DcF-iP-oKd" eventType="touchUpInside" id="dry-Al-yfV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="po3-Gb-2MU" firstAttribute="width" secondItem="ohb-2m-p0p" secondAttribute="width" multiplier="300:414" id="5J2-dy-8gT"/>
+                            <constraint firstAttribute="trailing" secondItem="wZL-2c-Kmq" secondAttribute="trailing" constant="20" id="8eE-jX-Rd2"/>
                             <constraint firstItem="eof-lW-M1f" firstAttribute="width" secondItem="po3-Gb-2MU" secondAttribute="width" id="9kT-xR-ASb"/>
                             <constraint firstItem="1SY-L5-EMY" firstAttribute="top" secondItem="qh6-45-nrb" secondAttribute="bottom" constant="48" id="D0h-Bd-J86"/>
                             <constraint firstItem="WMM-Ay-nBB" firstAttribute="top" secondItem="po3-Gb-2MU" secondAttribute="bottom" constant="35" id="DU8-hR-puD"/>
@@ -95,6 +107,7 @@
                             <constraint firstItem="eof-lW-M1f" firstAttribute="leading" secondItem="po3-Gb-2MU" secondAttribute="leading" id="iAx-iY-5v8"/>
                             <constraint firstItem="po3-Gb-2MU" firstAttribute="top" secondItem="ftS-Sb-PBn" secondAttribute="bottom" constant="135" id="iN5-7N-njc"/>
                             <constraint firstItem="jcL-MG-h7q" firstAttribute="top" secondItem="7PF-sh-UbN" secondAttribute="bottom" constant="60" id="lWd-C1-xtV"/>
+                            <constraint firstItem="wZL-2c-Kmq" firstAttribute="top" secondItem="hMX-6Q-QSA" secondAttribute="bottom" constant="8" id="oiB-tK-caG"/>
                             <constraint firstItem="WMM-Ay-nBB" firstAttribute="centerX" secondItem="po3-Gb-2MU" secondAttribute="centerX" id="pd4-eZ-8Cy"/>
                             <constraint firstItem="po3-Gb-2MU" firstAttribute="centerX" secondItem="ohb-2m-p0p" secondAttribute="centerX" id="sEf-pL-9Yh"/>
                             <constraint firstItem="ftS-Sb-PBn" firstAttribute="centerX" secondItem="ohb-2m-p0p" secondAttribute="centerX" id="wdv-7g-YIa"/>
@@ -111,4 +124,7 @@
             <point key="canvasLocation" x="267" y="241"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="login_cancel" width="12" height="12"/>
+    </resources>
 </document>

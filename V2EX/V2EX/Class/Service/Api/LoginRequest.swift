@@ -28,3 +28,20 @@ class LoginRequest: ZZBaseRequest {
     }
 }
 
+
+
+class UserInfoRequest: ZZBaseRequest {
+    
+    convenience init(username: String?) {
+        self.init()
+        
+        requestUrl = "/api/members/show.json"
+        method = .GET
+        
+        if let username = username {
+            parameters = [String: String]()
+            parameters!["username"] = username
+        }
+    }
+}
+

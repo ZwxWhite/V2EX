@@ -66,10 +66,10 @@ extension DailyHotViewController {
 // MARK: - LoadData
 extension DailyHotViewController {
     func loadData() {
-        topics.removeAll()
         let request = DailyHotRequest()
         request.start()?.responseJSON(completionHandler: { (response) -> Void in
             if let result = response.result.value as? NSArray {
+                self.topics.removeAll()
                 for dictionary in result {
                     let topic = V2Topic(dictionary: dictionary as! NSDictionary)
                     self.topics.append(V2TopicViewModel(topic: topic))
