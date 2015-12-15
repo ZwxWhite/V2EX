@@ -47,20 +47,20 @@ class V2UserModel: Object {
     dynamic var avatar_large = ""
     dynamic var created = NSNumber(integer: 0)
     
-    convenience init(dictionary: [String: AnyObject]) {
-        self.init()
-        self.setValuesForKeysWithDictionary(dictionary)
-    }
-    
-    required init() {
-        super.init()    
-    }
-  
-    
     // Specify properties to ignore (Realm won't persist these)
     
     //  override static func ignoredProperties() -> [String] {
     //    return []
     //  }
+    
+    override class func primaryKey() -> String {
+        return "id"
+    }
 
+}
+
+extension V2UserModel {
+    func setupWithDictionary(dictionary: [String: AnyObject]) {
+        self.setValuesForKeysWithDictionary(dictionary)
+    }
 }

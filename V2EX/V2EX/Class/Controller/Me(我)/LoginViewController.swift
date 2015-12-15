@@ -72,12 +72,12 @@ extension LoginViewController {
         request.start()?.responseJSON(completionHandler: { (response) -> Void in
             switch response.result{
             case .Success(let responseJson):
-                let user = V2UserModel(dictionary: responseJson as! [String : AnyObject])
+                let user = V2UserModel()
+                user.setupWithDictionary(responseJson as! [String: AnyObject])
                 try! v2Realm.write({ () -> Void in
-                    v2Realm.add(user)
+                    v2Realm.add(user, update: true)
                 })
                 
-                print(user.username)
                 self.dismissViewControllerAnimated(true, completion: nil)
             case .Failure(let error):
                 print(error)

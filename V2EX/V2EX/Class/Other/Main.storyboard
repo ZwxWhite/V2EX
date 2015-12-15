@@ -454,12 +454,17 @@
                                     </variation>
                                 </tableViewCellContentView>
                                 <inset key="separatorInset" minX="1000" minY="0.0" maxX="1000" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="avatarImageView" destination="tdb-ge-Aia" id="qa9-J4-Cxt"/>
+                                    <outlet property="descriptionLabel" destination="RHB-Ut-HvF" id="H3u-hS-6Ng"/>
+                                    <outlet property="usernameLabel" destination="Jec-19-VvK" id="8B3-Db-IjZ"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PersonalDetailCell" id="lci-Js-QTF" customClass="PersonalDetailCell" customModule="V2EX" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="167" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lci-Js-QTF" id="zBb-02-EW0">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MoreMyAlbum" translatesAutoresizingMaskIntoConstraints="NO" id="64t-XF-ppj">
