@@ -27,7 +27,7 @@ extension LoginViewController {
                 return
         }
         
-        Alamofire.request(.GET, "http://www.v2ex.com/signin").responseString { (response) -> Void in
+        Alamofire.request(.GET, v2exBaseUrl() + "/signin").responseString { (response) -> Void in
             switch response.result {
             case.Success(let htmlString):
                 // 获取htmlString并解析

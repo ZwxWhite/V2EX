@@ -15,7 +15,9 @@ class ZZBaseRequest {
     var method: Method = .GET
     
     /// baseUrl
-    var baseUrl: String = V2EXBaseUrl
+    var baseUrl: String {
+        return v2exBaseUrl()
+    }
     
     /// 请求url
     var requestUrl: String?

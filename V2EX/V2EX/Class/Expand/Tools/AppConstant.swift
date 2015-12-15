@@ -20,7 +20,16 @@ public let Tabbar_Height: CGFloat = 49.0
 
 public let V2TimeoutInterval = 30.0
 
-public let V2EXBaseUrl = "https://www.v2ex.com"
+public func v2exBaseUrl() -> String {
+    return "https://www.v2ex.com"
+}
+
+public func v2exHttps(https:Bool) -> String {
+    if https {
+        return "https:"
+    }
+    return "http:"
+}
 
 public func networkReachability() -> Bool {
     do {

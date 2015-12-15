@@ -418,11 +418,6 @@
                                                 <constraint firstAttribute="width" constant="60" id="gyH-iV-xW5"/>
                                                 <constraint firstAttribute="height" constant="60" id="nAU-Ap-TFG"/>
                                             </constraints>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                    <integer key="value" value="3"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="未登录" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jec-19-VvK">
                                             <rect key="frame" x="85" y="15" width="45" height="18"/>
