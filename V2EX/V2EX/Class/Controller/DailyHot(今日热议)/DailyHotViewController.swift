@@ -32,7 +32,7 @@ class DailyHotViewController: UIViewController,UITableViewDelegate,UITableViewDa
     }
     
     deinit {
-
+        
     }
 }
 
