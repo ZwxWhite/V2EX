@@ -43,3 +43,14 @@ extension V2Error {
 
 
 
+func printLog<T>(message: T,
+                    file: String = __FILE__,
+                  method: String = __FUNCTION__,
+                    line: Int = __LINE__){
+    #if DEBUG
+        print("\((file as NSString).lastPathComponent)[\(line)], \(method): \(message)")
+    #endif
+}
+
+
+

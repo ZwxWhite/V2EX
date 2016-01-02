@@ -8,16 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		8EE480D6E0032F386D83A753 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 971F9F073A31501FD7E5A26C /* Pods.framework */; };
+		CC04E6261C382E3900BBC0D1 /* DailyHotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3560481BF4456A00D1780A /* DailyHotViewController.swift */; };
 		CC07B6C21BF9852800DD73F1 /* DebugLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC07B6C11BF9852800DD73F1 /* DebugLog.swift */; };
 		CC1A270A1C1704300022A853 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1A27091C1704300022A853 /* LoginViewController.swift */; };
 		CC3560161BF33A8E00D1780A /* V2EXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3560151BF33A8E00D1780A /* V2EXTests.swift */; };
 		CC3560211BF33A8F00D1780A /* V2EXUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3560201BF33A8F00D1780A /* V2EXUITests.swift */; };
 		CC35603A1BF43F5F00D1780A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3560371BF43F5F00D1780A /* AppDelegate.swift */; };
 		CC35603B1BF43F5F00D1780A /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC3560381BF43F5F00D1780A /* Auth.storyboard */; };
-		CC35603C1BF43F5F00D1780A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC3560391BF43F5F00D1780A /* Info.plist */; };
 		CC35603E1BF4406000D1780A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC35603D1BF4406000D1780A /* Main.storyboard */; };
 		CC3560451BF4437E00D1780A /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3560441BF4437E00D1780A /* RootViewController.swift */; };
-		CC3560491BF4456A00D1780A /* DailyHotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3560481BF4456A00D1780A /* DailyHotViewController.swift */; };
 		CC35604D1BF4459200D1780A /* NodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC35604C1BF4459200D1780A /* NodeViewController.swift */; };
 		CC35604F1BF445D500D1780A /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC35604E1BF445D500D1780A /* PersonalViewController.swift */; };
 		CC3560571BF4897B00D1780A /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3560561BF4897B00D1780A /* Random.swift */; };
@@ -367,10 +366,10 @@
 			buildConfigurationList = CC3560251BF33A8F00D1780A /* Build configuration list for PBXNativeTarget "V2EX" */;
 			buildPhases = (
 				57AA9D72ACEBC09642C85CFA /* Check Pods Manifest.lock */,
-				CC355FF91BF33A8E00D1780A /* Sources */,
 				CC355FFA1BF33A8E00D1780A /* Frameworks */,
 				CC355FFB1BF33A8E00D1780A /* Resources */,
 				FE1F7F8ABBB1C2817E3873E6 /* Embed Pods Frameworks */,
+				CC355FF91BF33A8E00D1780A /* Sources */,
 				609D3BCFED57F73F28D2C9B4 /* Copy Pods Resources */,
 				CCF36B2F1BFB0DEE0006366D /* ShellScript */,
 			);
@@ -471,7 +470,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC35603B1BF43F5F00D1780A /* Auth.storyboard in Resources */,
-				CC35603C1BF43F5F00D1780A /* Info.plist in Resources */,
 				CCE8ABAA1C1EC82C0089ACF3 /* Assets.xcassets in Resources */,
 				CC35603E1BF4406000D1780A /* Main.storyboard in Resources */,
 			);
@@ -559,7 +557,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC3560491BF4456A00D1780A /* DailyHotViewController.swift in Sources */,
+				CC04E6261C382E3900BBC0D1 /* DailyHotViewController.swift in Sources */,
 				CCB27C3C1BF4A0F300D91B75 /* AppConstant.swift in Sources */,
 				CC9FE4B81BFAD457006967FF /* V2TopicCell.swift in Sources */,
 				CCB27C571BF5BFA700D91B75 /* V2Topics.swift in Sources */,
