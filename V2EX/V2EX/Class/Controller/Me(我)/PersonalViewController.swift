@@ -35,7 +35,11 @@ extension PersonalViewController {
         case 1: return 3
         case 2: return 2
         case 3: return 1
-        case 4: return 1
+        case 4:
+            if let user = v2Realm.objects(V2UserModel).first {
+                return user.logined ? 1 : 0
+            }
+            return 0
         default: return 0
         }
     }
@@ -69,6 +73,15 @@ extension PersonalViewController {
             }
             let loginController = UIStoryboard.viewControllerOfStoryboardName("Auth", identifier: "SID_ LoginViewController")
             presentViewController(loginController!, animated: true, completion: nil)
+        }
+        
+        else if indexPath.section == 4 {
+            try! v2Realm.write({ () -> Void in
+                if let user = v2Realm.objects(V2UserModel).first {
+                    v2Realm.delete(user)
+                    self.tableView.reloadData()
+                }
+            });
         }
     }
     
