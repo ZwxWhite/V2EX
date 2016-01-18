@@ -38,12 +38,12 @@ extension LoginViewController {
                         if let once = nodes![index].attributes["value"] {
                             self.loginWithInfo(once)
                         } else {
-                            print("登录失败");
+                            printLog("登录失败");
                         }
                     }
                 }
             case.Failure(let error):
-                print(error)
+                printLog(error)
             }
         }
     }
@@ -59,10 +59,10 @@ extension LoginViewController {
                 if htmlString?.rangeOfString("/notifications") != nil {
                     self.getUserInfo(username!)
                 } else {
-                    print("登录失败")
+                    printLog("登录失败")
                 }
             case .Failure(let error):
-                print(error)
+                printLog(error)
             }
         })
     }
@@ -79,7 +79,7 @@ extension LoginViewController {
                 })
                 self.dismissViewControllerAnimated(true, completion: nil)
             case .Failure(let error):
-                print(error)
+                printLog(error)
             }
         })
     }
