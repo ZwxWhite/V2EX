@@ -47,6 +47,12 @@ class V2UserModel: Object {
     dynamic var avatar_large = ""
     dynamic var created = NSNumber(integer: 0)
     
+    var logined: Bool {
+        get {
+            return !self.id.isEqualToNumber(NSNumber(integer: 0));
+        }
+    }
+    
     // Specify properties to ignore (Realm won't persist these)
     
     //  override static func ignoredProperties() -> [String] {

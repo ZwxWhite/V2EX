@@ -26,7 +26,7 @@ class PersonalViewController: UITableViewController {
 extension PersonalViewController {
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 4;
+        return 5;
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -35,6 +35,7 @@ extension PersonalViewController {
         case 1: return 3
         case 2: return 2
         case 3: return 1
+        case 4: return 1
         default: return 0
         }
     }
@@ -43,6 +44,9 @@ extension PersonalViewController {
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCellWithIdentifier("UserHeaderCell", forIndexPath: indexPath) as! UserHeaderCell
             cell.reloadData()
+            return cell
+        } else if indexPath.section == 4 {
+            let cell = tableView.dequeueReusableCellWithIdentifier("PersonalLogoutCell", forIndexPath: indexPath) as! PersonalLogoutCell
             return cell
         }
         
@@ -58,6 +62,11 @@ extension PersonalViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.section == 0 {
+            if let user = v2Realm.objects(V2UserModel).first {
+                if user.logined {
+                    return;
+                }
+            }
             let loginController = UIStoryboard.viewControllerOfStoryboardName("Auth", identifier: "SID_ LoginViewController")
             presentViewController(loginController!, animated: true, completion: nil)
         }

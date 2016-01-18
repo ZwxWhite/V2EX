@@ -15,6 +15,8 @@ class CategoryItemViewController: UIViewController, Contextualizable {
     
     @IBOutlet weak var tableView: UITableView!
     
+
+    
     private lazy var topics = [V2TopicViewModel]()
     
     override func viewDidLoad() {

@@ -77,7 +77,6 @@ extension LoginViewController {
                 try! v2Realm.write({ () -> Void in
                     v2Realm.add(user, update: true)
                 })
-                
                 self.dismissViewControllerAnimated(true, completion: nil)
             case .Failure(let error):
                 print(error)

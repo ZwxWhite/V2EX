@@ -24,7 +24,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="22k-Kl-mbR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1104" y="-466"/>
+            <point key="canvasLocation" x="-2472" y="-2122"/>
         </scene>
         <!--分类-->
         <scene sceneID="IbE-Di-X5n">
@@ -44,7 +44,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wy0-9g-ydl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="157" y="-1164"/>
+            <point key="canvasLocation" x="-1929" y="-347"/>
         </scene>
         <!--Sub分类-->
         <scene sceneID="Z8k-8g-BdB">
@@ -297,7 +297,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C2q-1z-BFC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="157" y="-2005"/>
+            <point key="canvasLocation" x="-2472" y="-347"/>
         </scene>
         <!--节点-->
         <scene sceneID="hdb-oc-jdz">
@@ -317,7 +317,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zuw-JI-a3F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="157" y="33"/>
+            <point key="canvasLocation" x="-1331" y="-347"/>
         </scene>
         <!--分类NAV-->
         <scene sceneID="fvK-ge-FFk">
@@ -336,7 +336,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ilY-3E-tMY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-469" y="-1164"/>
+            <point key="canvasLocation" x="-1929" y="-1205"/>
         </scene>
         <!--今日热议NAV-->
         <scene sceneID="f07-No-Xf2">
@@ -355,7 +355,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0lO-Kr-T2S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-469" y="-2005"/>
+            <point key="canvasLocation" x="-2472" y="-1205"/>
         </scene>
         <!--节点NAV-->
         <scene sceneID="NIJ-uv-ydn">
@@ -374,7 +374,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bGs-A0-qpp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-469" y="33"/>
+            <point key="canvasLocation" x="-1331" y="-1205"/>
         </scene>
         <!--我NAV-->
         <scene sceneID="6YL-FT-caz">
@@ -393,7 +393,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OCn-vl-uQf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-469" y="1121"/>
+            <point key="canvasLocation" x="-755" y="-1205"/>
         </scene>
         <!--我-->
         <scene sceneID="25b-7h-zF0">
@@ -459,7 +459,7 @@
                                 <rect key="frame" x="0.0" y="167" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lci-Js-QTF" id="zBb-02-EW0">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MoreMyAlbum" translatesAutoresizingMaskIntoConstraints="NO" id="64t-XF-ppj">
@@ -498,6 +498,27 @@
                                     <outlet property="logoImageView" destination="64t-XF-ppj" id="1Ra-Qt-rSe"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PersonalLogoutCell" rowHeight="52" id="dnA-dd-UHl" customClass="PersonalLogoutCell" customModule="V2EX" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="211" width="414" height="52"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dnA-dd-UHl" id="MVr-jf-vf0">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="51.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="退出登录" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBW-lk-4g0">
+                                            <rect key="frame" x="173" y="14" width="68" height="24"/>
+                                            <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="sBW-lk-4g0" firstAttribute="centerX" secondItem="MVr-jf-vf0" secondAttribute="centerX" id="8Ho-Lc-OIb"/>
+                                        <constraint firstItem="sBW-lk-4g0" firstAttribute="centerY" secondItem="MVr-jf-vf0" secondAttribute="centerY" id="Dg2-XM-hvC"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableViewCell>
                         </prototypes>
                         <sections/>
                         <connections>
@@ -510,7 +531,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9n2-p7-t3i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="114" y="1121"/>
+            <point key="canvasLocation" x="-755" y="-347"/>
         </scene>
     </scenes>
     <resources>

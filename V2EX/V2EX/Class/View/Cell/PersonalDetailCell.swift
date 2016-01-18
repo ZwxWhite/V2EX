@@ -13,7 +13,7 @@ class PersonalDetailCell: UITableViewCell {
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var contentLabel: UILabel!
     
-    let detailTexts = [[],["节点收藏","主题收藏","特别关注"],["主题","回复"],["设置"]]
+    let detailTexts = [[],["节点收藏","主题收藏","特别关注"],["主题","回复"],["设置"],[]]
     
     var indexPath: NSIndexPath? {
         didSet{
