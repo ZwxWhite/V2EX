@@ -19,7 +19,7 @@ class DailyHotViewController: UIViewController,UITableViewDelegate,UITableViewDa
     }
     
     /// 数据源
-    private var topics = [V2TopicViewModel]()
+    private var topics = [V2TopicModel]()
     
     /// 刷新
     private var refreshControl: UIRefreshControl?
@@ -72,7 +72,7 @@ extension DailyHotViewController {
                 self.topics.removeAll()
                 for dictionary in result {
                     let topic = V2Topic(dictionary: dictionary as! NSDictionary)
-                    self.topics.append(V2TopicViewModel(topic: topic))
+                    self.topics.append(V2TopicModel(topic: topic))
                 }
                 self.tableView.reloadData()
             } else {

@@ -14,14 +14,13 @@ class LoginRequest: ZZBaseRequest {
         requestUrl = "/signin"
         method = .POST
         
-        parameters = [String: String]()
-        parameters!["once"] = once
-        parameters!["next"] = "/"
+        parameters["once"] = once
+        parameters["next"] = "/"
         if let usernameValue = username {
-            parameters!["u"] = usernameValue
+            parameters["u"] = usernameValue
         }
         if let passwordValue = password {
-            parameters!["p"] = passwordValue
+            parameters["p"] = passwordValue
         }
         
         headers = ["Referer":"http://v2ex.com/signin"]
@@ -40,7 +39,7 @@ class UserInfoRequest: ZZBaseRequest {
         
         if let username = username {
             parameters = [String: String]()
-            parameters!["username"] = username
+            parameters["username"] = username
         }
     }
 }

@@ -15,9 +15,9 @@ class CategoryItemViewController: UIViewController, Contextualizable {
     
     @IBOutlet weak var tableView: UITableView!
     
-
+    var categoryTab: String!
     
-    private lazy var topics = [V2TopicViewModel]()
+    private lazy var topics = [V2TopicModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,23 +54,9 @@ extension CategoryItemViewController {
 extension CategoryItemViewController {
     private func loadData() {
         
-//                case .Tech: apiManager.tab = "tech"
-//                case .Creative: apiManager.tab = "creative"
-//                case .Play: apiManager.tab = "play"
-//                case .Jobs: apiManager.tab = "jobs"
-//                case .Deals: apiManager.tab = "deals"
-//                case .City: apiManager.tab = "city"
-//                case .Qna: apiManager.tab = "qna"
-//                case .Hot: apiManager.tab = "hot"
-//                case .All: apiManager.tab = "all"
-//                case .R2: apiManager.tab = "r2"
-//                case .Nodes: apiManager.tab = "nodes"
-//                case .Members: apiManager.tab = "members"
-//                default: apiManager.tab = "all"
+        self.categoryTab = "apple"
         
     }
-
-    
 }
 
 

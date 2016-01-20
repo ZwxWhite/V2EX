@@ -36,7 +36,7 @@ class V2TopicCell: UITableViewCell,Contextualizable {
         }
     }
     
-    var topicViewModel: V2TopicViewModel? {
+    var topicViewModel: V2TopicModel? {
         didSet{
             if let topic = topicViewModel {
                 
@@ -55,7 +55,7 @@ class V2TopicCell: UITableViewCell,Contextualizable {
 
 
 
-struct V2TopicViewModel {
+struct V2TopicModel {
     var avatarImageString: String?
     var title: String!
     var userName: String!

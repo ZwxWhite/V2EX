@@ -15,6 +15,18 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
 
+    @IBAction func dissmiss() {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func hideKeyboard() {
+        self.usernameTextField.resignFirstResponder()
+        self.passwordTextField.resignFirstResponder()
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.hideKeyboard()
+    }
 }
 
 
@@ -27,7 +39,7 @@ extension LoginViewController {
                 return
         }
         
-        Alamofire.request(.GET, v2exBaseUrl() + "/signin").responseString { (response) -> Void in
+        Alamofire.request(.GET, v2exBaseUrl + "/signin").responseString { (response) -> Void in
             switch response.result {
             case.Success(let htmlString):
                 // 获取htmlString并解析
@@ -55,9 +67,12 @@ extension LoginViewController {
         request.start()?.responseData({ (response) -> Void in
             switch response.result {
             case .Success(let responseData):
-                let htmlString = String(data: responseData, encoding: NSUTF8StringEncoding)
-                if htmlString?.rangeOfString("/notifications") != nil {
-                    self.getUserInfo(username!)
+                if let htmlString = String(data: responseData, encoding: NSUTF8StringEncoding) {
+                    if htmlString.containsString("/notifications'") {
+                        self.getUserInfo(username!)
+                    } else {
+                        printLog("登录失败")
+                    }
                 } else {
                     printLog("登录失败")
                 }
@@ -85,9 +100,7 @@ extension LoginViewController {
     }
     
     
-    @IBAction func dissmiss() {
-        dismissViewControllerAnimated(true, completion: nil)
-    }
+
 }
 
 
