@@ -736,6 +736,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = wenxuan.zhang.V2EX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Release;
 		};

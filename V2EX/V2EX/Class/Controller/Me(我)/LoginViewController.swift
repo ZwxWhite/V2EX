@@ -68,7 +68,8 @@ extension LoginViewController {
             switch response.result {
             case .Success(let responseData):
                 if let htmlString = String(data: responseData, encoding: NSUTF8StringEncoding) {
-                    if htmlString.containsString("/notifications'") {
+                    printLog(htmlString)
+                    if htmlString.containsString("/notifications") {
                         self.getUserInfo(username!)
                     } else {
                         printLog("登录失败")
