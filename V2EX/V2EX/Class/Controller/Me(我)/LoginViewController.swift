@@ -67,7 +67,7 @@ extension LoginViewController {
         request.start()?.responseData({ (response) -> Void in
             switch response.result {
             case .Success(let responseData):
-                if let htmlString = String(data: responseData, encoding: NSUTF8StringEncoding) {
+                if let htmlString = NSString(data: responseData, encoding: NSUTF8StringEncoding) {
                     printLog(htmlString)
                     if htmlString.containsString("/notifications") {
                         self.getUserInfo(username!)
