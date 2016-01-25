@@ -89,6 +89,7 @@ extension LoginViewController {
             switch response.result{
             case .Success(let responseJson):
                 let user = V2UserModel()
+                print(responseJson as! [String: AnyObject])
                 user.setupWithDictionary(responseJson as! [String: AnyObject])
                 try! v2Realm.write({ () -> Void in
                     v2Realm.add(user, update: true)

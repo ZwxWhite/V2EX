@@ -38,7 +38,6 @@ class UserInfoRequest: ZZBaseRequest {
         method = .GET
         
         if let username = username {
-            parameters = [String: String]()
             parameters["username"] = username
         }
     }
