@@ -39,6 +39,10 @@ extension LoginViewController {
                 return
         }
         
+        for cookie in NSHTTPCookieStorage.sharedHTTPCookieStorage().cookies! {
+            NSHTTPCookieStorage.sharedHTTPCookieStorage().deleteCookie(cookie)
+        }
+        
         Alamofire.request(.GET, v2exBaseUrl + "/signin").responseString { (response) -> Void in
             switch response.result {
             case.Success(let htmlString):
@@ -64,16 +68,12 @@ extension LoginViewController {
         // login
         let username = usernameTextField.text
         let request = LoginRequest(username: username, password: self.passwordTextField.text, once: once)
-        request.start()?.responseData({ (response) -> Void in
+        request.start()?.responseString(completionHandler: { (response) -> Void in
             switch response.result {
-            case .Success(let responseData):
-                if let htmlString = NSString(data: responseData, encoding: NSUTF8StringEncoding) {
-                    printLog(htmlString)
-                    if htmlString.containsString("/notifications") {
-                        self.getUserInfo(username!)
-                    } else {
-                        printLog("登录失败")
-                    }
+            case .Success(let responseString):
+                printLog(responseString)
+                if responseString.containsString("/notifications") {
+                    self.getUserInfo(username!)
                 } else {
                     printLog("登录失败")
                 }
