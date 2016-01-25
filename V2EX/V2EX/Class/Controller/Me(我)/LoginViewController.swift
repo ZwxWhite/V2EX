@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import Ji
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -27,6 +27,12 @@ class LoginViewController: UIViewController {
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.hideKeyboard()
     }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.login()
+        return true
+    }
+    
 }
 
 
@@ -100,9 +106,6 @@ extension LoginViewController {
             }
         })
     }
-    
-    
-
 }
 
 
