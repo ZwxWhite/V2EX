@@ -62,7 +62,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TopicCell" rowHeight="65" id="xmY-YJ-ixB" customClass="TopicCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TopicCell" rowHeight="65" id="xmY-YJ-ixB" customClass="V2TopicCell" customModule="V2EX" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xmY-YJ-ixB" id="URt-c3-DED">
@@ -150,7 +150,7 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="UEg-mG-vfy" id="LCG-WD-BnY"/>
+                                    <outlet property="dataSource" destination="h1A-Sv-ZBE" id="mup-go-bbn"/>
                                     <outlet property="delegate" destination="UEg-mG-vfy" id="bjW-Xt-PC1"/>
                                 </connections>
                             </tableView>

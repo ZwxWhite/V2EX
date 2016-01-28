@@ -98,20 +98,88 @@ extension CategoryItemViewController {
     private func configWithCellNodes(cellNodes: [JiNode]) {
         for cellNode in cellNodes {
             if let trNode = cellNode.childrenWithName("table").first?.childrenWithName("tr").first {
-                
-                var topicModel = V2TopicModel()
                 // 获取tdNode
                 let tdNodes = trNode.childrenWithName("td")
+                var topicModel = V2TopicModel()
+
+                // 遍历
                 for tdNode in tdNodes {
                     if let contentString = tdNode.rawContent {
+                        
+                        // 用户信息节点
                         if contentString.containsString("class=\"avatar\"") {
-                            if let userIdNode = tdNode.firstChildWithName("a") {
+                                if let userIdNode = tdNode.firstChildWithName("a") {
+                                // 获取用户名
                                 topicModel.userName = userIdNode.attributes["href"]?.componentsSeparatedByString("/").last
-                                print(topicModel.userName)
+                                
+                                // 获取头像
+                                let imgNode = userIdNode.childrenWithName("img").first
+                                if let avatarString = imgNode?.attributes["src"] {
+                                    topicModel.avatarImageString = "https:" + avatarString
+                                }
+                            }
+                        }
+                        
+                        // 标题节点
+                        if contentString.containsString("class=\"item_title\"") {
+                            if let titleNode = tdNode.childrenWithAttributeName("class", attributeValue: "item_title").first?.childrenWithName("a").first {
+                                // 获取标题
+                                topicModel.title = titleNode.content
+                                
+                                // 获取回复数
+                                topicModel.replies = titleNode.attributes["href"]?.componentsSeparatedByString("reply").last
+                            }
+                            
+                            if let infoNode = tdNode.childrenWithAttributeName("class", attributeValue: "small fade").first {
+                                
+                                if let nodeNode = infoNode.childrenWithName("a").first {
+                                    // 获取节点
+                                    topicModel.node = nodeNode.content! + "   "
+                                }
+                                
+                                if infoNode.rawContent?.containsString("href") == false {
+                                    // 回复时间
+                                    topicModel.lastModified = infoNode.content
+                                }
+                                
+                                if infoNode.rawContent?.containsString("最后回复") == true || infoNode.rawContent?.containsString("前") == true {
+                                    let components = infoNode.content?.componentsSeparatedByString("  •  ")
+                                    
+                                    var dateString: String
+                                    if components?.count > 2 {
+                                        dateString = components![2]
+                                    } else {
+                                        dateString = (infoNode.content?.stringByReplacingOccurrencesOfString("  •  (.*?)$", withString: ""))!
+                                    }
+                                    
+                                    let stringArray = dateString.componentsSeparatedByString(" ")
+                                    if stringArray.count > 1 {
+                                        var unitString = ""
+                                        let index = stringArray[1].startIndex.advancedBy(1)
+                                        let subString = stringArray[1].substringToIndex(index)
+                                        if subString == "分" {
+                                            unitString = "分钟前"
+                                        }
+                                        if subString == "小" {
+                                            unitString = "小时前"
+                                        }
+                                        if subString == "天" {
+                                            unitString = "天前"
+                                        }
+                                        dateString = stringArray.first! + unitString
+                                    } else {
+                                        dateString = "刚刚"
+                                    }
+                                    topicModel.lastModified = dateString
+                                }
                             }
                         }
                     }
                 }
+                self.topics.append(topicModel)
+                self.tableView.reloadData()
+            } else {
+                V2Error(self.currentDebugContext(),"解析错误").logError()
             }
         }
     }
