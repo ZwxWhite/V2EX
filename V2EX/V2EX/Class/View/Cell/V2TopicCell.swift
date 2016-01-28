@@ -55,62 +55,6 @@ class V2TopicCell: UITableViewCell,Contextualizable {
 
 
 
-struct V2TopicModel {
-    var avatarImageString: String?
-    var title: String!
-    var userName: String!
-    var lastModified: String!
-    var replies: String!
-    var node: String!
-    var id: Int?
-    
-    init() {
-        
-    }
-    
-    init(topic:V2Topic){
-        if let modelAvatarImageString = topic.member?.avatar_normal {
-            self.avatarImageString = "https:" + modelAvatarImageString
-        } else {
-            self.avatarImageString = nil
-        }
-        
-        if let modelTitle = topic.title {
-            self.title = modelTitle
-        } else {
-            self.title = ""
-        }
-        
-        if let modelUserName = topic.member?.username {
-            self.userName = modelUserName
-        } else {
-            self.userName = ""
-        }
-        
-        if let modelLastTouched = topic.last_modified {
-            
-            let lastTouchedTime = NSTimeInterval(modelLastTouched)
-            self.lastModified = relationshipOfDate(NSDate(), anotherDate: NSDate(timeIntervalSince1970: lastTouchedTime))
-        } else {
-            self.lastModified = ""
-        }
-        
-        if let modelReplies = topic.replies {
-            self.replies = String(modelReplies)
-        } else {
-            self.replies = "0"
-        }
-        
-        if let modelNode = topic.node?.title {
-            self.node = modelNode+"   "
-        } else {
-            self.node = ""
-        }
-        
-        self.id = topic.id
-    }
-}
-
 
 
 
