@@ -54,8 +54,6 @@ extension CategoryItemViewController {
 // MARK: - LoadData
 extension CategoryItemViewController {
     private func loadData() {
-        
-        self.categoryTab = "apple"
         request(.GET, v2exBaseUrl, parameters: ["tab":self.categoryTab], encoding: .URL, headers: nil).responseString { (response) -> Void in
             switch response.result{
             case .Success(let responseString):
