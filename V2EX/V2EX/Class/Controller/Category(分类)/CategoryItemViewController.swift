@@ -17,12 +17,13 @@ class CategoryItemViewController: UIViewController, Contextualizable {
     @IBOutlet weak var tableView: UITableView!
     
     var categoryTab: String!
-    
     private lazy var topics = [V2TopicModel]()
+    private var refreshControl: UIRefreshControl?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
+        addRefresh()
     }
 }
 
@@ -48,19 +49,27 @@ extension CategoryItemViewController {
         V2Error(currentDebugContext(),"cell error").logError()
         return UITableViewCell()
     }
+    
+    private func addRefresh() {
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl!.addTarget(self, action: "loadData", forControlEvents: UIControlEvents.ValueChanged)
+        tableView.addSubview(self.refreshControl!)
+    }
 }
 
 
 // MARK: - LoadData
 extension CategoryItemViewController {
-    private func loadData() {
+    func loadData() {
         request(.GET, v2exBaseUrl, parameters: ["tab":self.categoryTab], encoding: .URL, headers: nil).responseString { (response) -> Void in
             switch response.result{
             case .Success(let responseString):
+                self.topics.removeAll()
                 self.responseConfigWith(responseString)
             case .Failure(let error):
                 V2Error(self.currentDebugContext(),error.description).logError()
             }
+            self.refreshControl?.endRefreshing()
         }
     }
     

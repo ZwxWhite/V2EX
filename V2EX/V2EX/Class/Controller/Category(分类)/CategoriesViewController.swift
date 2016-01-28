@@ -46,8 +46,8 @@ extension CategoriesViewController {
      */
     func pagingControllerItems() -> [CategoryItemViewController] {
         
-        let titles = ["技术","创意","好玩","Apple","酷工作","交易","城市","问与答","最热","全部","R2","节点","关注"];
-        let tabs = ["tech","creative","play","apple","jobs","deals","city","qna","hot","all","r2","nodes","members","all"]
+        let titles = ["技术","创意","好玩","Apple","酷工作","交易","城市","问与答","最热","全部","R2"];
+        let tabs = ["tech","creative","play","apple","jobs","deals","city","qna","hot","all","r2"]
         var controllers = [CategoryItemViewController]()
         for index in 0...titles.count-1 {
             
