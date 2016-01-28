@@ -45,6 +45,7 @@ extension AppDelegate {
     func configTools() {
         Fabric.sharedSDK().debug = true
         Fabric.with([Crashlytics.self()])
+
     }
     
     func configV2exStyle(application: UIApplication) {

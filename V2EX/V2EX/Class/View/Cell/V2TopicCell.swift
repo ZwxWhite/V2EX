@@ -63,6 +63,10 @@ struct V2TopicModel {
     var replies: String!
     var node: String!
     
+    init() {
+        
+    }
+    
     init(topic:V2Topic){
         if let modelAvatarImageString = topic.member?.avatar_normal {
             self.avatarImageString = "https:" + modelAvatarImageString
