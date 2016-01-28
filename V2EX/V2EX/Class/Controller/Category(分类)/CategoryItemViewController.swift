@@ -135,6 +135,11 @@ extension CategoryItemViewController {
                                 
                                 // 获取回复数
                                 topicModel.replies = titleNode.attributes["href"]?.componentsSeparatedByString("reply").last
+                                
+                                // 获取id
+                                if let id = titleNode.attributes["href"]?.componentsSeparatedByString("#").first?.componentsSeparatedByString("/").last {
+                                    topicModel.id = Int(id)
+                                }
                             }
                             
                             if let infoNode = tdNode.childrenWithAttributeName("class", attributeValue: "small fade").first {

@@ -62,6 +62,7 @@ struct V2TopicModel {
     var lastModified: String!
     var replies: String!
     var node: String!
+    var id: Int?
     
     init() {
         
@@ -105,6 +106,8 @@ struct V2TopicModel {
         } else {
             self.node = ""
         }
+        
+        self.id = topic.id
     }
 }
 
