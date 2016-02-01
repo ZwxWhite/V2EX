@@ -35,6 +35,7 @@
 		CC9FE4B81BFAD457006967FF /* V2TopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9FE4B71BFAD457006967FF /* V2TopicCell.swift */; };
 		CCB27C3C1BF4A0F300D91B75 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB27C3B1BF4A0F300D91B75 /* AppConstant.swift */; };
 		CCB27C571BF5BFA700D91B75 /* V2Topics.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB27C561BF5BFA700D91B75 /* V2Topics.swift */; };
+		CCB641071C5F2E7A00795870 /* V2NodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB641061C5F2E7A00795870 /* V2NodeModel.swift */; };
 		CCB8C8751C16FCFA00404F15 /* Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8C8741C16FCFA00404F15 /* Extention.swift */; };
 		CCB99AB71C4F5B53000E746B /* CategoryTabRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB99AB61C4F5B53000E746B /* CategoryTabRequest.swift */; };
 		CCE8ABA81C1EC24C0089ACF3 /* PersonalDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE8ABA71C1EC24C0089ACF3 /* PersonalDetailCell.swift */; };
@@ -94,6 +95,7 @@
 		CC9FE4B71BFAD457006967FF /* V2TopicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = V2TopicCell.swift; sourceTree = "<group>"; };
 		CCB27C3B1BF4A0F300D91B75 /* AppConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
 		CCB27C561BF5BFA700D91B75 /* V2Topics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = V2Topics.swift; sourceTree = "<group>"; };
+		CCB641061C5F2E7A00795870 /* V2NodeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = V2NodeModel.swift; sourceTree = "<group>"; };
 		CCB8C8741C16FCFA00404F15 /* Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extention.swift; sourceTree = "<group>"; };
 		CCB99AB61C4F5B53000E746B /* CategoryTabRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTabRequest.swift; sourceTree = "<group>"; };
 		CCE8ABA71C1EC24C0089ACF3 /* PersonalDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalDetailCell.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				CC44ADC01C1AA9CE00B6C3FE /* V2UserModel.swift */,
 				CCB27C561BF5BFA700D91B75 /* V2Topics.swift */,
 				CC13F48A1C5A2EB4004FD8DA /* V2TopicModel.swift */,
+				CCB641061C5F2E7A00795870 /* V2NodeModel.swift */,
 			);
 			name = Model;
 			path = Class/Model;
@@ -587,6 +590,7 @@
 				CC9050841C0ED33800E3C84E /* ZZBaseRequest.swift in Sources */,
 				CC75D7441C11855B00E1C344 /* UserHeaderCell.swift in Sources */,
 				CC9050871C0ED81E00E3C84E /* ZZNetworkAgent.swift in Sources */,
+				CCB641071C5F2E7A00795870 /* V2NodeModel.swift in Sources */,
 				CC07B6C21BF9852800DD73F1 /* DebugLog.swift in Sources */,
 				CC35604F1BF445D500D1780A /* PersonalViewController.swift in Sources */,
 				CC3560571BF4897B00D1780A /* Random.swift in Sources */,
