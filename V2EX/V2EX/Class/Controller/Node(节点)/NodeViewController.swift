@@ -9,13 +9,27 @@
 import UIKit
 import Alamofire
 
-class NodeViewController: UITableViewController, Contextualizable {
+class NodeViewController: UITableViewController, Contextualizable, UISearchResultsUpdating, UISearchControllerDelegate, UISearchBarDelegate {
 
     
     var nodes = [V2NodeModel]()
     
+    var searchController: UISearchController!
+    var resultTableViewController = SearchResultTableViewController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.resultTableViewController = SearchResultTableViewController()
+        self.resultTableViewController.tableView.delegate = self
+        
+        self.searchController = UISearchController(searchResultsController: self.resultTableViewController)
+        self.searchController.searchResultsUpdater = self
+        self.searchController.searchBar.sizeToFit()
+        self.searchController.searchBar.delegate = self
+        self.searchController.dimsBackgroundDuringPresentation = false
+        
+        self.tableView.tableHeaderView = self.searchController.searchBar
         
         self.loadNodes()
     }
@@ -60,3 +74,20 @@ extension NodeViewController {
         return UITableViewCell()
     }
 }
+
+
+
+//MARK: - UISearchResultsUpdating
+extension NodeViewController {
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        
+    }
+}
+
+//MARK: - UISearchBarDelegate
+extension NodeViewController {
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        print("search")
+    }
+}
+

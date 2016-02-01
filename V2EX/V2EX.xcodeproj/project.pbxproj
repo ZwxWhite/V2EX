@@ -36,6 +36,7 @@
 		CCB27C3C1BF4A0F300D91B75 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB27C3B1BF4A0F300D91B75 /* AppConstant.swift */; };
 		CCB27C571BF5BFA700D91B75 /* V2Topics.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB27C561BF5BFA700D91B75 /* V2Topics.swift */; };
 		CCB641071C5F2E7A00795870 /* V2NodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB641061C5F2E7A00795870 /* V2NodeModel.swift */; };
+		CCB641091C5F422E00795870 /* SearchResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB641081C5F422E00795870 /* SearchResultTableViewController.swift */; };
 		CCB8C8751C16FCFA00404F15 /* Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8C8741C16FCFA00404F15 /* Extention.swift */; };
 		CCB99AB71C4F5B53000E746B /* CategoryTabRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB99AB61C4F5B53000E746B /* CategoryTabRequest.swift */; };
 		CCE8ABA81C1EC24C0089ACF3 /* PersonalDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE8ABA71C1EC24C0089ACF3 /* PersonalDetailCell.swift */; };
@@ -96,6 +97,7 @@
 		CCB27C3B1BF4A0F300D91B75 /* AppConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
 		CCB27C561BF5BFA700D91B75 /* V2Topics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = V2Topics.swift; sourceTree = "<group>"; };
 		CCB641061C5F2E7A00795870 /* V2NodeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = V2NodeModel.swift; sourceTree = "<group>"; };
+		CCB641081C5F422E00795870 /* SearchResultTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewController.swift; sourceTree = "<group>"; };
 		CCB8C8741C16FCFA00404F15 /* Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extention.swift; sourceTree = "<group>"; };
 		CCB99AB61C4F5B53000E746B /* CategoryTabRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTabRequest.swift; sourceTree = "<group>"; };
 		CCE8ABA71C1EC24C0089ACF3 /* PersonalDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalDetailCell.swift; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				CC35604C1BF4459200D1780A /* NodeViewController.swift */,
+				CCB641081C5F422E00795870 /* SearchResultTableViewController.swift */,
 			);
 			path = "Node(节点)";
 			sourceTree = "<group>";
@@ -589,6 +592,7 @@
 				CCE8ABA81C1EC24C0089ACF3 /* PersonalDetailCell.swift in Sources */,
 				CC9050841C0ED33800E3C84E /* ZZBaseRequest.swift in Sources */,
 				CC75D7441C11855B00E1C344 /* UserHeaderCell.swift in Sources */,
+				CCB641091C5F422E00795870 /* SearchResultTableViewController.swift in Sources */,
 				CC9050871C0ED81E00E3C84E /* ZZNetworkAgent.swift in Sources */,
 				CCB641071C5F2E7A00795870 /* V2NodeModel.swift in Sources */,
 				CC07B6C21BF9852800DD73F1 /* DebugLog.swift in Sources */,
