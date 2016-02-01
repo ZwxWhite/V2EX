@@ -11,7 +11,7 @@ import Alamofire
 import Ji
 
 
-class CategoryItemViewController: UIViewController, Contextualizable {
+class CategoryItemViewController: UIViewController, Contextualizable, UITableViewDataSource, UITableViewDelegate {
     
     
     @IBOutlet weak var tableView: UITableView!
@@ -48,6 +48,10 @@ extension CategoryItemViewController {
         }
         V2Error(currentDebugContext(),"cell error").logError()
         return UITableViewCell()
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
     private func addRefresh() {

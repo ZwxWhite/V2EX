@@ -65,6 +65,7 @@ extension PersonalViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
         if indexPath.section == 0 {
             if let user = v2Realm.objects(V2UserModel).first {
                 if user.logined {

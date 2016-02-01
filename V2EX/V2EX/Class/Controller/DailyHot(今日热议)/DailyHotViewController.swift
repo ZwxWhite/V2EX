@@ -58,7 +58,7 @@ extension DailyHotViewController {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.reloadData()
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
 }
 

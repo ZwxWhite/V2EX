@@ -31,11 +31,12 @@ class NodeViewController: UITableViewController, Contextualizable, UISearchResul
         
         self.tableView.tableHeaderView = self.searchController.searchBar
         
-        self.loadNodes()
     }
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
+        self.loadNodes()
     }
 }
 
@@ -53,6 +54,8 @@ extension NodeViewController {
                         self.nodes.append(node)
                     }
                 }
+                let cache = NSURLCache(memoryCapacity: 4 * 1024 * 1024, diskCapacity: 20 * 1024 * 1024, diskPath: nil)
+                NSURLCache.setSharedURLCache(cache)
                 self.tableView.reloadData()
             case .Failure(let error):
                 V2Error(self.currentDebugContext(),error.description).logError()
@@ -72,6 +75,10 @@ extension NodeViewController {
             return cell
         }
         return UITableViewCell()
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
 }
 
