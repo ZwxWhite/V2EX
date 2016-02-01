@@ -64,7 +64,7 @@ extension NodeViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.nodes.count
+        return 0
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -87,14 +87,24 @@ extension NodeViewController {
 //MARK: - UISearchResultsUpdating
 extension NodeViewController {
     func updateSearchResultsForSearchController(searchController: UISearchController) {
+        let searchResult = self.nodes
+        let strippedString = searchController.searchBar.text!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
         
+        let filterResult = searchResult.filter { (node) -> Bool in
+            return node.name.containsString(strippedString) || node.title.containsString(strippedString)
+        }
+        let resultController = searchController.searchResultsController as! SearchResultTableViewController
+        resultController.nodes = filterResult
+        resultController.tableView.reloadData()
     }
 }
 
 //MARK: - UISearchBarDelegate
 extension NodeViewController {
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
-        print("search")
+        if self.nodes.count <= 0 {
+            self.loadNodes()
+        }
     }
 }
 

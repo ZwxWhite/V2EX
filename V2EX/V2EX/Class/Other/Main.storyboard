@@ -66,7 +66,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xmY-YJ-ixB" id="URt-c3-DED">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="64.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xUO-n9-osM">
@@ -121,6 +121,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstItem="7Gw-NG-sur" firstAttribute="centerY" secondItem="Wdj-36-FqU" secondAttribute="centerY" id="7Sc-N6-zU2"/>
                                                 <constraint firstAttribute="trailing" secondItem="orn-0V-LcE" secondAttribute="trailing" constant="10" id="8ZB-Nr-meT"/>
@@ -138,6 +139,7 @@
                                                 <constraint firstItem="orn-0V-LcE" firstAttribute="top" secondItem="xUO-n9-osM" secondAttribute="top" id="rBu-6W-8o3"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <inset key="separatorInset" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
                                             <outlet property="avatarImage" destination="xUO-n9-osM" id="Mb7-KM-pYV"/>
@@ -192,7 +194,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="euo-Js-tbJ" id="uR3-hM-esQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="64.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jUE-bb-u3z">
@@ -247,6 +249,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstItem="bv2-6i-JDj" firstAttribute="leading" secondItem="CnM-HJ-2KJ" secondAttribute="trailing" constant="10" id="20a-Eo-D8V"/>
                                                 <constraint firstItem="bv2-6i-JDj" firstAttribute="centerY" secondItem="CnM-HJ-2KJ" secondAttribute="centerY" id="6Wd-gz-gVg"/>
@@ -264,6 +267,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="Txg-B2-HL4" secondAttribute="trailing" constant="10" id="yr0-Ka-jnw"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <inset key="separatorInset" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
                                             <outlet property="avatarImage" destination="jUE-bb-u3z" id="Bpz-74-x9k"/>
@@ -388,7 +392,7 @@
                                 <rect key="frame" x="0.0" y="92" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0tP-ET-vam" id="utA-ea-mJv">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5wm-dy-ptf">
@@ -403,6 +407,7 @@
                                         <constraint firstItem="5wm-dy-ptf" firstAttribute="leading" secondItem="utA-ea-mJv" secondAttribute="leading" constant="15" id="CKQ-XZ-qgq"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
