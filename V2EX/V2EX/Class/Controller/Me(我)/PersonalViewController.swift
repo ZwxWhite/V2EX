@@ -79,8 +79,8 @@ extension PersonalViewController {
             try! v2Realm.write({ () -> Void in
                 if let user = v2Realm.objects(V2UserModel).first {
                     v2Realm.delete(user)
-                    self.tableView.reloadData()
                 }
+                self.tableView.reloadData()
             });
         }
     }

@@ -39,7 +39,7 @@ class ZZBaseRequest {
     
     init() {
         self.method = .GET
-        self.baseUrl = v2exBaseUrl
+        self.baseUrl = "https://www.v2ex.com"
         self.parameters = [String: String]()
         self.headers = [String: String]()
         self.encoding = .URL

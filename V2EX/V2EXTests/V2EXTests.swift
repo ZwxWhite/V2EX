@@ -21,8 +21,10 @@ class V2EXTests: XCTestCase {
     }
     
     func testExample() {
-        
-        
+        let string = "   abcd bcde sdfsdf s    "
+        let whitespaceCharacterSet = NSCharacterSet.whitespaceAndNewlineCharacterSet()
+        let newStr = string.stringByTrimmingCharactersInSet(whitespaceCharacterSet)
+        print(newStr)
         
     }
     
