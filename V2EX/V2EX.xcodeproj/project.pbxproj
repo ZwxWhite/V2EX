@@ -37,6 +37,7 @@
 		CCB27C571BF5BFA700D91B75 /* V2Topics.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB27C561BF5BFA700D91B75 /* V2Topics.swift */; };
 		CCB641071C5F2E7A00795870 /* V2NodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB641061C5F2E7A00795870 /* V2NodeModel.swift */; };
 		CCB641091C5F422E00795870 /* SearchResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB641081C5F422E00795870 /* SearchResultTableViewController.swift */; };
+		CCB641161C60BF1300795870 /* V2FPSLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB641151C60BF1300795870 /* V2FPSLabel.swift */; };
 		CCB8C8751C16FCFA00404F15 /* Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8C8741C16FCFA00404F15 /* Extention.swift */; };
 		CCE8ABA81C1EC24C0089ACF3 /* PersonalDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE8ABA71C1EC24C0089ACF3 /* PersonalDetailCell.swift */; };
 		CCE8ABAA1C1EC82C0089ACF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCE8ABA91C1EC82C0089ACF3 /* Assets.xcassets */; };
@@ -97,6 +98,7 @@
 		CCB27C561BF5BFA700D91B75 /* V2Topics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = V2Topics.swift; sourceTree = "<group>"; };
 		CCB641061C5F2E7A00795870 /* V2NodeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = V2NodeModel.swift; sourceTree = "<group>"; };
 		CCB641081C5F422E00795870 /* SearchResultTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewController.swift; sourceTree = "<group>"; };
+		CCB641151C60BF1300795870 /* V2FPSLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = V2FPSLabel.swift; sourceTree = "<group>"; };
 		CCB8C8741C16FCFA00404F15 /* Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extention.swift; sourceTree = "<group>"; };
 		CCE8ABA71C1EC24C0089ACF3 /* PersonalDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalDetailCell.swift; sourceTree = "<group>"; };
 		CCE8ABA91C1EC82C0089ACF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 		CC3560351BF43EF900D1780A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CCB641151C60BF1300795870 /* V2FPSLabel.swift */,
 				CC9FE4B61BFAD440006967FF /* Cell */,
 			);
 			name = View;
@@ -569,6 +572,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCB641161C60BF1300795870 /* V2FPSLabel.swift in Sources */,
 				CC04E6261C382E3900BBC0D1 /* DailyHotViewController.swift in Sources */,
 				CCB27C3C1BF4A0F300D91B75 /* AppConstant.swift in Sources */,
 				CC9FE4B81BFAD457006967FF /* V2TopicCell.swift in Sources */,
@@ -721,10 +725,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					"COCOAPODS=1",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = V2EX/Class/Other/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -742,6 +743,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = V2EX/Class/Other/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -756,6 +758,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = V2EXTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = wenxuan.zhang.V2EXTests;
