@@ -67,24 +67,11 @@ struct V2TopicModel: Contextualizable {
      解析html 至cell node
      */
     static func responseConfigWith(result: String) -> [V2TopicModel] {
-        let jiDoc = Ji(htmlString: result, encoding: NSUTF8StringEncoding)
-        if let wrapperNode = jiDoc?.xPath("//body")?.first?.childrenWithAttributeName("id", attributeValue: "Wrapper").first {
-            if let contentNode = wrapperNode.childrenWithAttributeName("class", attributeValue: "content").first {
-                if let mainNode = contentNode.childrenWithAttributeName("id", attributeValue: "Main").first {
-                    if let boxNode = mainNode.childrenWithAttributeName("class", attributeValue: "box").first {
-                        let cellNodes = boxNode.childrenWithAttributeName("class", attributeValue: "cell item")
-                        return self.configWithCellNodes(cellNodes)
-                    } else {
-                        V2Error(__FILE__,"解析错误").logError()
-                    }
-                } else {
-                    V2Error(__FILE__,"解析错误").logError()
-                }
-            } else {
-                V2Error(__FILE__,"解析错误").logError()
+        
+        if let htmlJi = Ji(htmlString: result) {
+            if let cellNode = htmlJi.xPath("//body/div[@id='Wrapper']/div[@class='content']/div[@id='Main']/div[@class='box']/div[@class='cell item']") {
+                return self.configWithCellNodes(cellNode)
             }
-        } else {
-            V2Error(__FILE__,"解析错误").logError()
         }
         return [V2TopicModel]()
     }
