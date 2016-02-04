@@ -49,6 +49,7 @@ extension NodeViewController {
     
     private func loadSearchRecords() {
         self.searchRecords = v2Realm.objects(V2NodeRecord)
+        
         self.tableView.reloadData()
     }
     
