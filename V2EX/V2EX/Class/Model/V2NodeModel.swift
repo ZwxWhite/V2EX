@@ -36,3 +36,10 @@ extension V2NodeModel {
         
     }
 }
+
+
+
+
+class V2NodeRecord: Object {
+    dynamic var searchText: String?
+}

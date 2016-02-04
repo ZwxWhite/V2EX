@@ -8,11 +8,14 @@
 
 import UIKit
 import Alamofire
+import RealmSwift
 
 class NodeViewController: UITableViewController, Contextualizable, UISearchResultsUpdating, UISearchControllerDelegate, UISearchBarDelegate {
 
     
     var nodes = [V2NodeModel]()
+    
+    var searchRecords: Results<V2NodeRecord>!
     
     var searchController: UISearchController!
     var resultTableViewController = SearchResultTableViewController()
@@ -37,11 +40,17 @@ class NodeViewController: UITableViewController, Contextualizable, UISearchResul
         super.viewWillAppear(animated)
         
         self.loadNodes()
+        self.loadSearchRecords();
     }
 }
 
 
 extension NodeViewController {
+    
+    private func loadSearchRecords() {
+        self.searchRecords = v2Realm.objects(V2NodeRecord)
+        self.tableView.reloadData()
+    }
     
     private func loadNodes() {
         request(.GET, v2exBaseUrl+"/api/nodes/all.json", parameters: nil, encoding: .URL, headers: nil).responseJSON { (response) -> Void in
@@ -56,7 +65,6 @@ extension NodeViewController {
                 }
                 let cache = NSURLCache(memoryCapacity: 4 * 1024 * 1024, diskCapacity: 20 * 1024 * 1024, diskPath: nil)
                 NSURLCache.setSharedURLCache(cache)
-                self.tableView.reloadData()
             case .Failure(let error):
                 V2Error(self.currentDebugContext(),error.description).logError()
             }
@@ -64,13 +72,17 @@ extension NodeViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if let searchRecords = self.searchRecords {
+            return searchRecords.count
+        }
         return 0
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCellWithIdentifier("NodeCell") {
             if let label = cell.contentView.viewWithTag(1001) as? UILabel{
-                label.text = self.nodes[indexPath.row].name
+                let record = self.searchRecords[indexPath.row] as V2NodeRecord
+                label.text = record.searchText
             }
             return cell
         }
@@ -102,9 +114,14 @@ extension NodeViewController {
 //MARK: - UISearchBarDelegate
 extension NodeViewController {
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
-        if self.nodes.count <= 0 {
-            self.loadNodes()
-        }
+        
+        let record = V2NodeRecord()
+        record.searchText = searchBar.text
+        
+        try! v2Realm.write({ () -> Void in
+            v2Realm.add(record)
+        })
+        self.loadSearchRecords()
     }
 }
 
