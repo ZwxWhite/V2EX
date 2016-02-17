@@ -11,11 +11,23 @@ PODS:
   - Kingfisher (1.8.3)
   - PagingMenuController (0.7.6)
   - ReachabilitySwift (2.3)
+  - ReactiveCocoa (4.0.1):
+    - ReactiveCocoa/UI (= 4.0.1)
+    - Result (~> 1.0.2)
+  - ReactiveCocoa/Core (4.0.1):
+    - ReactiveCocoa/no-arc
+    - Result (~> 1.0.2)
+  - ReactiveCocoa/no-arc (4.0.1):
+    - Result (~> 1.0.2)
+  - ReactiveCocoa/UI (4.0.1):
+    - ReactiveCocoa/Core
+    - Result (~> 1.0.2)
   - Realm (0.96.3):
     - Realm/Headers (= 0.96.3)
   - Realm/Headers (0.96.3)
   - RealmSwift (0.96.3):
     - Realm (= 0.96.3)
+  - Result (1.0.2)
   - SnapKit (0.18.0)
   - SwiftDate (2.0.2)
 
@@ -27,6 +39,7 @@ DEPENDENCIES:
   - Kingfisher
   - PagingMenuController
   - ReachabilitySwift
+  - ReactiveCocoa
   - RealmSwift
   - SnapKit
   - SwiftDate
@@ -39,8 +52,10 @@ SPEC CHECKSUMS:
   Kingfisher: ead91e9dbeb7e5a2e8b7af3bd8a294104cbcc3f9
   PagingMenuController: d34cb992957c7dfae085785a870cf5f3966020be
   ReachabilitySwift: 2ac9df18a443901f06caae38a9f5431219a4c36a
+  ReactiveCocoa: f7011630aee4deeb16352fcb1b50d6bde9db4f90
   Realm: 145d3cdf78a03aee71bde5381ad7e542bd541720
   RealmSwift: aab84968aad662f61f36473d1aea019f63481505
+  Result: dd3dd71af3fa2e262f1a999e14fba2c25ec14f16
   SnapKit: e1f090a6d47b1dd4bd89b73f72b6746a7835ef3c
   SwiftDate: b4f4d0962afe48365ad2800c9850a6626deb9359
 
