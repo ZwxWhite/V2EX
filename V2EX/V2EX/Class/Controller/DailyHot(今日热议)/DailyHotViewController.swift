@@ -18,10 +18,8 @@ class DailyHotViewController: UIViewController,UITableViewDelegate,UITableViewDa
         }
     }
     
-    /// 数据源
     private var topics = [V2TopicModel]()
     
-    /// 刷新
     private var refreshControl: UIRefreshControl?
     
     override func viewDidLoad() {
@@ -29,10 +27,6 @@ class DailyHotViewController: UIViewController,UITableViewDelegate,UITableViewDa
         
         loadData()
         addRefresh()
-    }
-    
-    deinit {
-        
     }
 }
 
@@ -59,6 +53,7 @@ extension DailyHotViewController {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+
     }
 }
 
