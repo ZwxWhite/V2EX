@@ -21,7 +21,6 @@
 		CC35604D1BF4459200D1780A /* NodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC35604C1BF4459200D1780A /* NodeViewController.swift */; };
 		CC35604F1BF445D500D1780A /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC35604E1BF445D500D1780A /* PersonalViewController.swift */; };
 		CC3560571BF4897B00D1780A /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3560561BF4897B00D1780A /* Random.swift */; };
-		CC35605A1BF48A5200D1780A /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3560591BF48A5200D1780A /* Color.swift */; };
 		CC3BC3F71C7423150088E435 /* TopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3BC3F61C7423150088E435 /* TopicViewController.swift */; };
 		CC44ADC11C1AA9CE00B6C3FE /* V2UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC44ADC01C1AA9CE00B6C3FE /* V2UserModel.swift */; };
 		CC67D5901C113D1A00D23B8F /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC67D58E1C113D1A00D23B8F /* CategoriesViewController.swift */; };
@@ -85,7 +84,6 @@
 		CC35604C1BF4459200D1780A /* NodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeViewController.swift; sourceTree = "<group>"; };
 		CC35604E1BF445D500D1780A /* PersonalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
 		CC3560561BF4897B00D1780A /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
-		CC3560591BF48A5200D1780A /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		CC3BC3F61C7423150088E435 /* TopicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicViewController.swift; sourceTree = "<group>"; };
 		CC44ADC01C1AA9CE00B6C3FE /* V2UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = V2UserModel.swift; sourceTree = "<group>"; };
 		CC67D58E1C113D1A00D23B8F /* CategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
@@ -284,7 +282,6 @@
 			isa = PBXGroup;
 			children = (
 				CCB27C3D1BF5863200D91B75 /* Network */,
-				CC3560581BF48A4100D1780A /* Extention */,
 				CC3560551BF4895E00D1780A /* Tools */,
 			);
 			name = Expand;
@@ -300,14 +297,6 @@
 				CCF36B311BFB3DF60006366D /* DateTool.swift */,
 			);
 			path = Tools;
-			sourceTree = "<group>";
-		};
-		CC3560581BF48A4100D1780A /* Extention */ = {
-			isa = PBXGroup;
-			children = (
-				CC3560591BF48A5200D1780A /* Color.swift */,
-			);
-			path = Extention;
 			sourceTree = "<group>";
 		};
 		CC67D58D1C113D1A00D23B8F /* Category(分类) */ = {
@@ -581,7 +570,6 @@
 				CC9FE4B81BFAD457006967FF /* V2TopicCell.swift in Sources */,
 				CCB27C571BF5BFA700D91B75 /* V2Topics.swift in Sources */,
 				CC3560451BF4437E00D1780A /* RootViewController.swift in Sources */,
-				CC35605A1BF48A5200D1780A /* Color.swift in Sources */,
 				CC44ADC11C1AA9CE00B6C3FE /* V2UserModel.swift in Sources */,
 				CC35603A1BF43F5F00D1780A /* AppDelegate.swift in Sources */,
 				CCB8C8751C16FCFA00404F15 /* Extention.swift in Sources */,

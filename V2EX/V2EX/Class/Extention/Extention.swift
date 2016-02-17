@@ -23,3 +23,9 @@ extension UIStoryboard {
         return storyboard.instantiateViewControllerWithIdentifier(identifier)
     }
 }
+
+extension UIColor {
+    class func randomColor() -> UIColor {
+        return UIColor(red: CGFloat(randomInRange(0...255))/255.0, green: CGFloat(randomInRange(0...255))/255.0, blue: CGFloat(randomInRange(0...255))/255.0, alpha: 1)
+    }
+}
