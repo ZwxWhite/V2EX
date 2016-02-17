@@ -9,7 +9,7 @@
 import Foundation
 
 
-struct V2Topic {
+class V2Topic {
     
     var id: Int?
     var title: String?
@@ -54,7 +54,7 @@ struct V2Topic {
 
 
 
-struct V2Member {
+class V2Member {
     var id: Int?
     var username: String?
     var tagline: String?
@@ -83,7 +83,7 @@ struct V2Member {
 
 
 
-struct V2Node {
+class V2Node {
     var id: Int?
     var name: String?
     var title: String?

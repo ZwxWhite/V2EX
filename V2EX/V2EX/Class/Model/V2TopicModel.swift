@@ -8,7 +8,7 @@
 
 import Ji
 
-struct V2TopicModel: Contextualizable {
+class V2TopicModel: Contextualizable {
     var avatarImageString: String?
     var title: String!
     var userName: String!
@@ -16,8 +16,8 @@ struct V2TopicModel: Contextualizable {
     var replies: String!
     var node: String!
     var id: Int?
-    
-    init() {
+
+    init () {
         
     }
     
@@ -85,7 +85,7 @@ struct V2TopicModel: Contextualizable {
             if let trNode = cellNode.childrenWithName("table").first?.childrenWithName("tr").first {
                 // 获取tdNode
                 let tdNodes = trNode.childrenWithName("td")
-                var topicModel = V2TopicModel()
+                let topicModel = V2TopicModel()
                 
                 // 遍历
                 for tdNode in tdNodes {
