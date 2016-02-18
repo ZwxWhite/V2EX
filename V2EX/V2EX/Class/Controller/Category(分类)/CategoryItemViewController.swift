@@ -11,7 +11,7 @@ import Alamofire
 import Ji
 
 
-class CategoryItemViewController: UIViewController, Contextualizable, UITableViewDataSource, UITableViewDelegate {
+class CategoryItemViewController: UIViewController, Contextualizable {
     
     
     @IBOutlet weak var tableView: UITableView!
@@ -30,7 +30,7 @@ class CategoryItemViewController: UIViewController, Contextualizable, UITableVie
 
 
 // MARK: - UITableViewDelegate & UITableViewDataSource
-extension CategoryItemViewController {
+extension CategoryItemViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1

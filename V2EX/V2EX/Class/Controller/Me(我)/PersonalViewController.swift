@@ -50,7 +50,7 @@ extension PersonalViewController {
             cell.reloadData()
             return cell
         } else if indexPath.section == 4 {
-            let cell = tableView.dequeueReusableCellWithIdentifier("PersonalLogoutCell", forIndexPath: indexPath) as! PersonalLogoutCell
+            let cell = tableView.dequeueReusableCellWithIdentifier("PersonalLogoutCell", forIndexPath: indexPath)
             return cell
         }
         

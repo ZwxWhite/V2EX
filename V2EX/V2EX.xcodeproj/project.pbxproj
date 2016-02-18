@@ -29,7 +29,6 @@
 		CC67D5911C113D1A00D23B8F /* CategoryItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC67D58F1C113D1A00D23B8F /* CategoryItemViewController.swift */; };
 		CC67D5981C113EB200D23B8F /* DailyHotRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC67D5971C113EB200D23B8F /* DailyHotRequest.swift */; };
 		CC75D7441C11855B00E1C344 /* UserHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC75D7431C11855B00E1C344 /* UserHeaderCell.swift */; };
-		CC7BA1B51C4CFFEB00201ECA /* PersonalLogoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7BA1B41C4CFFEB00201ECA /* PersonalLogoutCell.swift */; };
 		CC9050841C0ED33800E3C84E /* ZZBaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9050831C0ED33800E3C84E /* ZZBaseRequest.swift */; };
 		CC9050851C0ED33800E3C84E /* ZZBaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9050831C0ED33800E3C84E /* ZZBaseRequest.swift */; };
 		CC9050871C0ED81E00E3C84E /* ZZNetworkAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9050861C0ED81E00E3C84E /* ZZNetworkAgent.swift */; };
@@ -96,7 +95,6 @@
 		CC67D58F1C113D1A00D23B8F /* CategoryItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryItemViewController.swift; sourceTree = "<group>"; };
 		CC67D5971C113EB200D23B8F /* DailyHotRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyHotRequest.swift; sourceTree = "<group>"; };
 		CC75D7431C11855B00E1C344 /* UserHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHeaderCell.swift; sourceTree = "<group>"; };
-		CC7BA1B41C4CFFEB00201ECA /* PersonalLogoutCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalLogoutCell.swift; sourceTree = "<group>"; };
 		CC9050831C0ED33800E3C84E /* ZZBaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZZBaseRequest.swift; sourceTree = "<group>"; };
 		CC9050861C0ED81E00E3C84E /* ZZNetworkAgent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZZNetworkAgent.swift; sourceTree = "<group>"; };
 		CC9FE4B71BFAD457006967FF /* V2TopicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = V2TopicCell.swift; sourceTree = "<group>"; };
@@ -341,7 +339,6 @@
 				CC9FE4B71BFAD457006967FF /* V2TopicCell.swift */,
 				CC75D7431C11855B00E1C344 /* UserHeaderCell.swift */,
 				CCE8ABA71C1EC24C0089ACF3 /* PersonalDetailCell.swift */,
-				CC7BA1B41C4CFFEB00201ECA /* PersonalLogoutCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -584,7 +581,6 @@
 				CC44ADC11C1AA9CE00B6C3FE /* V2UserModel.swift in Sources */,
 				CC35603A1BF43F5F00D1780A /* AppDelegate.swift in Sources */,
 				CCB8C8751C16FCFA00404F15 /* Extention.swift in Sources */,
-				CC7BA1B51C4CFFEB00201ECA /* PersonalLogoutCell.swift in Sources */,
 				CC1A270A1C1704300022A853 /* LoginViewController.swift in Sources */,
 				CC67D5981C113EB200D23B8F /* DailyHotRequest.swift in Sources */,
 				CCF36B321BFB3DF60006366D /* DateTool.swift in Sources */,

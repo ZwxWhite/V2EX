@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import RealmSwift
 
-class NodeViewController: UITableViewController, Contextualizable, UISearchResultsUpdating, UISearchControllerDelegate, UISearchBarDelegate {
+class NodeViewController: UITableViewController, Contextualizable, UISearchControllerDelegate {
 
     
     var nodes = [V2NodeModel]()
@@ -45,6 +45,8 @@ class NodeViewController: UITableViewController, Contextualizable, UISearchResul
 }
 
 
+
+// MARK: - UITableViewDelegate & UITableViewDataSource
 extension NodeViewController {
     
     private func loadSearchRecords() {
@@ -98,7 +100,7 @@ extension NodeViewController {
 
 
 //MARK: - UISearchResultsUpdating
-extension NodeViewController {
+extension NodeViewController: UISearchResultsUpdating {
     func updateSearchResultsForSearchController(searchController: UISearchController) {
         let searchResult = self.nodes
         let strippedString = searchController.searchBar.text!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
@@ -113,7 +115,7 @@ extension NodeViewController {
 }
 
 //MARK: - UISearchBarDelegate
-extension NodeViewController {
+extension NodeViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         
         let record = V2NodeRecord()

@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 
 // MARK: - Life cycle
-class DailyHotViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,Contextualizable {
+class DailyHotViewController: UIViewController,Contextualizable {
 
     @IBOutlet weak var tableView: UITableView! {
         didSet{
@@ -31,7 +31,7 @@ class DailyHotViewController: UIViewController,UITableViewDelegate,UITableViewDa
 }
 
 // MARK: - UITableViewDelegate & UITableViewDataSource
-extension DailyHotViewController {
+extension DailyHotViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
