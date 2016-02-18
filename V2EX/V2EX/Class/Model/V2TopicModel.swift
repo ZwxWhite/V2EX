@@ -16,6 +16,7 @@ class V2TopicModel: Contextualizable {
     var replies: String!
     var node: String!
     var id: Int?
+    var created: NSDate?
 
     init () {
         
@@ -58,6 +59,11 @@ class V2TopicModel: Contextualizable {
             self.node = modelNode+"   "
         } else {
             self.node = ""
+        }
+        
+        if let modelCreated = topic.created {
+            let interval = NSTimeInterval(modelCreated)
+            created = NSDate(timeIntervalSince1970: interval)
         }
         
         self.id = topic.id

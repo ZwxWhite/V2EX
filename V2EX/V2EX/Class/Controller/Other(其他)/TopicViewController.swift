@@ -9,11 +9,19 @@
 import UIKit
 
 class TopicViewController: UIViewController {
+    
+    var topic: V2TopicModel?
 
     @IBOutlet weak var tableView: UITableView!{
         didSet{
             tableView.tableFooterView = UIView(frame: CGRectZero)
         }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        title = topic?.title
     }
 }
 
@@ -26,11 +34,27 @@ extension TopicViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCellWithIdentifier("TopicUserInfoCell") as! TopicUserInfoCell
+            cell.topic = topic
+            
+            return cell
+        }
+        
         return UITableViewCell()
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        switch indexPath.row {
+        case 1 :
+            return 50
+        default:
+            return 50
+        }
     }
 }
 
