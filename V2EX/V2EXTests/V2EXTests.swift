@@ -25,7 +25,12 @@ class V2EXTests: XCTestCase {
         let whitespaceCharacterSet = NSCharacterSet.whitespaceAndNewlineCharacterSet()
         let newStr = string.stringByTrimmingCharactersInSet(whitespaceCharacterSet)
         print(newStr)
+    }
+    
+    func testTime() {
         
+        let date = NSDate(timeIntervalSince1970: 1455618017)
+        print(date)
     }
     
     func testPerformanceExample() {

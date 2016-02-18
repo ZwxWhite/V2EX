@@ -23,6 +23,7 @@
 		CC35604F1BF445D500D1780A /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC35604E1BF445D500D1780A /* PersonalViewController.swift */; };
 		CC3560571BF4897B00D1780A /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3560561BF4897B00D1780A /* Random.swift */; };
 		CC3BC3F71C7423150088E435 /* TopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3BC3F61C7423150088E435 /* TopicViewController.swift */; };
+		CC3E6ABD1C75D74500A73C3A /* V2NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3E6ABC1C75D74500A73C3A /* V2NavigationController.swift */; };
 		CC44ADC11C1AA9CE00B6C3FE /* V2UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC44ADC01C1AA9CE00B6C3FE /* V2UserModel.swift */; };
 		CC67D5901C113D1A00D23B8F /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC67D58E1C113D1A00D23B8F /* CategoriesViewController.swift */; };
 		CC67D5911C113D1A00D23B8F /* CategoryItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC67D58F1C113D1A00D23B8F /* CategoryItemViewController.swift */; };
@@ -89,6 +90,7 @@
 		CC35604E1BF445D500D1780A /* PersonalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
 		CC3560561BF4897B00D1780A /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
 		CC3BC3F61C7423150088E435 /* TopicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicViewController.swift; sourceTree = "<group>"; };
+		CC3E6ABC1C75D74500A73C3A /* V2NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = V2NavigationController.swift; sourceTree = "<group>"; };
 		CC44ADC01C1AA9CE00B6C3FE /* V2UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = V2UserModel.swift; sourceTree = "<group>"; };
 		CC67D58E1C113D1A00D23B8F /* CategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		CC67D58F1C113D1A00D23B8F /* CategoryItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryItemViewController.swift; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				CC3560441BF4437E00D1780A /* RootViewController.swift */,
+				CC3E6ABC1C75D74500A73C3A /* V2NavigationController.swift */,
 				CC3BC3F61C7423150088E435 /* TopicViewController.swift */,
 			);
 			path = "Other(其他)";
@@ -587,6 +590,7 @@
 				CCF36B321BFB3DF60006366D /* DateTool.swift in Sources */,
 				CC35604D1BF4459200D1780A /* NodeViewController.swift in Sources */,
 				CC13F48B1C5A2EB4004FD8DA /* V2TopicModel.swift in Sources */,
+				CC3E6ABD1C75D74500A73C3A /* V2NavigationController.swift in Sources */,
 				CCFCB8E31C192CC7006AF972 /* LoginRequest.swift in Sources */,
 				CCE8ABA81C1EC24C0089ACF3 /* PersonalDetailCell.swift in Sources */,
 				CC9050841C0ED33800E3C84E /* ZZBaseRequest.swift in Sources */,

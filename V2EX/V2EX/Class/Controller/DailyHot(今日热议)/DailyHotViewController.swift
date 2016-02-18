@@ -24,7 +24,7 @@ class DailyHotViewController: UIViewController,UITableViewDelegate,UITableViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         loadData()
         addRefresh()
     }
@@ -53,7 +53,9 @@ extension DailyHotViewController {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-
+        
+        let topicController = self.storyboard?.instantiateViewControllerWithIdentifier("SID_TopicViewController") as! TopicViewController
+        navigationController?.pushViewController(topicController, animated: true)
     }
 }
 
