@@ -12,6 +12,7 @@ class TopicViewController: UIViewController {
     
     var topic: V2TopicModel?
 
+    @IBOutlet weak var nodeLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!{
         didSet{
             tableView.tableFooterView = UIView(frame: CGRectZero)
@@ -20,8 +21,8 @@ class TopicViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        title = topic?.title
+        title = "话题详情"
+        nodeLabel.text = topic?.node
     }
 }
 
@@ -37,15 +38,10 @@ extension TopicViewController: UITableViewDataSource, UITableViewDelegate {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCellWithIdentifier("TopicUserInfoCell") as! TopicUserInfoCell
             cell.topic = topic
-            
             return cell
         }
         
         return UITableViewCell()
-    }
-    
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -55,6 +51,10 @@ extension TopicViewController: UITableViewDataSource, UITableViewDelegate {
         default:
             return 50
         }
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
 }
 
