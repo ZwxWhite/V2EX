@@ -50,7 +50,7 @@ extension AppDelegate {
     func configV2exStyle(application: UIApplication) {
 
         UINavigationBar.appearance().barTintColor = UIColor.whiteColor()
-        UINavigationBar.appearance().titleTextAttributes[NSForegroundColorAttributeName] = UIColor
+        UINavigationBar.appearance().tintColor = UIColor.colorWithRGB(0x565656)
         
         let fpsLabel = V2FPSLabel(frame: CGRectMake(Screen_Width-70, 20, 55, 20))
         self.window?.rootViewController?.view.addSubview(fpsLabel)
