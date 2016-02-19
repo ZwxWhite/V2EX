@@ -12,7 +12,6 @@ class TopicViewController: UIViewController {
     
     var topic: V2TopicModel?
 
-    @IBOutlet weak var nodeLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!{
         didSet{
             tableView.tableFooterView = UIView(frame: CGRectZero)
@@ -22,7 +21,7 @@ class TopicViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "话题详情"
-        nodeLabel.text = topic?.node
+
     }
 }
 
