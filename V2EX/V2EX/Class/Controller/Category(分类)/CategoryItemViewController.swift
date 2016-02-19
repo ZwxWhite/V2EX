@@ -41,7 +41,7 @@ extension CategoryItemViewController: UITableViewDataSource, UITableViewDelegate
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        if let topicCell = tableView.dequeueReusableCellWithIdentifier("TopicCell", forIndexPath: indexPath) as? V2TopicCell {
+        if let topicCell = tableView.dequeueReusableCellWithIdentifier("TopicCell") as? V2TopicCell {
             let topicViewModel = topics[indexPath.row]
             topicCell.topicViewModel = topicViewModel
             return topicCell

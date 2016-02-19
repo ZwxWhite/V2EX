@@ -46,7 +46,7 @@ extension TopicViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         switch indexPath.row {
         case 1 :
-            return 50
+            return 200
         default:
             return 50
         }
