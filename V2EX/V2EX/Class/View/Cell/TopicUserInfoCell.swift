@@ -35,16 +35,5 @@ class TopicUserInfoCell: UITableViewCell {
             }
         }
     }
-    
-    class func cellHeightWithTopic(model: V2TopicModel?) -> CGFloat {
-        if let topic = model {
-            let title = "李世石和谷歌 AlphaGo 的围棋五番棋，我认为李世石会赢，并且一旦赢，谷歌电脑会输的一败涂地。"
-            let titleRect = title.boundingRectWithSize(CGSize(width: Screen_Width, height: CGFloat(FLT_MAX)), options: [.UsesLineFragmentOrigin, .UsesFontLeading], attributes: nil, context: nil)
-            
-            return CGFloat(5+40+15) + titleRect.height
 
-        }
-        return 0
-    }
-    
 }

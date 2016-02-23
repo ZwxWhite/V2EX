@@ -55,7 +55,7 @@ extension DailyHotViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
         let topicController = self.storyboard?.instantiateViewControllerWithIdentifier("SID_TopicViewController") as! TopicViewController
-        topicController.topic = self.topics[indexPath.row]
+        topicController.topicInfo = self.topics[indexPath.row]
         navigationController?.pushViewController(topicController, animated: true)
     }
 }

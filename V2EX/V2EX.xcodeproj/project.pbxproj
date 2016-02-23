@@ -26,6 +26,7 @@
 		CC3E6ABD1C75D74500A73C3A /* V2NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3E6ABC1C75D74500A73C3A /* V2NavigationController.swift */; };
 		CC3E6ABF1C75DB1300A73C3A /* TopicUserInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3E6ABE1C75DB1300A73C3A /* TopicUserInfoCell.swift */; };
 		CC44ADC11C1AA9CE00B6C3FE /* V2UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC44ADC01C1AA9CE00B6C3FE /* V2UserModel.swift */; };
+		CC5FEF541C7C848C0066DD6D /* TopicRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FEF531C7C848C0066DD6D /* TopicRequest.swift */; };
 		CC67D5901C113D1A00D23B8F /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC67D58E1C113D1A00D23B8F /* CategoriesViewController.swift */; };
 		CC67D5911C113D1A00D23B8F /* CategoryItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC67D58F1C113D1A00D23B8F /* CategoryItemViewController.swift */; };
 		CC67D5981C113EB200D23B8F /* DailyHotRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC67D5971C113EB200D23B8F /* DailyHotRequest.swift */; };
@@ -93,6 +94,7 @@
 		CC3E6ABC1C75D74500A73C3A /* V2NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = V2NavigationController.swift; sourceTree = "<group>"; };
 		CC3E6ABE1C75DB1300A73C3A /* TopicUserInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicUserInfoCell.swift; sourceTree = "<group>"; };
 		CC44ADC01C1AA9CE00B6C3FE /* V2UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = V2UserModel.swift; sourceTree = "<group>"; };
+		CC5FEF531C7C848C0066DD6D /* TopicRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicRequest.swift; sourceTree = "<group>"; };
 		CC67D58E1C113D1A00D23B8F /* CategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		CC67D58F1C113D1A00D23B8F /* CategoryItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryItemViewController.swift; sourceTree = "<group>"; };
 		CC67D5971C113EB200D23B8F /* DailyHotRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyHotRequest.swift; sourceTree = "<group>"; };
@@ -331,6 +333,7 @@
 			children = (
 				CC67D5971C113EB200D23B8F /* DailyHotRequest.swift */,
 				CCFCB8E21C192CC7006AF972 /* LoginRequest.swift */,
+				CC5FEF531C7C848C0066DD6D /* TopicRequest.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -582,6 +585,7 @@
 				CC9FE4B81BFAD457006967FF /* V2TopicCell.swift in Sources */,
 				CCB27C571BF5BFA700D91B75 /* V2Topics.swift in Sources */,
 				CC3560451BF4437E00D1780A /* RootViewController.swift in Sources */,
+				CC5FEF541C7C848C0066DD6D /* TopicRequest.swift in Sources */,
 				CC44ADC11C1AA9CE00B6C3FE /* V2UserModel.swift in Sources */,
 				CC35603A1BF43F5F00D1780A /* AppDelegate.swift in Sources */,
 				CCB8C8751C16FCFA00404F15 /* Extention.swift in Sources */,
