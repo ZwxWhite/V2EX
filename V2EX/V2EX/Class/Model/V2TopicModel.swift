@@ -17,7 +17,7 @@ class V2TopicModel: Contextualizable {
     var node: String!
     var id: Int?
     var created: NSDate?
-
+    
     init () {
         
     }
@@ -28,19 +28,16 @@ class V2TopicModel: Contextualizable {
         } else {
             self.avatarImageString = nil
         }
-        
         if let modelTitle = topic.title {
             self.title = modelTitle
         } else {
             self.title = ""
         }
-        
         if let modelUserName = topic.member?.username {
             self.userName = modelUserName
         } else {
             self.userName = ""
         }
-        
         if let modelLastTouched = topic.last_modified {
             
             let lastTouchedTime = NSTimeInterval(modelLastTouched)
@@ -48,7 +45,6 @@ class V2TopicModel: Contextualizable {
         } else {
             self.lastModified = ""
         }
-        
         if let modelReplies = topic.replies {
             self.replies = String(modelReplies)
         } else {
@@ -60,7 +56,6 @@ class V2TopicModel: Contextualizable {
         } else {
             self.node = ""
         }
-        
         if let modelCreated = topic.created {
             let interval = NSTimeInterval(modelCreated)
             created = NSDate(timeIntervalSince1970: interval)

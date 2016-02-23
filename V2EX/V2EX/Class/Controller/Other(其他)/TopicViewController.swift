@@ -22,6 +22,9 @@ class TopicViewController: UIViewController {
         super.viewDidLoad()
         title = "话题详情"
 
+        
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 44.0
     }
 }
 
@@ -41,15 +44,6 @@ extension TopicViewController: UITableViewDataSource, UITableViewDelegate {
         }
         
         return UITableViewCell()
-    }
-    
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        switch indexPath.row {
-        case 1 :
-            return 200
-        default:
-            return 50
-        }
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
