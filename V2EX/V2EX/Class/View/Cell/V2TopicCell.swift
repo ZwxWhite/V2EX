@@ -11,7 +11,6 @@ import Kingfisher
 
 
 class V2TopicCell: UITableViewCell,Contextualizable {
-
     
 
     @IBOutlet weak var titleLabel: UILabel!
@@ -34,6 +33,13 @@ class V2TopicCell: UITableViewCell,Contextualizable {
             nodeLabel.layer.cornerRadius = 4
             nodeLabel.layer.masksToBounds = true
         }
+    }
+    
+    override func awakeFromNib() {
+        
+        // 解决卡顿  将试图渲染内容缓存
+        self.layer.shouldRasterize = true
+        self.layer.rasterizationScale = UIScreen.mainScreen().scale
     }
     
     var topicViewModel: V2TopicModel? {
