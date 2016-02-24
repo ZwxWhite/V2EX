@@ -31,6 +31,8 @@ class TopicViewController: UIViewController {
     }
     
     func loadData() {
+        
+        // topic
         TopicRequest(id: topicInfo?.id).start()?.responseJSON(completionHandler: { (response) -> Void in
             switch response.result {
             case .Success(let responseJson):

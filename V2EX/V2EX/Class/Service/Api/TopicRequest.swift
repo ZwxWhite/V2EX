@@ -17,7 +17,22 @@ class TopicRequest: ZZBaseRequest {
         self.method = .GET
         
         if let topicID = id {
-            parameters["id"] = id
+            parameters["id"] = topicID
+        }
+    }
+}
+
+
+class RepliesRequest: ZZBaseRequest {
+    convenience init(topicID: Int?, page: Int?) {
+        self.init()
+        
+        self.requestUrl = "/api/replies/show.json"
+        if topicID != nil {
+            parameters["topic_id"] = topicID
+        }
+        if page != nil {
+            parameters["page"] = page
         }
     }
 }
