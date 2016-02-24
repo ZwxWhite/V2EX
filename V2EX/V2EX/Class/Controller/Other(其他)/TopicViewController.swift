@@ -14,7 +14,7 @@ class TopicViewController: UIViewController {
     var topicInfo: V2TopicModel?
     var topic: V2Topic?
     var currentPage: Int!
-    var replies: [
+    var replies = [V2Reply]()
 
     @IBOutlet weak var tableView: UITableView!{
         didSet{
