@@ -8,6 +8,7 @@
 
 import Foundation
 import RealmSwift
+import SwiftyJSON
 
 /*
     "status": "found",
@@ -66,7 +67,23 @@ class V2UserModel: Object {
 }
 
 extension V2UserModel {
-    func setupWithDictionary(dictionary: [String: AnyObject]) {
-        self.setValuesForKeysWithDictionary(dictionary)
+    func setupWithJson(json: JSON) {
+
+        self.id = json["id"].int!
+        self.created = json["created"].int!
+        self.status = json["status"].string!
+        self.url = json["url"].string!
+        self.username = json["username"].string!
+        self.website = json["website"].string!
+        self.twitter = json["twitter"].string!
+        self.psn = json["psn"].string!
+        self.github = json["github"].string!
+        self.btc = json["btc"].string!
+        self.location = json["location"].string!
+        self.tagline = json["tagline"].string!
+        self.bio = json["bio"].string!
+        self.avatar_mini = json["avatar_mini"].string!
+        self.avatar_normal = json["avatar_normal"].string!
+        self.avatar_large = json["avatar_large"].string!
     }
 }

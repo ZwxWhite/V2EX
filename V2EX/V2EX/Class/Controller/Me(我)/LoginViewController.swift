@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import Ji
+import SwiftyJSON
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
@@ -96,7 +97,7 @@ extension LoginViewController {
             case .Success(let responseJson):
                 let user = V2UserModel()
                 print(responseJson as! [String: AnyObject])
-                user.setupWithDictionary(responseJson as! [String: AnyObject])
+                user.setupWithJson(JSON(responseJson))
                 try! v2Realm.write({ () -> Void in
                     v2Realm.add(user, update: true)
                 })

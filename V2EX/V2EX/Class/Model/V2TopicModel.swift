@@ -18,10 +18,10 @@ class V2TopicModel: Contextualizable {
     var id: Int?
     var created: NSDate?
     
-    init () {
+    init() {
         
     }
-    
+
     init(topic:V2Topic){
         if let modelAvatarImageString = topic.member?.avatar_normal {
             self.avatarImageString = "https:" + modelAvatarImageString

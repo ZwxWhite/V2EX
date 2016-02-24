@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import RealmSwift
+import SwiftyJSON
 
 class NodeViewController: UITableViewController, Contextualizable, UISearchControllerDelegate {
 
@@ -54,15 +55,14 @@ extension NodeViewController {
         
         self.tableView.reloadData()
     }
-    
+
     private func loadNodes() {
         request(.GET, v2exBaseUrl+"/api/nodes/all.json", parameters: nil, encoding: .URL, headers: nil).responseJSON { (response) -> Void in
             switch response.result {
             case .Success(let responseResult):
                 if let responseArray = responseResult as? NSArray {
                     for dictionary in responseArray {
-                        let node = V2NodeModel()
-                        node.setupWithDictionary(dictionary as! [String : AnyObject])
+                        let node = V2NodeModel(json: JSON(dictionary))
                         self.nodes.append(node)
                     }
                 }

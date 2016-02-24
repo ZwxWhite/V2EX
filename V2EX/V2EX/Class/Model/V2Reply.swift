@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 class V2Reply {
     
@@ -18,5 +19,10 @@ class V2Reply {
     var created: Int?
     var last_modified: Int?
     
-    
+    init(json: JSON) {
+        self.id = json["id"].int
+        self.thanks = json["thanks"].int
+        self.content = json["content"].string
+        self.content_rendered = json["content_rendered"].string
+    }
 }

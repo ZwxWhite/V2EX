@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
 
 // MARK: - Life cycle
 class DailyHotViewController: UIViewController,Contextualizable {
@@ -69,7 +70,7 @@ extension DailyHotViewController {
             if let result = response.result.value as? NSArray {
                 self.topics.removeAll()
                 for dictionary in result {
-                    let topic = V2Topic(dictionary: dictionary as! NSDictionary)
+                    let topic = V2Topic(json: JSON(dictionary))
                     self.topics.append(V2TopicModel(topic: topic))
                 }
                 self.tableView.reloadData()

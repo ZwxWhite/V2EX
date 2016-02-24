@@ -8,6 +8,7 @@
 
 import Foundation
 import RealmSwift
+import SwiftyJSON
 
 class V2NodeModel: Object {
     
@@ -24,20 +25,22 @@ class V2NodeModel: Object {
     override class func primaryKey() -> String {
         return "id"
     }
-}
-
-
-extension V2NodeModel {
-    func setupWithDictionary(dictionary: [String: AnyObject]) {
-        self.setValuesForKeysWithDictionary(dictionary)
-    }
     
-    override func setValue(value: AnyObject?, forUndefinedKey key: String) {
-        
+    convenience init(json: JSON) {
+        self.init()
+        self.id = json["id"].int!
+        self.topics = json["topics"].int!
+        self.created = json["created"].int!
+        self.name = json["name"].string!
+        self.url = json["url"].string!
+        self.title = json["title"].string!
+        self.title_alternative = json["title_alternative"].string!
+//        self.header = json["header"].string!
+//        self.footer = json["footer"].string!
     }
+
+    
 }
-
-
 
 
 class V2NodeRecord: Object {
