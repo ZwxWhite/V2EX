@@ -15,5 +15,6 @@ pod 'SwiftDate'
 pod 'Ji'
 pod 'RealmSwift'
 pod 'ReactiveCocoa'
+pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
 
 end

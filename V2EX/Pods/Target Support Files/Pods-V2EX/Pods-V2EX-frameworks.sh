@@ -95,6 +95,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-V2EX/Result.framework"
   install_framework "Pods-V2EX/SnapKit.framework"
   install_framework "Pods-V2EX/SwiftDate.framework"
+  install_framework "Pods-V2EX/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-V2EX/Alamofire.framework"
@@ -108,4 +109,5 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-V2EX/Result.framework"
   install_framework "Pods-V2EX/SnapKit.framework"
   install_framework "Pods-V2EX/SwiftDate.framework"
+  install_framework "Pods-V2EX/SwiftyJSON.framework"
 fi

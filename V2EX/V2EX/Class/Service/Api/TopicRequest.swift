@@ -24,17 +24,12 @@ class TopicRequest: ZZBaseRequest {
 
 
 class RepliesRequest: ZZBaseRequest {
-    convenience init(topicID: Int?, page: Int?) {
+    convenience init(topicID: Int?) {
         self.init()
         
         self.requestUrl = "/api/replies/show.json"
-        parameters["page_size"] = 10
         if topicID != nil {
             parameters["topic_id"] = topicID
         }
-        if page != nil {
-            parameters["page"] = page
-        }
-        
     }
 }

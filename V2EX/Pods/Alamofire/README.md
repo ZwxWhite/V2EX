@@ -25,7 +25,7 @@ Alamofire is an HTTP networking library written in Swift.
 ## Requirements
 
 - iOS 8.0+ / Mac OS X 10.9+ / tvOS 9.0+ / watchOS 2.0+
-- Xcode 7.1+
+- Xcode 7.2+
 
 ## Migration Guides
 
@@ -89,7 +89,7 @@ To integrate Alamofire into your Xcode project using Carthage, specify it in you
 github "Alamofire/Alamofire" ~> 3.0
 ```
 
-Run `carthage` to build the framework and drag the built `Alamofire.framework` into your Xcode project.
+Run `carthage update` to build the framework and drag the built `Alamofire.framework` into your Xcode project.
 
 ### Manually
 
@@ -183,7 +183,7 @@ Alamofire.request(.GET, "https://httpbin.org/get", parameters: ["foo": "bar"])
           }
 ```
 
-> The `response` serializer does NOT evaluate any of the response data. It merely forwards on all the information directly from the URL session delegate. We strongly encourage you to leverage the other responser serializers taking advantage of `Response` and `Result` types.
+> The `response` serializer does NOT evaluate any of the response data. It merely forwards on all the information directly from the URL session delegate. We strongly encourage you to leverage the other response serializers taking advantage of `Response` and `Result` types.
 
 #### Response Data Handler
 
@@ -571,6 +571,25 @@ Alamofire.request(.GET, "https://httpbin.org/get", parameters: ["foo": "bar"])
              }
          }
 ```
+
+### Timeline
+
+Alamofire collects timings throughout the lifecycle of a `Request` and creates a `Timeline` object exposed as a property on a `Response`.
+
+```swift
+Alamofire.request(.GET, "https://httpbin.org/get", parameters: ["foo": "bar"])
+         .validate()
+         .responseJSON { response in
+             print(response.timeline)
+         }
+```
+
+The above reports the following `Timeline` info:
+
+- `Latency`: 0.428 seconds
+- `Request Duration`: 0.428 seconds
+- `Serialization Duration`: 0.001 seconds
+- `Total Duration`: 0.429 seconds
 
 ### Printable
 
@@ -1101,15 +1120,45 @@ If you run into this problem (high probability with self-signed certificates), y
 				<false/>
 				<key>NSIncludesSubdomains</key>
 				<true/>
+				<!-- Optional: Specify minimum TLS version -->
+				<key>NSTemporaryExceptionMinimumTLSVersion</key>
+				<string>TLSv1.2</string>
 			</dict>
 		</dict>
 	</dict>
 </dict>
 ```
 
-Whether you need to set the `NSExceptionRequiresForwardSecrecy` to `NO` depends on whether your TLS connection is using an allowed cipher suite. In certain cases, it will need to be set to `NO`. The `NSExceptionAllowsInsecureHTTPLoads` MUST be set to `YES` in order to allow the `SessionDelegate` to receive challenge callbacks. Once the challenge callbacks are being called, the `ServerTrustPolicyManager` will take over the server trust evaluation.
+Whether you need to set the `NSExceptionRequiresForwardSecrecy` to `NO` depends on whether your TLS connection is using an allowed cipher suite. In certain cases, it will need to be set to `NO`. The `NSExceptionAllowsInsecureHTTPLoads` MUST be set to `YES` in order to allow the `SessionDelegate` to receive challenge callbacks. Once the challenge callbacks are being called, the `ServerTrustPolicyManager` will take over the server trust evaluation. You may also need to specify the `NSTemporaryExceptionMinimumTLSVersion` if you're trying to connect to a host that only supports TLS versions less than `1.2`.
 
 > It is recommended to always use valid certificates in production environments.
+
+### Network Reachability
+
+The `NetworkReachabilityManager` listens for reachability changes of hosts and addresses for both WWAN and WiFi network interfaces.
+
+```swift
+let manager = NetworkReachabilityManager(host: "www.apple.com")
+
+manager?.listener = { status in
+    print("Network Status Changed: \(status)")
+}
+
+manager?.startListening()
+```
+
+> Make sure to remember to retain the `manager` in the above example, or no status changes will be reported.
+
+There are some important things to remember when using network reachability to determine what to do next.
+
+* **Do NOT** use Reachability to determine if a network request should be sent.
+  * You should **ALWAYS** send it.
+* When Reachability is restored, use the event to retry failed network requests.
+  * Even though the network requests may still fail, this is a good moment to retry them.
+* The network reachability status can be useful for determining why a network request may have failed.
+  * If a network request fails, it is more useful to tell the user that the network request failed due to being offline rather than a more technical errror, such as "request timed out."
+
+> It is recommended to check out [WWDC 2012 Session 706, "Networking Best Practices"](https://developer.apple.com/videos/play/wwdc2012-706/) for more info.
 
 ---
 
@@ -1123,7 +1172,6 @@ In order to keep Alamofire focused specifically on core networking implementatio
 
 The following rdars have some affect on the current implementation of Alamofire.
 
-* [rdar://22024442](http://www.openradar.me/radar?id=6082025006039040) - Array of [SecCertificate] crashing Swift 2.0 compiler in optimized builds
 * [rdar://21349340](http://www.openradar.me/radar?id=5517037090635776) - Compiler throwing warning due to toll-free bridging issue in test case
 
 ## FAQ

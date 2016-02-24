@@ -30,6 +30,7 @@ PODS:
   - Result (1.0.2)
   - SnapKit (0.18.0)
   - SwiftDate (2.0.2)
+  - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - Alamofire
@@ -43,6 +44,16 @@ DEPENDENCIES:
   - RealmSwift
   - SnapKit
   - SwiftDate
+  - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
+
+EXTERNAL SOURCES:
+  SwiftyJSON:
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
+
+CHECKOUT OPTIONS:
+  SwiftyJSON:
+    :commit: 42bdb102d2624b143c07850ebdc1537d5b6579b6
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 SPEC CHECKSUMS:
   Alamofire: 9f93b56389e48def9220dd57d1f44b1927229a5a
@@ -58,5 +69,6 @@ SPEC CHECKSUMS:
   Result: dd3dd71af3fa2e262f1a999e14fba2c25ec14f16
   SnapKit: e1f090a6d47b1dd4bd89b73f72b6746a7835ef3c
   SwiftDate: b4f4d0962afe48365ad2800c9850a6626deb9359
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
 COCOAPODS: 0.39.0

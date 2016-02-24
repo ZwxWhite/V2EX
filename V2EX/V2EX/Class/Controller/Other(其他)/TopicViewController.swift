@@ -8,12 +8,12 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
 
 class TopicViewController: UIViewController {
     
     var topicInfo: V2TopicModel?
     var topic: V2Topic?
-    var currentPage: Int!
     var replies = [V2Reply]()
 
     @IBOutlet weak var tableView: UITableView!{
@@ -25,7 +25,6 @@ class TopicViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "话题详情"
-        currentPage = 1
         
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 44.0
@@ -46,11 +45,11 @@ class TopicViewController: UIViewController {
             }
         })
         
-        RepliesRequest(topicID: topicInfo?.id, page: currentPage).start()?.responseJSON(completionHandler: { (response) -> Void in
+        RepliesRequest(topicID: topicInfo?.id).start()?.responseJSON(completionHandler: { (response) -> Void in
             switch response.result {
             case .Success(let responseJson):
-                self.topic = V2Topic(dictionary: responseJson.firstObject as! NSDictionary)
-                self.tableView.reloadData()
+                let json = JSON(responseJson)
+                print("json: \(json)")
             case .Failure(let error):
                 print(error)
             }
@@ -62,8 +61,15 @@ class TopicViewController: UIViewController {
 //MARK: - UITableViewDelegate & UITableViewDataSource
 extension TopicViewController: UITableViewDataSource, UITableViewDelegate {
     
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 2
+    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (self.topic != nil) ? 2 : 1
+        if section == 0 {
+            return (self.topic != nil) ? 2 : 1
+        }
+        return replies.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
