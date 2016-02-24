@@ -28,11 +28,13 @@ class RepliesRequest: ZZBaseRequest {
         self.init()
         
         self.requestUrl = "/api/replies/show.json"
+        parameters["page_size"] = 10
         if topicID != nil {
             parameters["topic_id"] = topicID
         }
         if page != nil {
             parameters["page"] = page
         }
+        
     }
 }

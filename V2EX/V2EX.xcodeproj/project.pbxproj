@@ -13,6 +13,7 @@
 		CC07B6C21BF9852800DD73F1 /* DebugLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC07B6C11BF9852800DD73F1 /* DebugLog.swift */; };
 		CC13F48B1C5A2EB4004FD8DA /* V2TopicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC13F48A1C5A2EB4004FD8DA /* V2TopicModel.swift */; };
 		CC1A270A1C1704300022A853 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1A27091C1704300022A853 /* LoginViewController.swift */; };
+		CC3328B41C7D88310009B86A /* V2Reply.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3328B31C7D88310009B86A /* V2Reply.swift */; };
 		CC3560161BF33A8E00D1780A /* V2EXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3560151BF33A8E00D1780A /* V2EXTests.swift */; };
 		CC3560211BF33A8F00D1780A /* V2EXUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3560201BF33A8F00D1780A /* V2EXUITests.swift */; };
 		CC35603A1BF43F5F00D1780A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3560371BF43F5F00D1780A /* AppDelegate.swift */; };
@@ -74,6 +75,7 @@
 		CC07B6C11BF9852800DD73F1 /* DebugLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugLog.swift; sourceTree = "<group>"; };
 		CC13F48A1C5A2EB4004FD8DA /* V2TopicModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = V2TopicModel.swift; sourceTree = "<group>"; };
 		CC1A27091C1704300022A853 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CC3328B31C7D88310009B86A /* V2Reply.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = V2Reply.swift; sourceTree = "<group>"; };
 		CC355FFD1BF33A8E00D1780A /* V2EX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = V2EX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC3560111BF33A8E00D1780A /* V2EXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = V2EXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC3560151BF33A8E00D1780A /* V2EXTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2EXTests.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 				CCB27C561BF5BFA700D91B75 /* V2Topics.swift */,
 				CC13F48A1C5A2EB4004FD8DA /* V2TopicModel.swift */,
 				CCB641061C5F2E7A00795870 /* V2NodeModel.swift */,
+				CC3328B31C7D88310009B86A /* V2Reply.swift */,
 			);
 			name = Model;
 			path = Class/Model;
@@ -590,6 +593,7 @@
 				CC35603A1BF43F5F00D1780A /* AppDelegate.swift in Sources */,
 				CCB8C8751C16FCFA00404F15 /* Extention.swift in Sources */,
 				CC1A270A1C1704300022A853 /* LoginViewController.swift in Sources */,
+				CC3328B41C7D88310009B86A /* V2Reply.swift in Sources */,
 				CC67D5981C113EB200D23B8F /* DailyHotRequest.swift in Sources */,
 				CCF36B321BFB3DF60006366D /* DateTool.swift in Sources */,
 				CC35604D1BF4459200D1780A /* NodeViewController.swift in Sources */,

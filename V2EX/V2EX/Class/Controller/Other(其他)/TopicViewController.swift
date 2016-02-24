@@ -13,6 +13,8 @@ class TopicViewController: UIViewController {
     
     var topicInfo: V2TopicModel?
     var topic: V2Topic?
+    var currentPage: Int!
+    var replies: [
 
     @IBOutlet weak var tableView: UITableView!{
         didSet{
@@ -23,6 +25,7 @@ class TopicViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "话题详情"
+        currentPage = 1
         
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 44.0
@@ -34,6 +37,16 @@ class TopicViewController: UIViewController {
         
         // topic
         TopicRequest(id: topicInfo?.id).start()?.responseJSON(completionHandler: { (response) -> Void in
+            switch response.result {
+            case .Success(let responseJson):
+                self.topic = V2Topic(dictionary: responseJson.firstObject as! NSDictionary)
+                self.tableView.reloadData()
+            case .Failure(let error):
+                print(error)
+            }
+        })
+        
+        RepliesRequest(topicID: topicInfo?.id, page: currentPage).start()?.responseJSON(completionHandler: { (response) -> Void in
             switch response.result {
             case .Success(let responseJson):
                 self.topic = V2Topic(dictionary: responseJson.firstObject as! NSDictionary)
