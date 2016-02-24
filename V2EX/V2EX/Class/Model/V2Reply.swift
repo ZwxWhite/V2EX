@@ -24,5 +24,9 @@ class V2Reply {
         self.thanks = json["thanks"].int
         self.content = json["content"].string
         self.content_rendered = json["content_rendered"].string
+        self.created = json["created"].int
+        self.last_modified = json["last_modified"].int
+        
+        self.member = V2Member(json: json["member"])
     }
 }

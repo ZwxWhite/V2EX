@@ -27,6 +27,7 @@
 		CC3E6ABD1C75D74500A73C3A /* V2NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3E6ABC1C75D74500A73C3A /* V2NavigationController.swift */; };
 		CC3E6ABF1C75DB1300A73C3A /* TopicUserInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3E6ABE1C75DB1300A73C3A /* TopicUserInfoCell.swift */; };
 		CC44ADC11C1AA9CE00B6C3FE /* V2UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC44ADC01C1AA9CE00B6C3FE /* V2UserModel.swift */; };
+		CC52437B1C7DD4C2005F56BF /* ReplyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC52437A1C7DD4C2005F56BF /* ReplyCell.swift */; };
 		CC5FEF541C7C848C0066DD6D /* TopicRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FEF531C7C848C0066DD6D /* TopicRequest.swift */; };
 		CC67D5901C113D1A00D23B8F /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC67D58E1C113D1A00D23B8F /* CategoriesViewController.swift */; };
 		CC67D5911C113D1A00D23B8F /* CategoryItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC67D58F1C113D1A00D23B8F /* CategoryItemViewController.swift */; };
@@ -96,6 +97,7 @@
 		CC3E6ABC1C75D74500A73C3A /* V2NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = V2NavigationController.swift; sourceTree = "<group>"; };
 		CC3E6ABE1C75DB1300A73C3A /* TopicUserInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicUserInfoCell.swift; sourceTree = "<group>"; };
 		CC44ADC01C1AA9CE00B6C3FE /* V2UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = V2UserModel.swift; sourceTree = "<group>"; };
+		CC52437A1C7DD4C2005F56BF /* ReplyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReplyCell.swift; sourceTree = "<group>"; };
 		CC5FEF531C7C848C0066DD6D /* TopicRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicRequest.swift; sourceTree = "<group>"; };
 		CC67D58E1C113D1A00D23B8F /* CategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		CC67D58F1C113D1A00D23B8F /* CategoryItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryItemViewController.swift; sourceTree = "<group>"; };
@@ -348,6 +350,7 @@
 				CC75D7431C11855B00E1C344 /* UserHeaderCell.swift */,
 				CCE8ABA71C1EC24C0089ACF3 /* PersonalDetailCell.swift */,
 				CC3E6ABE1C75DB1300A73C3A /* TopicUserInfoCell.swift */,
+				CC52437A1C7DD4C2005F56BF /* ReplyCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -603,6 +606,7 @@
 				CCE8ABA81C1EC24C0089ACF3 /* PersonalDetailCell.swift in Sources */,
 				CC9050841C0ED33800E3C84E /* ZZBaseRequest.swift in Sources */,
 				CC75D7441C11855B00E1C344 /* UserHeaderCell.swift in Sources */,
+				CC52437B1C7DD4C2005F56BF /* ReplyCell.swift in Sources */,
 				CCB641091C5F422E00795870 /* SearchResultTableViewController.swift in Sources */,
 				CC9050871C0ED81E00E3C84E /* ZZNetworkAgent.swift in Sources */,
 				CCB641071C5F2E7A00795870 /* V2NodeModel.swift in Sources */,
