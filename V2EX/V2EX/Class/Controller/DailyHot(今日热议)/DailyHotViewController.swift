@@ -44,8 +44,8 @@ extension DailyHotViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if let topicCell = tableView.dequeueReusableCellWithIdentifier("TopicCell", forIndexPath: indexPath) as? V2TopicCell {
-            let topicViewModel = topics[indexPath.row]
-            topicCell.topicViewModel = topicViewModel
+            let topicModel = topics[indexPath.row]
+            topicCell.topicModel = topicModel
             return topicCell
         }
         V2Error(currentDebugContext(),"cell error").logError()

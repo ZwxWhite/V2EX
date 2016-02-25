@@ -42,9 +42,9 @@ class V2TopicCell: UITableViewCell,Contextualizable {
         self.layer.rasterizationScale = UIScreen.mainScreen().scale
     }
     
-    var topicViewModel: V2TopicModel? {
+    var topicModel: V2TopicModel? {
         didSet{
-            if let topic = topicViewModel {
+            if let topic = topicModel {
                 
                 titleLabel.text = topic.title
                 userName.text = topic.userName

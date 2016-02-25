@@ -38,7 +38,8 @@ class TopicViewController: UIViewController {
         TopicRequest(id: topicInfo?.id).start()?.responseJSON(completionHandler: { (response) -> Void in
             switch response.result {
             case .Success(let responseJson):
-                self.topic = V2Topic(dictionary: responseJson.firstObject as! NSDictionary)
+                self.topic = V2Topic(json: JSON(responseJson.firstObject as! NSDictionary))
+                self.topicInfo = V2TopicModel(topic: self.topic!)
                 self.tableView.reloadData()
                 
                 RepliesRequest(topicID: self.topicInfo?.id).start()?.responseJSON(completionHandler: { (response) -> Void in

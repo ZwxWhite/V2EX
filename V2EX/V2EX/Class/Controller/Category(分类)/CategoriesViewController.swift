@@ -54,6 +54,7 @@ extension CategoriesViewController {
             if let controller = UIStoryboard.viewControllerOfStoryboardName("Main", identifier: "SID_CategoryItemViewController") as? CategoryItemViewController {
                 controller.title = titles[index]
                 controller.categoryTab = tabs[index]
+                controller.categoriesViewController = self
                 controllers.append(controller)
             }
         }

@@ -9,12 +9,15 @@
 import UIKit
 import Alamofire
 import Ji
+import PagingMenuController
 
 
 class CategoryItemViewController: UIViewController, Contextualizable {
     
     
     @IBOutlet weak var tableView: UITableView!
+    
+    var categoriesViewController: UIViewController?
     
     var categoryTab: String!
     private lazy var topics = [V2TopicModel]()
@@ -42,8 +45,8 @@ extension CategoryItemViewController: UITableViewDataSource, UITableViewDelegate
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if let topicCell = tableView.dequeueReusableCellWithIdentifier("TopicCell") as? V2TopicCell {
-            let topicViewModel = topics[indexPath.row]
-            topicCell.topicViewModel = topicViewModel
+            let topicModel = topics[indexPath.row]
+            topicCell.topicModel = topicModel
             return topicCell
         }
         V2Error(currentDebugContext(),"cell error").logError()
@@ -52,6 +55,10 @@ extension CategoryItemViewController: UITableViewDataSource, UITableViewDelegate
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        let topicController = self.storyboard?.instantiateViewControllerWithIdentifier("SID_TopicViewController") as! TopicViewController
+        topicController.topicInfo = self.topics[indexPath.row]
+        categoriesViewController?.navigationController?.pushViewController(topicController, animated: true)
     }
     
     private func addRefresh() {
