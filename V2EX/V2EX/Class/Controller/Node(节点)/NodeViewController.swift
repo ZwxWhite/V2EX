@@ -106,7 +106,7 @@ extension NodeViewController: UISearchResultsUpdating {
         let strippedString = searchController.searchBar.text!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
         
         let filterResult = searchResult.filter { (node) -> Bool in
-            return node.name.containsString(strippedString) || node.title.containsString(strippedString)
+            return node.name!.containsString(strippedString) || node.title!.containsString(strippedString)
         }
         let resultController = searchController.searchResultsController as! SearchResultTableViewController
         resultController.nodes = filterResult

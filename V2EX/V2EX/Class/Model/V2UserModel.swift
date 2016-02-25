@@ -31,26 +31,28 @@ import SwiftyJSON
 
 class V2UserModel: Object {
     
-    dynamic var status = ""
-    dynamic var id = NSNumber(integer: 0)
-    dynamic var url = ""
-    dynamic var username = ""
-    dynamic var website = ""
-    dynamic var twitter = ""
-    dynamic var psn = ""
-    dynamic var github = ""
-    dynamic var btc = ""
-    dynamic var location = ""
-    dynamic var tagline = ""
-    dynamic var bio = ""
-    dynamic var avatar_mini = ""
-    dynamic var avatar_normal = ""
-    dynamic var avatar_large = ""
-    dynamic var created = NSNumber(integer: 0)
+    
+    dynamic var id = 0
+    var created = RealmOptional<Int>(nil)
+    
+    dynamic var status: String? = nil
+    dynamic var url: String? = nil
+    dynamic var username: String? = nil
+    dynamic var website: String? = nil
+    dynamic var twitter: String? = nil
+    dynamic var psn: String? = nil
+    dynamic var github: String? = nil
+    dynamic var btc: String? = nil
+    dynamic var location: String? = nil
+    dynamic var tagline: String? = nil
+    dynamic var bio: String? = nil
+    dynamic var avatar_mini: String? = nil
+    dynamic var avatar_normal: String? = nil
+    dynamic var avatar_large: String? = nil
     
     var logined: Bool {
         get {
-            return !self.id.isEqualToNumber(NSNumber(integer: 0));
+            return (self.id != 0);
         }
     }
     
@@ -69,21 +71,21 @@ class V2UserModel: Object {
 extension V2UserModel {
     func setupWithJson(json: JSON) {
 
-        self.id = json["id"].int!
-        self.created = json["created"].int!
-        self.status = json["status"].string!
-        self.url = json["url"].string!
-        self.username = json["username"].string!
-        self.website = json["website"].string!
-        self.twitter = json["twitter"].string!
-        self.psn = json["psn"].string!
-        self.github = json["github"].string!
-        self.btc = json["btc"].string!
-        self.location = json["location"].string!
-        self.tagline = json["tagline"].string!
-        self.bio = json["bio"].string!
-        self.avatar_mini = json["avatar_mini"].string!
-        self.avatar_normal = json["avatar_normal"].string!
-        self.avatar_large = json["avatar_large"].string!
+        self.id            = json["id"].int!
+        self.created.value = json["created"].int
+        self.status        = json["status"].string
+        self.url           = json["url"].string
+        self.username      = json["username"].string
+        self.website       = json["website"].string
+        self.twitter       = json["twitter"].string
+        self.psn           = json["psn"].string
+        self.github        = json["github"].string
+        self.btc           = json["btc"].string
+        self.location      = json["location"].string
+        self.tagline       = json["tagline"].string
+        self.bio           = json["bio"].string
+        self.avatar_mini   = json["avatar_mini"].string
+        self.avatar_normal = json["avatar_normal"].string
+        self.avatar_large  = json["avatar_large"].string
     }
 }

@@ -12,15 +12,16 @@ import SwiftyJSON
 
 class V2NodeModel: Object {
     
-    dynamic var id = 0
-    dynamic var name = ""
-    dynamic var url = ""
-    dynamic var title = ""
-    dynamic var title_alternative = ""
-    dynamic var topics = 0
-    dynamic var header = ""
-    dynamic var footer = ""
-    dynamic var created = 0
+    var id = RealmOptional<Int>(nil)
+    var created = RealmOptional<Int>(nil)
+    var topics = RealmOptional<Int>(nil)
+
+    dynamic var name: String? = nil
+    dynamic var url: String? = nil
+    dynamic var title: String? = nil
+    dynamic var title_alternative: String? = nil
+    dynamic var header: String? = nil
+    dynamic var footer: String? = nil
     
     override class func primaryKey() -> String {
         return "id"
@@ -28,15 +29,15 @@ class V2NodeModel: Object {
     
     convenience init(json: JSON) {
         self.init()
-        self.id = json["id"].int!
-        self.topics = json["topics"].int!
-        self.created = json["created"].int!
-        self.name = json["name"].string!
-        self.url = json["url"].string!
-        self.title = json["title"].string!
-        self.title_alternative = json["title_alternative"].string!
-//        self.header = json["header"].string!
-//        self.footer = json["footer"].string!
+        self.id.value = json["id"].int
+        self.topics.value = json["topics"].int
+        self.created.value = json["created"].int
+        self.name = json["name"].string
+        self.url = json["url"].string
+        self.title = json["title"].string
+        self.title_alternative = json["title_alternative"].string
+        self.header = json["header"].string
+        self.footer = json["footer"].string
     }
 
     
