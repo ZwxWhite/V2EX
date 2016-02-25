@@ -93,9 +93,9 @@ extension TopicViewController: UITableViewDataSource, UITableViewDelegate {
             }
         }
         
-        else if indexPath.section == 1 {1
+        else if indexPath.section == 1 {
             let cell = tableView.dequeueReusableCellWithIdentifier("TopicReplyCell") as! ReplyCell
-            cell.reply = self.replies[indexPath.row]
+            cell.reply = replies[indexPath.row]
             return cell
         }
         
