@@ -25,7 +25,7 @@ class TopicUserInfoCell: UITableViewCell {
                 topicTitleLabel.text = topicModel.title
                 
                 if let date = topic?.created {
-                    createdLabel.text = "创建时间 \(date.month)月\(date.day)日 \(date.hour):\(date.minute)"
+                    createdLabel.text = "创建时间 \(String(format:"%02d",date.month))月\(String(format:"%02d",date.day))日 \(String(format:"%02d",date.hour)):\(String(format:"%02d",date.minute))"
                 } else {
                     createdLabel.text = ""
                 }
