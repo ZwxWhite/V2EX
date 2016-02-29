@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
         configTools()
-        configV2exStyle(application)
+        configStyle(application)
         
         return true
     }
@@ -47,14 +47,17 @@ extension AppDelegate {
         Fabric.with([Crashlytics.self()])
     }
     
-    func configV2exStyle(application: UIApplication) {
+    func configStyle(application: UIApplication) {
 
         UINavigationBar.appearance().barTintColor = UIColor.whiteColor()
         UINavigationBar.appearance().tintColor = UIColor.colorWithRGB(0x565656)
         UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffset(horizontal: 0, vertical: -60), forBarMetrics: .Default)
         
+        #if DEBUG
         let fpsLabel = V2FPSLabel(frame: CGRectMake(Screen_Width-70, 20, 55, 20))
         self.window?.rootViewController?.view.addSubview(fpsLabel)
+        #else
+        #endif
     }
 }
 

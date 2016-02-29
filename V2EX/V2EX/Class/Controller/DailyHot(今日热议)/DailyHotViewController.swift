@@ -44,8 +44,6 @@ extension DailyHotViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if let topicCell = tableView.dequeueReusableCellWithIdentifier("TopicCell", forIndexPath: indexPath) as? V2TopicCell {
-            let topicModel = topics[indexPath.row]
-            topicCell.topicModel = topicModel
             return topicCell
         }
         V2Error(currentDebugContext(),"cell error").logError()
@@ -58,6 +56,13 @@ extension DailyHotViewController: UITableViewDelegate, UITableViewDataSource {
         let topicController = self.storyboard?.instantiateViewControllerWithIdentifier("SID_TopicViewController") as! TopicViewController
         topicController.topicInfo = self.topics[indexPath.row]
         navigationController?.pushViewController(topicController, animated: true)
+    }
+    
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        let tpoicModel = topics[indexPath.row]
+        if cell.isKindOfClass(V2TopicCell) {
+            (cell as! V2TopicCell).topicModel = tpoicModel
+        }
     }
 }
 

@@ -45,12 +45,17 @@ extension CategoryItemViewController: UITableViewDataSource, UITableViewDelegate
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if let topicCell = tableView.dequeueReusableCellWithIdentifier("TopicCell") as? V2TopicCell {
-            let topicModel = topics[indexPath.row]
-            topicCell.topicModel = topicModel
             return topicCell
         }
         V2Error(currentDebugContext(),"cell error").logError()
         return UITableViewCell()
+    }
+    
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        let tpoicModel = topics[indexPath.row]
+        if cell.isKindOfClass(V2TopicCell) {
+            (cell as! V2TopicCell).topicModel = tpoicModel
+        }
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
