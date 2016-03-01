@@ -9,6 +9,7 @@ PODS:
     - Ji/Ji-libxml
   - Ji/Ji-libxml (1.2.0)
   - Kingfisher (1.8.3)
+  - KVOController (1.0.3)
   - PagingMenuController (0.7.6)
   - ReachabilitySwift (2.3)
   - ReactiveCocoa (4.0.1):
@@ -38,6 +39,7 @@ DEPENDENCIES:
   - Fabric
   - Ji
   - Kingfisher
+  - KVOController (~> 1.0.3)
   - PagingMenuController
   - ReachabilitySwift
   - ReactiveCocoa
@@ -61,6 +63,7 @@ SPEC CHECKSUMS:
   Fabric: bf0ceb04e7c924090efc5f8c55e4fbcca189e0a0
   Ji: ddebb22f9ac445db6e884b66f78ea74fb135fdb7
   Kingfisher: ead91e9dbeb7e5a2e8b7af3bd8a294104cbcc3f9
+  KVOController: 9fd8f0343670994e4b6f9f0b31f5a45663f3e1cf
   PagingMenuController: d34cb992957c7dfae085785a870cf5f3966020be
   ReachabilitySwift: 2ac9df18a443901f06caae38a9f5431219a4c36a
   ReactiveCocoa: f7011630aee4deeb16352fcb1b50d6bde9db4f90

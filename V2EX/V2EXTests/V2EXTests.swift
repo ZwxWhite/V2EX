@@ -31,6 +31,10 @@ class V2EXTests: XCTestCase {
         
         let date = NSDate(timeIntervalSince1970: 1455618017)
         print(date)
+        
+        print(UIFont.familyNames())
+        print(UIFont.fontNamesForFamilyName("PingFang SC"))
+        print("a")
     }
     
     func testPerformanceExample() {

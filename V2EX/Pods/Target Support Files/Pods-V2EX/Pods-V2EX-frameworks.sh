@@ -86,6 +86,7 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-V2EX/Alamofire.framework"
   install_framework "Pods-V2EX/Ji.framework"
+  install_framework "Pods-V2EX/KVOController.framework"
   install_framework "Pods-V2EX/Kingfisher.framework"
   install_framework "Pods-V2EX/PagingMenuController.framework"
   install_framework "Pods-V2EX/ReachabilitySwift.framework"
@@ -100,6 +101,7 @@ fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-V2EX/Alamofire.framework"
   install_framework "Pods-V2EX/Ji.framework"
+  install_framework "Pods-V2EX/KVOController.framework"
   install_framework "Pods-V2EX/Kingfisher.framework"
   install_framework "Pods-V2EX/PagingMenuController.framework"
   install_framework "Pods-V2EX/ReachabilitySwift.framework"

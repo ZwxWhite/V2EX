@@ -35,5 +35,13 @@ class TopicUserInfoCell: UITableViewCell {
             }
         }
     }
+    
+    class func cellHeightWithContent(content: String?) -> CGFloat {
+        if let cellContent = content {
+            let height = UILabel.heightForView(cellContent, font: UIFont(name: "PingFangSC-Semibold", size: 17)!, width: Screen_Width-20)
+            return 5 + 40 + 15 + height
+        }
+        return 0
+    }
 
 }

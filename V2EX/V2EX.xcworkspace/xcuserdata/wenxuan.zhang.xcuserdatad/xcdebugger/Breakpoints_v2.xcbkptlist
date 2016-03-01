@@ -27,13 +27,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "V2EX/Class/Controller/Other(&#x5176;&#x4ed6;)/TopicViewController.swift"
-            timestampString = "478502535.350719"
+            filePath = "V2EXTests/V2EXTests.swift"
+            timestampString = "478504217.830653"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "loadData()"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "testTime()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

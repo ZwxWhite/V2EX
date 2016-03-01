@@ -44,6 +44,7 @@
 		CCB641091C5F422E00795870 /* SearchResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB641081C5F422E00795870 /* SearchResultTableViewController.swift */; };
 		CCB641161C60BF1300795870 /* V2FPSLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB641151C60BF1300795870 /* V2FPSLabel.swift */; };
 		CCB8C8751C16FCFA00404F15 /* Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8C8741C16FCFA00404F15 /* Extention.swift */; };
+		CCBF49C91C855FF10051378F /* TopicContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBF49C81C855FF10051378F /* TopicContentCell.swift */; };
 		CCE8ABA81C1EC24C0089ACF3 /* PersonalDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE8ABA71C1EC24C0089ACF3 /* PersonalDetailCell.swift */; };
 		CCE8ABAA1C1EC82C0089ACF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCE8ABA91C1EC82C0089ACF3 /* Assets.xcassets */; };
 		CCF36B321BFB3DF60006366D /* DateTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF36B311BFB3DF60006366D /* DateTool.swift */; };
@@ -112,6 +113,7 @@
 		CCB641081C5F422E00795870 /* SearchResultTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewController.swift; sourceTree = "<group>"; };
 		CCB641151C60BF1300795870 /* V2FPSLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = V2FPSLabel.swift; sourceTree = "<group>"; };
 		CCB8C8741C16FCFA00404F15 /* Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extention.swift; sourceTree = "<group>"; };
+		CCBF49C81C855FF10051378F /* TopicContentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicContentCell.swift; sourceTree = "<group>"; };
 		CCE8ABA71C1EC24C0089ACF3 /* PersonalDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalDetailCell.swift; sourceTree = "<group>"; };
 		CCE8ABA91C1EC82C0089ACF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCF36B311BFB3DF60006366D /* DateTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTool.swift; sourceTree = "<group>"; };
@@ -350,6 +352,7 @@
 				CC75D7431C11855B00E1C344 /* UserHeaderCell.swift */,
 				CCE8ABA71C1EC24C0089ACF3 /* PersonalDetailCell.swift */,
 				CC3E6ABE1C75DB1300A73C3A /* TopicUserInfoCell.swift */,
+				CCBF49C81C855FF10051378F /* TopicContentCell.swift */,
 				CC52437A1C7DD4C2005F56BF /* ReplyCell.swift */,
 			);
 			path = Cell;
@@ -597,6 +600,7 @@
 				CCB8C8751C16FCFA00404F15 /* Extention.swift in Sources */,
 				CC1A270A1C1704300022A853 /* LoginViewController.swift in Sources */,
 				CC3328B41C7D88310009B86A /* V2Reply.swift in Sources */,
+				CCBF49C91C855FF10051378F /* TopicContentCell.swift in Sources */,
 				CC67D5981C113EB200D23B8F /* DailyHotRequest.swift in Sources */,
 				CCF36B321BFB3DF60006366D /* DateTool.swift in Sources */,
 				CC35604D1BF4459200D1780A /* NodeViewController.swift in Sources */,

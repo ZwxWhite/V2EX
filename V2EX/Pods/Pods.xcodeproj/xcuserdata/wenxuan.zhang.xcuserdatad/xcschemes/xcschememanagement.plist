@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>KVOController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Kingfisher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -77,17 +82,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>03155536B3F92AD944B1155ED189FF9C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>05786A6C5FCD5BF7B8D8E73D6FC64E8E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>23D4B5C9CC657B68134305BFEB076270</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>308074E16E353B1CCCA9BAAC9655D573</key>
+		<key>241A76BD2753C6D67BBE19DF9AFD38E1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>53E1E3B7F877A1087987957733A0DB4C</key>
+		<key>5B78BFB5E8E8B8C6AEA4E10D44878D39</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -97,32 +112,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>64D145172612A0088E6F0C8B0698E3C7</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>71E88C425B96F0F33BA65F7FE91F8060</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>76D7738AAB239E2A0BF22D5CD89863A2</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ABB4173D14D20D5759BE9FE96A1CDEED</key>
+		<key>97329A510CF97E088E662FE17DB2E6FC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BF918A6FE38ED6C216B3478D205B2F9B</key>
+		<key>9FC05B7ED8944EFDC42256674B44D07C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -132,17 +132,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EB5A426AFDD3CD03BC741522B1362123</key>
+		<key>CC3819457BA07E0B78E368EC37CBC1A8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F86BAB8E9DDE205B17C830B8BFFD8F91</key>
+		<key>D3F03F30DD47DAFBFD7A05EF0BC6A5B3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F8FC7B492EBB99D0975BBF0979B04970</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>F91226101ECE8FCFD221A3EC54481F82</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F9340D59348A3E9449070554587A0496</key>
 		<dict>
 			<key>primary</key>
 			<true/>

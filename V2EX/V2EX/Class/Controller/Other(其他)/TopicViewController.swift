@@ -15,6 +15,7 @@ class TopicViewController: UIViewController {
     var topicInfo: V2TopicModel?
     var topic: V2Topic?
     var replies = [V2Reply]()
+    var topicContentCellHeight: CGFloat = 0
 
     @IBOutlet weak var tableView: UITableView!{
         didSet{
@@ -88,9 +89,13 @@ extension TopicViewController: UITableViewDataSource, UITableViewDelegate {
                 cell.topic = topicInfo
                 return cell
             } else if indexPath.row == 1 {
-                let cell = tableView.dequeueReusableCellWithIdentifier("TopicContentCell")
-                (cell?.contentView.viewWithTag(10002) as! UILabel).text = topic?.content
-                return cell!
+                let cell = tableView.dequeueReusableCellWithIdentifier("TopicContentCell") as! TopicContentCell
+                cell.content = topic?.content_rendered
+                cell.contentHeightChanged = { [weak self] (height:CGFloat) -> Void  in
+                    self?.topicContentCellHeight = height
+                    self?.tableView.reloadData()
+                }
+                return cell
             }
         }
         
@@ -101,6 +106,20 @@ extension TopicViewController: UITableViewDataSource, UITableViewDelegate {
         }
         
         return UITableViewCell()
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if indexPath.section == 0 {
+            if indexPath.row == 0 {
+                return TopicUserInfoCell.cellHeightWithContent(topicInfo?.title)
+            } else if indexPath.row == 1 {
+                return self.topicContentCellHeight
+            }
+        } else if indexPath.section == 1 {
+            return ReplyCell.cellHeightWithContent(replies[indexPath.row].content)
+        }
+        
+        return 44.0
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
