@@ -46,7 +46,10 @@ class TopicContentCell: UITableViewCell, UIWebViewDelegate {
     
     func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
         if navigationType == .LinkClicked {
-            return false
+            if request.URLString.hasPrefix("http") {
+                UIApplication.sharedApplication().openURL(request.URL!)
+                return false
+            }
         }
         return true
     }
