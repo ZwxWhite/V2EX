@@ -25,7 +25,11 @@ class TopicContentCell: UITableViewCell, UIWebViewDelegate {
                 return
             }
             if oldValue != content {
-                webView.loadHTMLString(content!, baseURL: NSURL(string: v2exHttps(true) + "//"))
+                
+                let width = Screen_Width * 0.98
+                let margin = Screen_Width - width
+                let htmlStr = "<head><style type=\"text/css\">body {font-size: 14.0 !important;margin: \(margin); padding: -\(margin);text-align:left;word-break:break-all;word-wrap:break-word;width:\(width)}img {width:98%%}</style></head><body style=\"background-color: transparent\">" + content! + "</body>"
+                webView.loadHTMLString(htmlStr, baseURL: NSURL(string: v2exHttps(true) + "//"))
             }
         }
     }
