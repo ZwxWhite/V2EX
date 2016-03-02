@@ -29,8 +29,16 @@ class TopicViewController: UIViewController {
         
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 44.0
-        
         self.loadData()
+    }
+    
+    
+    // 3dtouch
+    override func previewActionItems() -> [UIPreviewActionItem] {
+        let actionReply = UIPreviewAction(title: "回复", style: .Default) { (_, _) -> Void in
+            printLog("点击了回复")
+        }
+        return [actionReply]
     }
     
     func loadData() {
