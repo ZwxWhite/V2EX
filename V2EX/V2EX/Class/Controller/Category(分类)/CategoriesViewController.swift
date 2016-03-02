@@ -10,13 +10,14 @@ import UIKit
 import PagingMenuController
 
 //MARK: life cycle
-class CategoriesViewController: UIViewController  {
+class CategoriesViewController: UIViewController, UIViewController3DTouch  {
     
     private var pagingMenuController: PagingMenuController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
      
+        check3DTouch()
         configPagingMenuController()
     }
     
@@ -77,6 +78,37 @@ extension CategoriesViewController {
         options.menuDisplayMode = .Standard(widthMode: .Fixed(width: 70), centerItem: false, scrollingMode: PagingMenuOptions.MenuScrollingMode.ScrollEnabled)
         options.menuItemMode = .RoundRect(radius: 4, horizontalPadding: 5, verticalPadding: 5, selectedColor: UIColor(red: 51/255.0, green: 51/255.0, blue: 67/255.0, alpha: 1))
         return options
+    }
+}
+
+// MARK: - 3DTouch
+extension CategoriesViewController: UIViewControllerPreviewingDelegate{
+    
+    func previewingContext(previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        
+        guard let currentViewController = self.pagingMenuController.currentViewController as? CategoryItemViewController else {
+            return nil
+        }
+        
+        
+        guard let indexPath = currentViewController.tableView.indexPathForRowAtPoint(location), _ = currentViewController.tableView.cellForRowAtIndexPath(indexPath) else {
+            return nil
+        }
+        
+        guard let topicViewController = self.storyboard?.instantiateViewControllerWithIdentifier("SID_TopicViewController") as? TopicViewController else {
+            return nil
+        }
+        
+        topicViewController.topicInfo = currentViewController.topics[indexPath.row]
+        let cellFrame = currentViewController.tableView.cellForRowAtIndexPath(indexPath)!.frame
+        previewingContext.sourceRect = view.convertRect(cellFrame, fromCoordinateSpace: currentViewController.tableView)
+        
+        return topicViewController
+    }
+    
+    func previewingContext(previewingContext: UIViewControllerPreviewing, commitViewController viewControllerToCommit: UIViewController) {
+        
+        self.showViewController(viewControllerToCommit, sender:nil)
     }
 }
 

@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 
 // MARK: - Life cycle
-class DailyHotViewController: UIViewController,Contextualizable {
+class DailyHotViewController: UIViewController,Contextualizable, UIViewController3DTouch {
 
     @IBOutlet weak var tableView: UITableView! {
         didSet{
@@ -28,6 +28,7 @@ class DailyHotViewController: UIViewController,Contextualizable {
 
         loadData()
         addRefresh()
+        check3DTouch()
     }
 }
 
@@ -90,6 +91,32 @@ extension DailyHotViewController {
         self.refreshControl = UIRefreshControl()
         self.refreshControl!.addTarget(self, action: "loadData", forControlEvents: UIControlEvents.ValueChanged)
         tableView.addSubview(self.refreshControl!)
+    }
+}
+
+
+// MARK: - 3DTouch
+extension DailyHotViewController: UIViewControllerPreviewingDelegate{
+    
+    func previewingContext(previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        
+        guard let indexPath = tableView.indexPathForRowAtPoint(location), _ = tableView.cellForRowAtIndexPath(indexPath) else {
+            return nil
+        }
+        
+        guard let topicViewController = self.storyboard?.instantiateViewControllerWithIdentifier("SID_TopicViewController") as? TopicViewController else {
+            return nil
+        }
+        
+        topicViewController.topicInfo = self.topics[indexPath.row]
+        let cellFrame = tableView.cellForRowAtIndexPath(indexPath)!.frame
+        previewingContext.sourceRect = view.convertRect(cellFrame, fromCoordinateSpace: tableView)
+        
+        return topicViewController
+    }
+    
+    func previewingContext(previewingContext: UIViewControllerPreviewing, commitViewController viewControllerToCommit: UIViewController) {
+        self.showViewController(viewControllerToCommit, sender: nil)
     }
 }
 

@@ -20,7 +20,7 @@ class CategoryItemViewController: UIViewController, Contextualizable {
     var categoriesViewController: UIViewController?
     
     var categoryTab: String!
-    private lazy var topics = [V2TopicModel]()
+    private(set) lazy var topics = [V2TopicModel]()
     private var refreshControl: UIRefreshControl?
     
     override func viewDidLoad() {
@@ -90,6 +90,8 @@ extension CategoryItemViewController {
         }
     }
 }
+
+
 
 
 

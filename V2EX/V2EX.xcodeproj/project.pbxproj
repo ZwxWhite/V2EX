@@ -54,6 +54,7 @@
 		CCE49CB61C86AB90005673E2 /* UILabel+v2ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE49CB41C86AB90005673E2 /* UILabel+v2ex.swift */; };
 		CCE49CB91C86ABDC005673E2 /* SegueHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE49CB81C86ABDC005673E2 /* SegueHandlerType.swift */; };
 		CCE49CBA1C86ABDC005673E2 /* SegueHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE49CB81C86ABDC005673E2 /* SegueHandlerType.swift */; };
+		CCE49CBE1C87009F005673E2 /* UIViewController3DTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE49CBD1C87009F005673E2 /* UIViewController3DTouch.swift */; };
 		CCE8ABA81C1EC24C0089ACF3 /* PersonalDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE8ABA71C1EC24C0089ACF3 /* PersonalDetailCell.swift */; };
 		CCE8ABAA1C1EC82C0089ACF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCE8ABA91C1EC82C0089ACF3 /* Assets.xcassets */; };
 		CCF36B321BFB3DF60006366D /* DateTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF36B311BFB3DF60006366D /* DateTool.swift */; };
@@ -127,6 +128,7 @@
 		CCE49CB11C86AB77005673E2 /* UIColor+v2ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+v2ex.swift"; sourceTree = "<group>"; };
 		CCE49CB41C86AB90005673E2 /* UILabel+v2ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+v2ex.swift"; sourceTree = "<group>"; };
 		CCE49CB81C86ABDC005673E2 /* SegueHandlerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueHandlerType.swift; sourceTree = "<group>"; };
+		CCE49CBD1C87009F005673E2 /* UIViewController3DTouch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController3DTouch.swift; sourceTree = "<group>"; };
 		CCE8ABA71C1EC24C0089ACF3 /* PersonalDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalDetailCell.swift; sourceTree = "<group>"; };
 		CCE8ABA91C1EC82C0089ACF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCF36B311BFB3DF60006366D /* DateTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTool.swift; sourceTree = "<group>"; };
@@ -398,6 +400,7 @@
 			isa = PBXGroup;
 			children = (
 				CCE49CB81C86ABDC005673E2 /* SegueHandlerType.swift */,
+				CCE49CBD1C87009F005673E2 /* UIViewController3DTouch.swift */,
 			);
 			name = Protocol;
 			path = Class/Protocol;
@@ -644,6 +647,7 @@
 				CCB641071C5F2E7A00795870 /* V2NodeModel.swift in Sources */,
 				CC3BC3F71C7423150088E435 /* TopicViewController.swift in Sources */,
 				CC07B6C21BF9852800DD73F1 /* DebugLog.swift in Sources */,
+				CCE49CBE1C87009F005673E2 /* UIViewController3DTouch.swift in Sources */,
 				CCE49CAF1C86AAA0005673E2 /* UIStoryboard+v2ex.swift in Sources */,
 				CC35604F1BF445D500D1780A /* PersonalViewController.swift in Sources */,
 				CC3560571BF4897B00D1780A /* Random.swift in Sources */,
