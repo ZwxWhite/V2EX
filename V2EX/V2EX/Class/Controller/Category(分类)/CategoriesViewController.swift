@@ -84,12 +84,14 @@ extension CategoriesViewController {
 // MARK: - 3DTouch
 extension CategoriesViewController: UIViewControllerPreviewingDelegate{
     
-    func previewingContext(previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+    func previewingContext(previewingContext: UIViewControllerPreviewing,var viewControllerForLocation location: CGPoint) -> UIViewController? {
+        
         
         guard let currentViewController = self.pagingMenuController.currentViewController as? CategoryItemViewController else {
             return nil
         }
         
+        location = self.view.convertPoint(location, toView: (self.pagingMenuController.currentViewController as! CategoryItemViewController).tableView)
         
         guard let indexPath = currentViewController.tableView.indexPathForRowAtPoint(location), _ = currentViewController.tableView.cellForRowAtIndexPath(indexPath) else {
             return nil

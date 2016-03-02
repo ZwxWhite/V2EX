@@ -98,7 +98,10 @@ extension DailyHotViewController {
 // MARK: - 3DTouch
 extension DailyHotViewController: UIViewControllerPreviewingDelegate{
     
-    func previewingContext(previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+    func previewingContext(previewingContext: UIViewControllerPreviewing,var viewControllerForLocation location: CGPoint) -> UIViewController? {
+        
+        // location fix
+        location = self.view.convertPoint(location, toView: self.tableView)
         
         guard let indexPath = tableView.indexPathForRowAtPoint(location), _ = tableView.cellForRowAtIndexPath(indexPath) else {
             return nil
