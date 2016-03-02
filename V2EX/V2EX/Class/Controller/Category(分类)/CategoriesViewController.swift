@@ -12,7 +12,7 @@ import PagingMenuController
 //MARK: life cycle
 class CategoriesViewController: UIViewController  {
     
-    var pagingMenuController: PagingMenuController!
+    private var pagingMenuController: PagingMenuController!
     
     override func viewDidLoad() {
         super.viewDidLoad()

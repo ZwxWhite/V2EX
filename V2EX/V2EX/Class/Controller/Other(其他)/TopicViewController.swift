@@ -13,9 +13,9 @@ import SwiftyJSON
 class TopicViewController: UIViewController {
     
     var topicInfo: V2TopicModel?
-    var topic: V2Topic?
-    var replies = [V2Reply]()
-    var topicContentCellHeight: CGFloat = 0
+    private var topic: V2Topic?
+    private var replies = [V2Reply]()
+    private var topicContentCellHeight: CGFloat = 0
 
     @IBOutlet weak var tableView: UITableView!{
         didSet{
