@@ -51,11 +51,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if let shortcutItems = application.shortcutItems where shortcutItems.isEmpty {
             
-            let shortcut1 = UIMutableApplicationShortcutItem(type: ShortcutIdentifier.First.type, localizedTitle: "localizedTitle", localizedSubtitle: "subtitle", icon: UIApplicationShortcutIcon(templateImageName: "login_cancel"), userInfo: [AppDelegate.applicationShortcutUserInfoIconKey: UIApplicationShortcutIconType.Play.rawValue])
+            let shortcut1 = UIMutableApplicationShortcutItem(type: ShortcutIdentifier.First.type, localizedTitle: "localizedTitle", localizedSubtitle: "subtitle", icon: UIApplicationShortcutIcon(templateImageName: "touchIcon"), userInfo: nil)
             
-            let shortcut2 = UIMutableApplicationShortcutItem(type: ShortcutIdentifier.Second.type, localizedTitle: "Pause", localizedSubtitle: "Will Pause an item", icon: UIApplicationShortcutIcon(type: .Share), userInfo: [
-                AppDelegate.applicationShortcutUserInfoIconKey: UIApplicationShortcutIconType.Pause.rawValue
-            ])
+            let shortcut2 = UIMutableApplicationShortcutItem(type: ShortcutIdentifier.Second.type, localizedTitle: "Pause", localizedSubtitle: "Will Pause an item", icon: UIApplicationShortcutIcon(templateImageName: "touchIcon"), userInfo: nil)
             
             application.shortcutItems = [shortcut1, shortcut2]
         }
