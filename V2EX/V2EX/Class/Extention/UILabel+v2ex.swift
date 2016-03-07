@@ -12,7 +12,13 @@ extension UILabel {
     
     class func heightForView(text:String, font:UIFont, width:CGFloat) -> CGFloat{
         
-        let textSize = NSString(string: text).boundingRectWithSize(CGSizeMake(width, CGFloat.max), options: .UsesLineFragmentOrigin, attributes: [NSFontAttributeName:font], context: nil)
-        return textSize.height + 10
+        var resultSize = CGSizeZero
+        if text.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) <= 0 {
+            return resultSize.height
+        }
+        
+        resultSize = NSString(string: text).boundingRectWithSize(CGSize(width: width, height: CGFloat.max), options: [.UsesFontLeading, .UsesLineFragmentOrigin], attributes: [NSFontAttributeName: font], context: nil).size
+        
+        return resultSize.height + 10
     }
 }
