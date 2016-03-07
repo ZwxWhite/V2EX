@@ -22,9 +22,10 @@ class UserHeaderCell: UITableViewCell {
     func reloadData() {
         if let user = v2Realm.objects(V2UserModel).first {
             usernameLabel.text = user.username
-            descriptionLabel.text = "简介: "
-            if let url = user.url {
-                descriptionLabel.text = descriptionLabel.text! + url
+            if let tagline = user.tagline where tagline.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) > 0 {
+                descriptionLabel.text = "简介: " + tagline
+            } else {
+                descriptionLabel.text = "这家伙很懒,什么都没留下"
             }
             if let avatarUrl = user.avatar_normal {
                 avatarImageView.kf_setImageWithURL(NSURL(string: v2exHttps(false) + avatarUrl)!, placeholderImage: nil)
