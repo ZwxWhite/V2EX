@@ -34,6 +34,7 @@
 		CC67D5911C113D1A00D23B8F /* CategoryItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC67D58F1C113D1A00D23B8F /* CategoryItemViewController.swift */; };
 		CC67D5981C113EB200D23B8F /* DailyHotRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC67D5971C113EB200D23B8F /* DailyHotRequest.swift */; };
 		CC75D7441C11855B00E1C344 /* UserHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC75D7431C11855B00E1C344 /* UserHeaderCell.swift */; };
+		CC857EE51C8D923B005F92D4 /* MemberInfoHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC857EE41C8D923B005F92D4 /* MemberInfoHeaderCell.swift */; };
 		CC9050841C0ED33800E3C84E /* ZZBaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9050831C0ED33800E3C84E /* ZZBaseRequest.swift */; };
 		CC9050851C0ED33800E3C84E /* ZZBaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9050831C0ED33800E3C84E /* ZZBaseRequest.swift */; };
 		CC9050871C0ED81E00E3C84E /* ZZNetworkAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9050861C0ED81E00E3C84E /* ZZNetworkAgent.swift */; };
@@ -116,6 +117,7 @@
 		CC67D58F1C113D1A00D23B8F /* CategoryItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryItemViewController.swift; sourceTree = "<group>"; };
 		CC67D5971C113EB200D23B8F /* DailyHotRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyHotRequest.swift; sourceTree = "<group>"; };
 		CC75D7431C11855B00E1C344 /* UserHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHeaderCell.swift; sourceTree = "<group>"; };
+		CC857EE41C8D923B005F92D4 /* MemberInfoHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberInfoHeaderCell.swift; sourceTree = "<group>"; };
 		CC9050831C0ED33800E3C84E /* ZZBaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZZBaseRequest.swift; sourceTree = "<group>"; };
 		CC9050861C0ED81E00E3C84E /* ZZNetworkAgent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZZNetworkAgent.swift; sourceTree = "<group>"; };
 		CC9FE4B71BFAD457006967FF /* V2TopicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = V2TopicCell.swift; sourceTree = "<group>"; };
@@ -373,6 +375,7 @@
 				CC3E6ABE1C75DB1300A73C3A /* TopicUserInfoCell.swift */,
 				CCBF49C81C855FF10051378F /* TopicContentCell.swift */,
 				CC52437A1C7DD4C2005F56BF /* ReplyCell.swift */,
+				CC857EE41C8D923B005F92D4 /* MemberInfoHeaderCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -653,6 +656,7 @@
 				CC07B6C21BF9852800DD73F1 /* DebugLog.swift in Sources */,
 				CCE49CBE1C87009F005673E2 /* UIViewController3DTouch.swift in Sources */,
 				CCE49CAF1C86AAA0005673E2 /* UIStoryboard+v2ex.swift in Sources */,
+				CC857EE51C8D923B005F92D4 /* MemberInfoHeaderCell.swift in Sources */,
 				CC35604F1BF445D500D1780A /* PersonalViewController.swift in Sources */,
 				CC3560571BF4897B00D1780A /* Random.swift in Sources */,
 				CC67D5911C113D1A00D23B8F /* CategoryItemViewController.swift in Sources */,

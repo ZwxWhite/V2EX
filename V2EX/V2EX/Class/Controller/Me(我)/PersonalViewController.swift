@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-class PersonalViewController: UITableViewController {
+class PersonalViewController: UITableViewController, SegueHandlerType {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +19,18 @@ class PersonalViewController: UITableViewController {
     
     override func viewWillAppear(animated: Bool) {
         tableView.reloadData()
+    }
+    
+    enum SegueIdentifier: String {
+        case SegueIDForUserInfoFromPersonalViewController
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        switch segueIdentifierForSegue(segue) {
+        case .SegueIDForUserInfoFromPersonalViewController:
+            let user = sender as! V2UserModel
+            (segue.destinationViewController as! UserInfoViewController).username = user.username
+        }
     }
 }
 
@@ -69,11 +81,15 @@ extension PersonalViewController {
         if indexPath.section == 0 {
             if let user = v2Realm.objects(V2UserModel).first {
                 if user.logined {
-                    return;
+                    performSegueWithIdentifier(.SegueIDForUserInfoFromPersonalViewController, sender: user)
+                } else {
+                    fatalError("取到用户数据 ,logined 却为 false")
                 }
+            } else {
+                let loginController = UIStoryboard.viewControllerOfStoryboardName("Auth", identifier: "SID_ LoginViewController")
+                presentViewController(loginController!, animated: true, completion: nil)
             }
-            let loginController = UIStoryboard.viewControllerOfStoryboardName("Auth", identifier: "SID_ LoginViewController")
-            presentViewController(loginController!, animated: true, completion: nil)
+      
         }
         
         else if indexPath.section == 4 {
