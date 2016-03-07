@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class TopicViewController: UIViewController {
+class TopicViewController: UIViewController, SegueHandlerType {
     
     var topicInfo: V2TopicModel?
     private var topic: V2Topic?
@@ -30,6 +30,18 @@ class TopicViewController: UIViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 44.0
         self.loadData()
+    }
+    
+    enum SegueIdentifier: String {
+        case SegueIDForUserInfoFromTopicViewController
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        switch segueIdentifierForSegue(segue) {
+        case .SegueIDForUserInfoFromTopicViewController:
+            let username = sender as? String
+            (segue.destinationViewController as! UserInfoViewController).username = username
+        }
     }
     
     
@@ -70,14 +82,15 @@ class TopicViewController: UIViewController {
                 print(error)
             }
         })
-        
-        
     }
+    
+    // MARK: Actions
+    
 }
 
 
 //MARK: - UITableViewDelegate & UITableViewDataSource
-extension TopicViewController: UITableViewDataSource, UITableViewDelegate {
+extension TopicViewController: UITableViewDataSource, UITableViewDelegate, TopicUserInfoCellProtocol {
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 2
@@ -95,6 +108,7 @@ extension TopicViewController: UITableViewDataSource, UITableViewDelegate {
             if indexPath.row == 0 {
                 let cell = tableView.dequeueReusableCellWithIdentifier("TopicUserInfoCell") as! TopicUserInfoCell
                 cell.topic = topicInfo
+                cell.delegate = self
                 return cell
             } else if indexPath.row == 1 {
                 let cell = tableView.dequeueReusableCellWithIdentifier("TopicContentCell") as! TopicContentCell
@@ -133,5 +147,12 @@ extension TopicViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
+    
+    // MARK: - TopicUserInfoCellProtocol
+    func showUserInfo(username: String?) {
+        guard let _ = username where username?.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) > 0 else { return }
+        performSegueWithIdentifier(.SegueIDForUserInfoFromTopicViewController, sender: username)
+    }
 }
+
 

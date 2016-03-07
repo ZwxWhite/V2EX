@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol TopicUserInfoCellProtocol: class {
+    func showUserInfo(username: String?)
+}
+
 class TopicUserInfoCell: UITableViewCell {
     
     @IBOutlet weak var avatarImageView: UIImageView!
@@ -15,6 +19,12 @@ class TopicUserInfoCell: UITableViewCell {
     @IBOutlet weak var createdLabel: UILabel!
     @IBOutlet weak var nodeLabel: UILabel!
     @IBOutlet weak var topicTitleLabel: UILabel!
+    
+    weak var delegate: TopicUserInfoCellProtocol?
+    
+    override func awakeFromNib() {
+        self.avatarImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "avatarImageViewDidClick"))
+    }
     
     var topic: V2TopicModel?{
         didSet{
@@ -43,5 +53,10 @@ class TopicUserInfoCell: UITableViewCell {
         }
         return 0
     }
-
+    
+    func avatarImageViewDidClick() {
+        if let delegate = delegate {
+            delegate.showUserInfo(topic?.userName)
+        }
+    }
 }
