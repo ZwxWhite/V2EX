@@ -90,7 +90,7 @@ class TopicViewController: UIViewController, SegueHandlerType {
 
 
 //MARK: - UITableViewDelegate & UITableViewDataSource
-extension TopicViewController: UITableViewDataSource, UITableViewDelegate, TopicUserInfoCellProtocol {
+extension TopicViewController: UITableViewDataSource, UITableViewDelegate, ShowUserInfoProtocol {
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 2
@@ -124,6 +124,7 @@ extension TopicViewController: UITableViewDataSource, UITableViewDelegate, Topic
         else if indexPath.section == 1 {
             let cell = tableView.dequeueReusableCellWithIdentifier("TopicReplyCell") as! ReplyCell
             cell.reply = replies[indexPath.row]
+            cell.delegate = self
             return cell
         }
         

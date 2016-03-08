@@ -36,6 +36,7 @@ class TopicContentCell: UITableViewCell, UIWebViewDelegate {
     
     
     override func awakeFromNib() {
+        
         self.KVOController.observe(self.webView!.scrollView, keyPath: "contentSize", options: [.New]) {
             [weak self] (observe, observer, change) -> Void in
             if let weakSelf = self {

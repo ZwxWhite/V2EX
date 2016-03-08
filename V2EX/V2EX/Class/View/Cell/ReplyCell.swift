@@ -20,9 +20,12 @@ class ReplyCell: UITableViewCell {
     @IBOutlet weak var timeIntervalLabel: UILabel!
     @IBOutlet weak var replyContentLabel: UILabel!
     
+    weak var delegate: ShowUserInfoProtocol?
+    
     override func awakeFromNib() {
         self.layer.shouldRasterize = true
         self.layer.rasterizationScale = UIScreen.mainScreen().scale
+        self.avatarImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "avatarImageViewDidClick"))
     }
     
     var reply: V2Reply? {
@@ -47,6 +50,12 @@ class ReplyCell: UITableViewCell {
             return 5 + 40 - 15 + height
         }
         return 0
+    }
+    
+    func avatarImageViewDidClick() {
+        if let delegate = self.delegate {
+            delegate.showUserInfo(self.reply?.member?.username)
+        }
     }
     
 }

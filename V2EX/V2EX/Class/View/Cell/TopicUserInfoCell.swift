@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol TopicUserInfoCellProtocol: class {
+protocol ShowUserInfoProtocol: class {
     func showUserInfo(username: String?)
 }
 
@@ -20,7 +20,7 @@ class TopicUserInfoCell: UITableViewCell {
     @IBOutlet weak var nodeLabel: UILabel!
     @IBOutlet weak var topicTitleLabel: UILabel!
     
-    weak var delegate: TopicUserInfoCellProtocol?
+    weak var delegate: ShowUserInfoProtocol?
     
     override func awakeFromNib() {
         self.avatarImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "avatarImageViewDidClick"))
