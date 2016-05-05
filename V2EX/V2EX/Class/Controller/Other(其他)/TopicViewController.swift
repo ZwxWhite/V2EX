@@ -71,6 +71,9 @@ class TopicViewController: UIViewController, SegueHandlerType {
                                 let reply = V2Reply(json: JSON(dictionary))
                                 self.replies.append(reply)
                             }
+                            self.replies = self.replies .sort({ (obj1, obj2) -> Bool in
+                                return obj1.last_modified > obj2.last_modified
+                            })
                             self.tableView.reloadData()
                         }
                     case .Failure(let error):

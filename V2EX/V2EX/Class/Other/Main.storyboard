@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ga7-aX-8ex">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ga7-aX-8ex">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -303,8 +303,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7st-nL-9ym">
-                                                    <rect key="frame" x="60" y="30" width="250" height="65"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7st-nL-9ym">
+                                                    <rect key="frame" x="60" y="47" width="250" height="48"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -329,25 +329,26 @@
                                                     <color key="textColor" red="0.33725490196078434" green="0.33725490196078434" blue="0.33725490196078434" alpha="0.90356272163120566" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="创建时间" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVT-f1-ZrJ">
-                                                    <rect key="frame" x="262" y="5" width="48" height="15"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="创建时间" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVT-f1-ZrJ">
+                                                    <rect key="frame" x="60" y="30" width="250" height="15"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                                     <color key="textColor" red="0.58823529409999997" green="0.58823529409999997" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="aVT-f1-ZrJ" firstAttribute="top" secondItem="v9V-31-uBs" secondAttribute="top" id="2xw-RE-M9b"/>
+                                                <constraint firstItem="aVT-f1-ZrJ" firstAttribute="top" secondItem="v9V-31-uBs" secondAttribute="bottom" constant="8" id="3YY-pS-YhH"/>
                                                 <constraint firstItem="v9V-31-uBs" firstAttribute="top" secondItem="oet-7W-bEB" secondAttribute="top" id="8rt-DT-eca"/>
                                                 <constraint firstItem="oet-7W-bEB" firstAttribute="leading" secondItem="dMw-Zr-KgE" secondAttribute="leading" constant="10" id="Beq-3q-99w"/>
                                                 <constraint firstItem="v9V-31-uBs" firstAttribute="leading" secondItem="oet-7W-bEB" secondAttribute="trailing" constant="10" id="Bwj-Mf-lWt"/>
                                                 <constraint firstAttribute="trailing" secondItem="7st-nL-9ym" secondAttribute="trailing" constant="10" id="EQH-xf-1Fk"/>
-                                                <constraint firstItem="7st-nL-9ym" firstAttribute="top" secondItem="oet-7W-bEB" secondAttribute="bottom" constant="-15" id="Hd0-xc-i8X"/>
                                                 <constraint firstAttribute="trailing" secondItem="aVT-f1-ZrJ" secondAttribute="trailing" constant="10" id="Ozc-67-Djz"/>
-                                                <constraint firstItem="aVT-f1-ZrJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="v9V-31-uBs" secondAttribute="trailing" constant="10" id="Qme-IG-WYw"/>
                                                 <constraint firstItem="oet-7W-bEB" firstAttribute="top" secondItem="dMw-Zr-KgE" secondAttribute="top" constant="5" id="U2U-mJ-kHe"/>
+                                                <constraint firstItem="aVT-f1-ZrJ" firstAttribute="leading" secondItem="v9V-31-uBs" secondAttribute="leading" id="UAa-fD-t7S"/>
+                                                <constraint firstItem="7st-nL-9ym" firstAttribute="top" secondItem="aVT-f1-ZrJ" secondAttribute="bottom" constant="2" id="kY9-Ej-xoC"/>
                                                 <constraint firstAttribute="bottom" secondItem="7st-nL-9ym" secondAttribute="bottom" constant="5" id="nhG-sb-xwt"/>
                                                 <constraint firstItem="7st-nL-9ym" firstAttribute="leading" secondItem="v9V-31-uBs" secondAttribute="leading" id="nhk-iJ-VGn"/>
+                                                <constraint firstItem="7st-nL-9ym" firstAttribute="leading" secondItem="aVT-f1-ZrJ" secondAttribute="leading" id="uYH-mc-rPE"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

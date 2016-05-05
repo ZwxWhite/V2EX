@@ -47,7 +47,7 @@ class ReplyCell: UITableViewCell {
     class func cellHeightWithContent(content: String?) -> CGFloat {
         if let cellContent = content {
             let height = UILabel.heightForView(cellContent, font: UIFont(name: "PingFangSC-Regular", size: 14)!, width: Screen_Width-70)
-            return 5 + 40 - 15 + height
+            return 5 + 40 - 15 + height + 25
         }
         return 0
     }
