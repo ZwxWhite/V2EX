@@ -54,33 +54,33 @@ extension LoginViewController {
             switch response.result {
             case.Success(let htmlString):
                 // 获取htmlString并解析
-                let jiDoc = Ji(htmlString: htmlString, encoding: NSUTF8StringEncoding)
-                let nodes = jiDoc?.xPath("//body//input")
-                for index in 0...nodes!.count-1 {
-                    if nodes![index].attributes["name"] == "once" {
-                        if let once = nodes![index].attributes["value"] {
-                            self.loginWithInfo(once)
-                        } else {
-                            printLog("登录失败");
-                        }
-                    }
+                if let jiDoc = Ji(htmlString: htmlString, encoding: NSUTF8StringEncoding) {
+                    
+                    let once:String? = jiDoc.xPath("//*[@name='once'][1]")?.first?["value"]
+                    print(jiDoc.xPath("//*[@id='Wrapper']/div/div[2]/div[1]"))
+                    let usernameStr:String? = jiDoc.xPath("//*[@id='Wrapper']/div/div[3]/div[2]/div[@class='cell']/form/table/tr[1]/td[2]/input[@class='sl']")?.first?["name"]
+                    let passwordStr:String? = jiDoc.xPath("//*[@id='Wrapper']/div/div[3]/div[2]/div[@class='cell']/form/table/tr[2]/td[2]/input[@class='sl']")?.first?["name"]
+                    self.loginWithOnce(once,usernameKey: usernameStr,passwordKey: passwordStr)
+                } else {
+                    printLog("登录信息获取失败")
                 }
+                
             case.Failure(let error):
                 printLog(error)
             }
         }
     }
     
-    func loginWithInfo(once: String) {
-        // login
-        let username = usernameTextField.text
-        let request = LoginRequest(username: username, password: self.passwordTextField.text, once: once)
+    func loginWithOnce(once: String?, usernameKey: String?, passwordKey: String?) {
+
+        guard let _ = once, username = self.usernameTextField.text, password = self.passwordTextField.text else { return }
+        
+        let request = LoginRequest(username: username, password: password, once: once, usernameKey: usernameKey, passwordKey: passwordKey)
         request.start()?.responseString(completionHandler: { (response) -> Void in
             switch response.result {
-            case .Success(let responseString):
-                printLog(responseString)
-                if responseString.containsString("/notifications") {
-                    self.getUserInfo(username!)
+            case .Success(let htmlString):
+                if htmlString.containsString("/notifications") {
+                    self.getUserInfo(self.usernameTextField.text!)
                 } else {
                     printLog("登录失败")
                 }
@@ -96,7 +96,7 @@ extension LoginViewController {
             switch response.result{
             case .Success(let responseJson):
                 let user = V2UserModel()
-                print(responseJson as! [String: AnyObject])
+                printLog(responseJson as! [String: AnyObject])
                 user.setupWithJson(JSON(responseJson))
                 try! v2Realm.write({ () -> Void in
                     v2Realm.add(user, update: true)

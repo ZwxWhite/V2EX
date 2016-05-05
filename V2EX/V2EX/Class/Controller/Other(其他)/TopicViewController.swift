@@ -77,12 +77,12 @@ class TopicViewController: UIViewController, SegueHandlerType {
                             self.tableView.reloadData()
                         }
                     case .Failure(let error):
-                        print(error)
+                        printLog(error)
                     }
                 })
                 
             case .Failure(let error):
-                print(error)
+                printLog(error)
             }
         })
     }
