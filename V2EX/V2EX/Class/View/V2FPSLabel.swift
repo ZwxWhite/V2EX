@@ -31,7 +31,7 @@ class V2FPSLabel: UILabel {
         self.backgroundColor = UIColor(white: 0, alpha: 0.7)
         self.font = UIFont(name: "Menlo", size: 14)
         weak var weakSelf = self
-        _link = CADisplayLink(target: weakSelf!, selector:"tick:" );
+        _link = CADisplayLink(target: weakSelf!, selector:#selector(V2FPSLabel.tick(_:)) );
         _link!.addToRunLoop(NSRunLoop .mainRunLoop(), forMode:NSRunLoopCommonModes)
     }
     required init?(coder aDecoder: NSCoder) {
@@ -44,7 +44,7 @@ class V2FPSLabel: UILabel {
             return
         }
         
-        _count++
+        _count += 1
         let delta = link.timestamp - _lastTime
         if delta < 1 {
             return

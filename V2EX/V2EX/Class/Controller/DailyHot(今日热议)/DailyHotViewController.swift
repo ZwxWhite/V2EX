@@ -89,7 +89,7 @@ extension DailyHotViewController {
     
     private func addRefresh() {
         self.refreshControl = UIRefreshControl()
-        self.refreshControl!.addTarget(self, action: "loadData", forControlEvents: UIControlEvents.ValueChanged)
+        self.refreshControl!.addTarget(self, action: #selector(DailyHotViewController.loadData), forControlEvents: UIControlEvents.ValueChanged)
         tableView.addSubview(self.refreshControl!)
     }
 }
