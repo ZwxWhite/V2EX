@@ -65,6 +65,21 @@ class V2UserModel: Object {
     override class func primaryKey() -> String {
         return "id"
     }
+    
+    class func getUser() -> V2UserModel {
+        if let user = v2Realm.objects(V2UserModel).first {
+            return user
+        }
+        return V2UserModel()
+    }
+    
+    class func logout() {
+        try! v2Realm.write({ () -> Void in
+            if let user = v2Realm.objects(V2UserModel).first {
+                v2Realm.delete(user)
+            }
+        });
+    }
 
 }
 

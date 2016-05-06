@@ -79,26 +79,17 @@ extension PersonalViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         if indexPath.section == 0 {
-            if let user = v2Realm.objects(V2UserModel).first {
-                if user.logined {
-                    performSegueWithIdentifier(.SegueIDForUserInfoFromPersonalViewController, sender: user)
-                } else {
-                    fatalError("取到用户数据 ,logined 却为 false")
-                }
+            if V2UserModel.getUser().logined {
+                performSegueWithIdentifier(.SegueIDForUserInfoFromPersonalViewController, sender: V2UserModel.getUser())
             } else {
-                let loginController = UIStoryboard.viewControllerOfStoryboardName("Auth", identifier: "SID_ LoginViewController")
+                let loginController = UIStoryboard.viewControllerOfStoryboardName("Auth", identifier: "SID_LoginViewController")
                 presentViewController(loginController!, animated: true, completion: nil)
             }
-      
         }
         
         else if indexPath.section == 4 {
-            try! v2Realm.write({ () -> Void in
-                if let user = v2Realm.objects(V2UserModel).first {
-                    v2Realm.delete(user)
-                }
-                self.tableView.reloadData()
-            });
+            V2UserModel.logout()
+            tableView.reloadData()
         }
     }
     

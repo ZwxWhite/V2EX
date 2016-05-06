@@ -154,7 +154,12 @@ extension TopicViewController: UITableViewDataSource, UITableViewDelegate, ShowU
         
         let reply = self.replies[indexPath.row]
         let username = reply.member?.username
-        self.performSegueWithIdentifier(.SegueIDForShowReplyController, sender: username)
+        
+        if V2UserModel.getUser().logined {
+            performSegueWithIdentifier(.SegueIDForShowReplyController, sender: username)
+        } else {
+            printLog("请先登录")
+        }
     }
     
     // MARK: - TopicUserInfoCellProtocol
