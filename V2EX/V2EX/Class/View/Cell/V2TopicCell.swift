@@ -49,7 +49,7 @@ class V2TopicCell: UITableViewCell,Contextualizable {
                 titleLabel.text = topic.title
                 userName.text = topic.userName
                 lastModifiedLabel.text = topic.lastModified
-                avatarImage.kf_setImageWithURL(NSURL(string: topic.avatarImageString!)!, placeholderImage: nil)
+                avatarImage.kf_setImageWithURL(NSURL(string: topic.avatarImageString!)!, placeholderImage: UIImage(named: "avatar_default"))
                 repliesLabel.text = topic.replies
                 nodeLabel.text = topic.node
             } else {

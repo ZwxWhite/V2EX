@@ -58,7 +58,7 @@ extension UserInfoViewController: UITableViewDelegate, UITableViewDataSource {
         
         if let avatarImageURL = user?.avatar_normal where avatarImageURL.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) > 0 {
             let avatarImageView = cell.contentView.viewWithTag(1000) as! UIImageView
-            avatarImageView.kf_setImageWithURL(NSURL(string: v2exHttps(true) + avatarImageURL)!, placeholderImage: nil)
+            avatarImageView.kf_setImageWithURL(NSURL(string: v2exHttps(true) + avatarImageURL)!, placeholderImage: UIImage(named: "avatar_default"))
         }
         
         if let index = user?.id, _ = username where index > 0 {

@@ -34,7 +34,7 @@ class ReplyCell: UITableViewCell {
             replyContentLabel.text = reply?.content
             if reply != nil {
                 if let avatarUrl = reply!.member?.avatar_normal {
-                    avatarImageView.kf_setImageWithURL(NSURL(string: v2exHttps(false) + avatarUrl)!, placeholderImage: nil)
+                    avatarImageView.kf_setImageWithURL(NSURL(string: v2exHttps(false) + avatarUrl)!, placeholderImage: UIImage(named: "avatar_default"))
                 }
             }
             if let lastModified = reply?.last_modified {

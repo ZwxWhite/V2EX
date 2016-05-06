@@ -29,7 +29,7 @@ class TopicUserInfoCell: UITableViewCell {
     var topic: V2TopicModel?{
         didSet{
             if let topicModel = topic {
-                avatarImageView.kf_setImageWithURL(NSURL(string: topicModel.avatarImageString!)!, placeholderImage: nil)
+                avatarImageView.kf_setImageWithURL(NSURL(string: topicModel.avatarImageString!)!, placeholderImage: UIImage(named: "avatar_default"))
                 userLabel.text = topicModel.userName
                 nodeLabel.text = topicModel.node
                 topicTitleLabel.text = topicModel.title

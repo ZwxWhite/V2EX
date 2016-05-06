@@ -28,7 +28,7 @@ class UserHeaderCell: UITableViewCell {
                 descriptionLabel.text = "这家伙很懒,什么都没留下"
             }
             if let avatarUrl = user.avatar_normal {
-                avatarImageView.kf_setImageWithURL(NSURL(string: v2exHttps(false) + avatarUrl)!, placeholderImage: nil)
+                avatarImageView.kf_setImageWithURL(NSURL(string: v2exHttps(false) + avatarUrl)!, placeholderImage: UIImage(named: "avatar_default"))
             }
         } else {
             usernameLabel.text = "未登录"
