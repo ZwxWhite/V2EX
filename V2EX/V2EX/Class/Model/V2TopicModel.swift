@@ -169,7 +169,7 @@ class V2TopicModel: Contextualizable {
                 }
                 topics.append(topicModel)
             } else {
-                V2Error(__FILE__,"解析错误").logError()
+                V2Error(#file,"解析错误").logError()
             }
         }
         return topics

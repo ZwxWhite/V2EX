@@ -68,7 +68,7 @@ extension CategoryItemViewController: UITableViewDataSource, UITableViewDelegate
     
     private func addRefresh() {
         self.refreshControl = UIRefreshControl()
-        self.refreshControl!.addTarget(self, action: "loadData", forControlEvents: UIControlEvents.ValueChanged)
+        self.refreshControl!.addTarget(self, action: #selector(CategoryItemViewController.loadData), forControlEvents: UIControlEvents.ValueChanged)
         tableView.addSubview(self.refreshControl!)
     }
 }

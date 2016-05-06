@@ -23,7 +23,7 @@ class TopicUserInfoCell: UITableViewCell {
     weak var delegate: ShowUserInfoProtocol?
     
     override func awakeFromNib() {
-        self.avatarImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "avatarImageViewDidClick"))
+        self.avatarImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(TopicUserInfoCell.avatarImageViewDidClick)))
     }
     
     var topic: V2TopicModel?{
