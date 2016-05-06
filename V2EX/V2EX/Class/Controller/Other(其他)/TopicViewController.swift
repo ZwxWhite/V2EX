@@ -25,10 +25,8 @@ class TopicViewController: UIViewController, SegueHandlerType {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "话题详情"
-        
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 44.0
+
+        self.setupViews()
         self.loadData()
     }
     
@@ -57,8 +55,18 @@ class TopicViewController: UIViewController, SegueHandlerType {
         return [actionReply]
     }
     
-    func loadData() {
+    // UI
+    func setupViews() {
+        title = "话题详情"
         
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 44.0
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "more"), style: .Done, target: self, action: #selector(TopicViewController.showMore))
+    }
+    
+    // Data
+    func loadData() {
         // topic
         TopicRequest(id: topicInfo?.id).start()?.responseJSON(completionHandler: { (response) -> Void in
             switch response.result {
@@ -87,9 +95,10 @@ class TopicViewController: UIViewController, SegueHandlerType {
             }
         })
     }
-    
-    // MARK: Actions
-    
+
+    func showMore() {
+        
+    }
 }
 
 
