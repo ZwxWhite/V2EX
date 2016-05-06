@@ -15,8 +15,6 @@
 		CC13F48B1C5A2EB4004FD8DA /* V2TopicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC13F48A1C5A2EB4004FD8DA /* V2TopicModel.swift */; };
 		CC1A270A1C1704300022A853 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1A27091C1704300022A853 /* LoginViewController.swift */; };
 		CC3328B41C7D88310009B86A /* V2Reply.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3328B31C7D88310009B86A /* V2Reply.swift */; };
-		CC3560161BF33A8E00D1780A /* V2EXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3560151BF33A8E00D1780A /* V2EXTests.swift */; };
-		CC3560211BF33A8F00D1780A /* V2EXUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3560201BF33A8F00D1780A /* V2EXUITests.swift */; };
 		CC35603A1BF43F5F00D1780A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3560371BF43F5F00D1780A /* AppDelegate.swift */; };
 		CC35603B1BF43F5F00D1780A /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC3560381BF43F5F00D1780A /* Auth.storyboard */; };
 		CC35603E1BF4406000D1780A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC35603D1BF4406000D1780A /* Main.storyboard */; };
@@ -36,9 +34,7 @@
 		CC75D7441C11855B00E1C344 /* UserHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC75D7431C11855B00E1C344 /* UserHeaderCell.swift */; };
 		CC857EE51C8D923B005F92D4 /* MemberInfoHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC857EE41C8D923B005F92D4 /* MemberInfoHeaderCell.swift */; };
 		CC9050841C0ED33800E3C84E /* ZZBaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9050831C0ED33800E3C84E /* ZZBaseRequest.swift */; };
-		CC9050851C0ED33800E3C84E /* ZZBaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9050831C0ED33800E3C84E /* ZZBaseRequest.swift */; };
 		CC9050871C0ED81E00E3C84E /* ZZNetworkAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9050861C0ED81E00E3C84E /* ZZNetworkAgent.swift */; };
-		CC9050881C0ED81E00E3C84E /* ZZNetworkAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9050861C0ED81E00E3C84E /* ZZNetworkAgent.swift */; };
 		CC9FE4B81BFAD457006967FF /* V2TopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9FE4B71BFAD457006967FF /* V2TopicCell.swift */; };
 		CCB27C3C1BF4A0F300D91B75 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB27C3B1BF4A0F300D91B75 /* AppConstant.swift */; };
 		CCB27C571BF5BFA700D91B75 /* V2Topics.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB27C561BF5BFA700D91B75 /* V2Topics.swift */; };
@@ -48,38 +44,16 @@
 		CCB8BEBA1CDC41850071599A /* ReplyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8BEB81CDC41850071599A /* ReplyViewController.swift */; };
 		CCBF49C91C855FF10051378F /* TopicContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBF49C81C855FF10051378F /* TopicContentCell.swift */; };
 		CCE49CAC1C86AA68005673E2 /* NSDate+v2ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE49CAB1C86AA68005673E2 /* NSDate+v2ex.swift */; };
-		CCE49CAD1C86AA68005673E2 /* NSDate+v2ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE49CAB1C86AA68005673E2 /* NSDate+v2ex.swift */; };
 		CCE49CAF1C86AAA0005673E2 /* UIStoryboard+v2ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE49CAE1C86AAA0005673E2 /* UIStoryboard+v2ex.swift */; };
-		CCE49CB01C86AAA0005673E2 /* UIStoryboard+v2ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE49CAE1C86AAA0005673E2 /* UIStoryboard+v2ex.swift */; };
 		CCE49CB21C86AB77005673E2 /* UIColor+v2ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE49CB11C86AB77005673E2 /* UIColor+v2ex.swift */; };
-		CCE49CB31C86AB77005673E2 /* UIColor+v2ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE49CB11C86AB77005673E2 /* UIColor+v2ex.swift */; };
 		CCE49CB51C86AB90005673E2 /* UILabel+v2ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE49CB41C86AB90005673E2 /* UILabel+v2ex.swift */; };
-		CCE49CB61C86AB90005673E2 /* UILabel+v2ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE49CB41C86AB90005673E2 /* UILabel+v2ex.swift */; };
 		CCE49CB91C86ABDC005673E2 /* SegueHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE49CB81C86ABDC005673E2 /* SegueHandlerType.swift */; };
-		CCE49CBA1C86ABDC005673E2 /* SegueHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE49CB81C86ABDC005673E2 /* SegueHandlerType.swift */; };
 		CCE49CBE1C87009F005673E2 /* UIViewController3DTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE49CBD1C87009F005673E2 /* UIViewController3DTouch.swift */; };
 		CCE8ABA81C1EC24C0089ACF3 /* PersonalDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE8ABA71C1EC24C0089ACF3 /* PersonalDetailCell.swift */; };
 		CCE8ABAA1C1EC82C0089ACF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCE8ABA91C1EC82C0089ACF3 /* Assets.xcassets */; };
 		CCF36B321BFB3DF60006366D /* DateTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF36B311BFB3DF60006366D /* DateTool.swift */; };
 		CCFCB8E31C192CC7006AF972 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCB8E21C192CC7006AF972 /* LoginRequest.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		CC3560121BF33A8E00D1780A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CC355FF51BF33A8E00D1780A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CC355FFC1BF33A8E00D1780A;
-			remoteInfo = V2EX;
-		};
-		CC35601D1BF33A8F00D1780A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CC355FF51BF33A8E00D1780A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CC355FFC1BF33A8E00D1780A;
-			remoteInfo = V2EX;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1D011BFAB51798F58212AC29 /* Pods_V2EX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_V2EX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,12 +66,6 @@
 		CC1A27091C1704300022A853 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CC3328B31C7D88310009B86A /* V2Reply.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = V2Reply.swift; sourceTree = "<group>"; };
 		CC355FFD1BF33A8E00D1780A /* V2EX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = V2EX.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC3560111BF33A8E00D1780A /* V2EXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = V2EXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC3560151BF33A8E00D1780A /* V2EXTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2EXTests.swift; sourceTree = "<group>"; };
-		CC3560171BF33A8E00D1780A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CC35601C1BF33A8F00D1780A /* V2EXUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = V2EXUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC3560201BF33A8F00D1780A /* V2EXUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2EXUITests.swift; sourceTree = "<group>"; };
-		CC3560221BF33A8F00D1780A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC3560371BF43F5F00D1780A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC3560381BF43F5F00D1780A /* Auth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		CC3560391BF43F5F00D1780A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -150,20 +118,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CC35600E1BF33A8E00D1780A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CC3560191BF33A8F00D1780A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -180,8 +134,6 @@
 			isa = PBXGroup;
 			children = (
 				CC355FFF1BF33A8E00D1780A /* V2EX */,
-				CC3560141BF33A8E00D1780A /* V2EXTests */,
-				CC35601F1BF33A8F00D1780A /* V2EXUITests */,
 				CC355FFE1BF33A8E00D1780A /* Products */,
 				F0F01E4CA06FBBEC5D8DC79F /* Pods */,
 				7FD2D4B1D1F531F21A1EED0F /* Frameworks */,
@@ -192,8 +144,6 @@
 			isa = PBXGroup;
 			children = (
 				CC355FFD1BF33A8E00D1780A /* V2EX.app */,
-				CC3560111BF33A8E00D1780A /* V2EXTests.xctest */,
-				CC35601C1BF33A8F00D1780A /* V2EXUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -211,24 +161,6 @@
 				CC3560361BF43F5F00D1780A /* Other */,
 			);
 			path = V2EX;
-			sourceTree = "<group>";
-		};
-		CC3560141BF33A8E00D1780A /* V2EXTests */ = {
-			isa = PBXGroup;
-			children = (
-				CC3560151BF33A8E00D1780A /* V2EXTests.swift */,
-				CC3560171BF33A8E00D1780A /* Info.plist */,
-			);
-			path = V2EXTests;
-			sourceTree = "<group>";
-		};
-		CC35601F1BF33A8F00D1780A /* V2EXUITests */ = {
-			isa = PBXGroup;
-			children = (
-				CC3560201BF33A8F00D1780A /* V2EXUITests.swift */,
-				CC3560221BF33A8F00D1780A /* Info.plist */,
-			);
-			path = V2EXUITests;
 			sourceTree = "<group>";
 		};
 		CC3560321BF43EF900D1780A /* Controller */ = {
@@ -446,42 +378,6 @@
 			productReference = CC355FFD1BF33A8E00D1780A /* V2EX.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CC3560101BF33A8E00D1780A /* V2EXTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CC3560281BF33A8F00D1780A /* Build configuration list for PBXNativeTarget "V2EXTests" */;
-			buildPhases = (
-				CC35600D1BF33A8E00D1780A /* Sources */,
-				CC35600E1BF33A8E00D1780A /* Frameworks */,
-				CC35600F1BF33A8E00D1780A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CC3560131BF33A8E00D1780A /* PBXTargetDependency */,
-			);
-			name = V2EXTests;
-			productName = V2EXTests;
-			productReference = CC3560111BF33A8E00D1780A /* V2EXTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		CC35601B1BF33A8F00D1780A /* V2EXUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CC35602B1BF33A8F00D1780A /* Build configuration list for PBXNativeTarget "V2EXUITests" */;
-			buildPhases = (
-				CC3560181BF33A8F00D1780A /* Sources */,
-				CC3560191BF33A8F00D1780A /* Frameworks */,
-				CC35601A1BF33A8F00D1780A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CC35601E1BF33A8F00D1780A /* PBXTargetDependency */,
-			);
-			name = V2EXUITests;
-			productName = V2EXUITests;
-			productReference = CC35601C1BF33A8F00D1780A /* V2EXUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -495,16 +391,6 @@
 					CC355FFC1BF33A8E00D1780A = {
 						CreatedOnToolsVersion = 7.1.1;
 						DevelopmentTeam = HQ3FLUKHX3;
-					};
-					CC3560101BF33A8E00D1780A = {
-						CreatedOnToolsVersion = 7.1.1;
-						DevelopmentTeam = 5U6GZAE2TF;
-						TestTargetID = CC355FFC1BF33A8E00D1780A;
-					};
-					CC35601B1BF33A8F00D1780A = {
-						CreatedOnToolsVersion = 7.1.1;
-						DevelopmentTeam = 5U6GZAE2TF;
-						TestTargetID = CC355FFC1BF33A8E00D1780A;
 					};
 				};
 			};
@@ -522,8 +408,6 @@
 			projectRoot = "";
 			targets = (
 				CC355FFC1BF33A8E00D1780A /* V2EX */,
-				CC3560101BF33A8E00D1780A /* V2EXTests */,
-				CC35601B1BF33A8F00D1780A /* V2EXUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -536,20 +420,6 @@
 				CC35603B1BF43F5F00D1780A /* Auth.storyboard in Resources */,
 				CCE8ABAA1C1EC82C0089ACF3 /* Assets.xcassets in Resources */,
 				CC35603E1BF4406000D1780A /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CC35600F1BF33A8E00D1780A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CC35601A1BF33A8F00D1780A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -665,43 +535,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CC35600D1BF33A8E00D1780A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CCE49CB01C86AAA0005673E2 /* UIStoryboard+v2ex.swift in Sources */,
-				CCE49CAD1C86AA68005673E2 /* NSDate+v2ex.swift in Sources */,
-				CCE49CB61C86AB90005673E2 /* UILabel+v2ex.swift in Sources */,
-				CC9050881C0ED81E00E3C84E /* ZZNetworkAgent.swift in Sources */,
-				CC9050851C0ED33800E3C84E /* ZZBaseRequest.swift in Sources */,
-				CC3560161BF33A8E00D1780A /* V2EXTests.swift in Sources */,
-				CCE49CB31C86AB77005673E2 /* UIColor+v2ex.swift in Sources */,
-				CCE49CBA1C86ABDC005673E2 /* SegueHandlerType.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CC3560181BF33A8F00D1780A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CC3560211BF33A8F00D1780A /* V2EXUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		CC3560131BF33A8E00D1780A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CC355FFC1BF33A8E00D1780A /* V2EX */;
-			targetProxy = CC3560121BF33A8E00D1780A /* PBXContainerItemProxy */;
-		};
-		CC35601E1BF33A8F00D1780A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CC355FFC1BF33A8E00D1780A /* V2EX */;
-			targetProxy = CC35601D1BF33A8F00D1780A /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		CC3560231BF33A8F00D1780A /* Debug */ = {
@@ -824,55 +658,6 @@
 			};
 			name = Release;
 		};
-		CC3560291BF33A8F00D1780A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				GCC_OPTIMIZATION_LEVEL = 0;
-				INFOPLIST_FILE = V2EXTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = wenxuan.zhang.V2EXTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/V2EX.app/V2EX";
-			};
-			name = Debug;
-		};
-		CC35602A1BF33A8F00D1780A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = V2EXTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = wenxuan.zhang.V2EXTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/V2EX.app/V2EX";
-			};
-			name = Release;
-		};
-		CC35602C1BF33A8F00D1780A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = V2EXUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = wenxuan.zhang.V2EXUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = V2EX;
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		CC35602D1BF33A8F00D1780A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = V2EXUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = wenxuan.zhang.V2EXUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = V2EX;
-				USES_XCTRUNNER = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -890,24 +675,6 @@
 			buildConfigurations = (
 				CC3560261BF33A8F00D1780A /* Debug */,
 				CC3560271BF33A8F00D1780A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CC3560281BF33A8F00D1780A /* Build configuration list for PBXNativeTarget "V2EXTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CC3560291BF33A8F00D1780A /* Debug */,
-				CC35602A1BF33A8F00D1780A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CC35602B1BF33A8F00D1780A /* Build configuration list for PBXNativeTarget "V2EXUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CC35602C1BF33A8F00D1780A /* Debug */,
-				CC35602D1BF33A8F00D1780A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
