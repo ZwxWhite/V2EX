@@ -34,6 +34,7 @@ class TopicViewController: UIViewController, SegueHandlerType {
     
     enum SegueIdentifier: String {
         case SegueIDForUserInfoFromTopicViewController
+        case SegueIDForShowReplyController
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -41,6 +42,9 @@ class TopicViewController: UIViewController, SegueHandlerType {
         case .SegueIDForUserInfoFromTopicViewController:
             let username = sender as? String
             (segue.destinationViewController as! UserInfoViewController).username = username
+        case .SegueIDForShowReplyController:
+            let username = sender as? String
+            ((segue.destinationViewController as! UINavigationController).viewControllers.first as! ReplyViewController).replyMember = username
         }
     }
     
@@ -71,9 +75,6 @@ class TopicViewController: UIViewController, SegueHandlerType {
                                 let reply = V2Reply(json: JSON(dictionary))
                                 self.replies.append(reply)
                             }
-                            self.replies = self.replies .sort({ (obj1, obj2) -> Bool in
-                                return obj1.last_modified > obj2.last_modified
-                            })
                             self.tableView.reloadData()
                         }
                     case .Failure(let error):
@@ -150,6 +151,10 @@ extension TopicViewController: UITableViewDataSource, UITableViewDelegate, ShowU
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        let reply = self.replies[indexPath.row]
+        let username = reply.member?.username
+        self.performSegueWithIdentifier(.SegueIDForShowReplyController, sender: username)
     }
     
     // MARK: - TopicUserInfoCellProtocol
