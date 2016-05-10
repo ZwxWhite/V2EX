@@ -14,6 +14,9 @@
 		CC1019A71C8D4A370044195F /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1019A61C8D4A370044195F /* UserInfoViewController.swift */; };
 		CC13F48B1C5A2EB4004FD8DA /* V2TopicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC13F48A1C5A2EB4004FD8DA /* V2TopicModel.swift */; };
 		CC1A270A1C1704300022A853 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1A27091C1704300022A853 /* LoginViewController.swift */; };
+		CC2A39E21CE1D9A000A674D1 /* String+EX.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2A39E11CE1D9A000A674D1 /* String+EX.swift */; };
+		CC2A39F91CE1DBA700A674D1 /* V2EXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2A39F81CE1DBA700A674D1 /* V2EXTests.swift */; };
+		CC2A3A001CE1DBAE00A674D1 /* String+EX.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2A39E11CE1D9A000A674D1 /* String+EX.swift */; };
 		CC3328B41C7D88310009B86A /* V2Reply.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3328B31C7D88310009B86A /* V2Reply.swift */; };
 		CC35603A1BF43F5F00D1780A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3560371BF43F5F00D1780A /* AppDelegate.swift */; };
 		CC35603B1BF43F5F00D1780A /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC3560381BF43F5F00D1780A /* Auth.storyboard */; };
@@ -55,6 +58,16 @@
 		CCFCB8E31C192CC7006AF972 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCB8E21C192CC7006AF972 /* LoginRequest.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		CC2A39FB1CE1DBA700A674D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC355FF51BF33A8E00D1780A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC355FFC1BF33A8E00D1780A;
+			remoteInfo = V2EX;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		1D011BFAB51798F58212AC29 /* Pods_V2EX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_V2EX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		357A34811A7CC7307D064358 /* Pods-V2EX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-V2EX.release.xcconfig"; path = "Pods/Target Support Files/Pods-V2EX/Pods-V2EX.release.xcconfig"; sourceTree = "<group>"; };
@@ -64,6 +77,10 @@
 		CC1019A61C8D4A370044195F /* UserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		CC13F48A1C5A2EB4004FD8DA /* V2TopicModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = V2TopicModel.swift; sourceTree = "<group>"; };
 		CC1A27091C1704300022A853 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CC2A39E11CE1D9A000A674D1 /* String+EX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+EX.swift"; sourceTree = "<group>"; };
+		CC2A39F61CE1DBA700A674D1 /* V2EXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = V2EXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC2A39F81CE1DBA700A674D1 /* V2EXTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2EXTests.swift; sourceTree = "<group>"; };
+		CC2A39FA1CE1DBA700A674D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC3328B31C7D88310009B86A /* V2Reply.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = V2Reply.swift; sourceTree = "<group>"; };
 		CC355FFD1BF33A8E00D1780A /* V2EX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = V2EX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC3560371BF43F5F00D1780A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +126,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CC2A39F31CE1DBA700A674D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CC355FFA1BF33A8E00D1780A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -130,10 +154,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CC2A39F71CE1DBA700A674D1 /* V2EXTests */ = {
+			isa = PBXGroup;
+			children = (
+				CC2A39F81CE1DBA700A674D1 /* V2EXTests.swift */,
+				CC2A39FA1CE1DBA700A674D1 /* Info.plist */,
+			);
+			path = V2EXTests;
+			sourceTree = "<group>";
+		};
 		CC355FF41BF33A8E00D1780A = {
 			isa = PBXGroup;
 			children = (
 				CC355FFF1BF33A8E00D1780A /* V2EX */,
+				CC2A39F71CE1DBA700A674D1 /* V2EXTests */,
 				CC355FFE1BF33A8E00D1780A /* Products */,
 				F0F01E4CA06FBBEC5D8DC79F /* Pods */,
 				7FD2D4B1D1F531F21A1EED0F /* Frameworks */,
@@ -144,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				CC355FFD1BF33A8E00D1780A /* V2EX.app */,
+				CC2A39F61CE1DBA700A674D1 /* V2EXTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -330,6 +365,7 @@
 				CCE49CAE1C86AAA0005673E2 /* UIStoryboard+v2ex.swift */,
 				CCE49CB11C86AB77005673E2 /* UIColor+v2ex.swift */,
 				CCE49CB41C86AB90005673E2 /* UILabel+v2ex.swift */,
+				CC2A39E11CE1D9A000A674D1 /* String+EX.swift */,
 			);
 			name = Extention;
 			path = Class/Extention;
@@ -357,6 +393,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		CC2A39F51CE1DBA700A674D1 /* V2EXTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC2A39FD1CE1DBA700A674D1 /* Build configuration list for PBXNativeTarget "V2EXTests" */;
+			buildPhases = (
+				CC2A39F21CE1DBA700A674D1 /* Sources */,
+				CC2A39F31CE1DBA700A674D1 /* Frameworks */,
+				CC2A39F41CE1DBA700A674D1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC2A39FC1CE1DBA700A674D1 /* PBXTargetDependency */,
+			);
+			name = V2EXTests;
+			productName = V2EXTests;
+			productReference = CC2A39F61CE1DBA700A674D1 /* V2EXTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		CC355FFC1BF33A8E00D1780A /* V2EX */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CC3560251BF33A8F00D1780A /* Build configuration list for PBXNativeTarget "V2EX" */;
@@ -384,10 +438,14 @@
 		CC355FF51BF33A8E00D1780A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "张文轩";
 				TargetAttributes = {
+					CC2A39F51CE1DBA700A674D1 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = CC355FFC1BF33A8E00D1780A;
+					};
 					CC355FFC1BF33A8E00D1780A = {
 						CreatedOnToolsVersion = 7.1.1;
 						DevelopmentTeam = HQ3FLUKHX3;
@@ -408,11 +466,19 @@
 			projectRoot = "";
 			targets = (
 				CC355FFC1BF33A8E00D1780A /* V2EX */,
+				CC2A39F51CE1DBA700A674D1 /* V2EXTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		CC2A39F41CE1DBA700A674D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CC355FFB1BF33A8E00D1780A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -487,6 +553,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CC2A39F21CE1DBA700A674D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC2A3A001CE1DBAE00A674D1 /* String+EX.swift in Sources */,
+				CC2A39F91CE1DBA700A674D1 /* V2EXTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CC355FF91BF33A8E00D1780A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -509,6 +584,7 @@
 				CCF36B321BFB3DF60006366D /* DateTool.swift in Sources */,
 				CC35604D1BF4459200D1780A /* NodeViewController.swift in Sources */,
 				CC13F48B1C5A2EB4004FD8DA /* V2TopicModel.swift in Sources */,
+				CC2A39E21CE1D9A000A674D1 /* String+EX.swift in Sources */,
 				CC3E6ABD1C75D74500A73C3A /* V2NavigationController.swift in Sources */,
 				CC1019A71C8D4A370044195F /* UserInfoViewController.swift in Sources */,
 				CCFCB8E31C192CC7006AF972 /* LoginRequest.swift in Sources */,
@@ -537,7 +613,43 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		CC2A39FC1CE1DBA700A674D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC355FFC1BF33A8E00D1780A /* V2EX */;
+			targetProxy = CC2A39FB1CE1DBA700A674D1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		CC2A39FE1CE1DBA700A674D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				INFOPLIST_FILE = V2EXTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wenxuan.V2EXTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/V2EX.app/V2EX";
+			};
+			name = Debug;
+		};
+		CC2A39FF1CE1DBA700A674D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				INFOPLIST_FILE = V2EXTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wenxuan.V2EXTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/V2EX.app/V2EX";
+			};
+			name = Release;
+		};
 		CC3560231BF33A8F00D1780A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -661,6 +773,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CC2A39FD1CE1DBA700A674D1 /* Build configuration list for PBXNativeTarget "V2EXTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC2A39FE1CE1DBA700A674D1 /* Debug */,
+				CC2A39FF1CE1DBA700A674D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		CC355FF81BF33A8E00D1780A /* Build configuration list for PBXProject "V2EX" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

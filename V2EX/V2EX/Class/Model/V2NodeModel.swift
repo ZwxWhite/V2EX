@@ -15,6 +15,9 @@ class V2NodeModel: Object {
     var id = RealmOptional<Int>(nil)
     var created = RealmOptional<Int>(nil)
     var topics = RealmOptional<Int>(nil)
+    var firstCharacter: String? {
+        return self.name?.firstCharacter()
+    }
 
     dynamic var name: String? = nil
     dynamic var url: String? = nil
@@ -39,11 +42,4 @@ class V2NodeModel: Object {
         self.header = json["header"].string
         self.footer = json["footer"].string
     }
-
-    
-}
-
-
-class V2NodeRecord: Object {
-    dynamic var searchText: String?
 }
