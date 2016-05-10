@@ -24,6 +24,8 @@ class NodeViewController: UICollectionViewController {
             flowLayout.estimatedItemSize = CGSizeMake(1, 1)
             flowLayout.minimumLineSpacing = 5
         }
+        
+        self.collectionView?.contentInset = UIEdgeInsetsMake(0, 10, 10, 10)
     }
 }
 
