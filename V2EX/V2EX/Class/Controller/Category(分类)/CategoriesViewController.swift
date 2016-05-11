@@ -86,7 +86,6 @@ extension CategoriesViewController: UIViewControllerPreviewingDelegate{
     
     func previewingContext(previewingContext: UIViewControllerPreviewing,var viewControllerForLocation location: CGPoint) -> UIViewController? {
         
-        
         guard let currentViewController = self.pagingMenuController.currentViewController as? CategoryItemViewController else {
             return nil
         }
