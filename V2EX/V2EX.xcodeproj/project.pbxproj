@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8EE480D6E0032F386D83A753 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 971F9F073A31501FD7E5A26C /* Pods.framework */; };
 		BFFBF68857FA47B42B1AF168 /* Pods_V2EX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D011BFAB51798F58212AC29 /* Pods_V2EX.framework */; };
 		CC04E6261C382E3900BBC0D1 /* DailyHotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3560481BF4456A00D1780A /* DailyHotViewController.swift */; };
 		CC07B6C21BF9852800DD73F1 /* DebugLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC07B6C11BF9852800DD73F1 /* DebugLog.swift */; };
@@ -137,7 +136,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EE480D6E0032F386D83A753 /* Pods.framework in Frameworks */,
 				BFFBF68857FA47B42B1AF168 /* Pods_V2EX.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -780,6 +778,7 @@
 				CC2A39FF1CE1DBA700A674D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CC355FF81BF33A8E00D1780A /* Build configuration list for PBXProject "V2EX" */ = {
 			isa = XCConfigurationList;
